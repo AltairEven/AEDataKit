@@ -7,18 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0F6C131F136A280070AB84 /* AEDKProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C111F136A280070AB84 /* AEDKProcess.h */; };
+		8F0F6C141F136A280070AB84 /* AEDKProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F6C121F136A280070AB84 /* AEDKProcess.m */; };
+		8F0F6C171F1372200070AB84 /* AEDKServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C151F1372200070AB84 /* AEDKServiceConfiguration.h */; };
+		8F0F6C181F1372200070AB84 /* AEDKServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F6C161F1372200070AB84 /* AEDKServiceConfiguration.m */; };
 		8F1658B91F0BA6DF0086351E /* NSURLRequest+AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658B71F0BA6DF0086351E /* NSURLRequest+AEDataKit.h */; };
 		8F1658BA1F0BA6DF0086351E /* NSURLRequest+AEDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1658B81F0BA6DF0086351E /* NSURLRequest+AEDataKit.m */; };
 		8F1658BD1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658BB1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.h */; };
 		8F1658BE1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1658BC1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.m */; };
+		8F1658C01F0DE39F0086351E /* AEDKPlugProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658BF1F0DE39F0086351E /* AEDKPlugProtocol.h */; };
+		8F1658C31F0E4CD30086351E /* AEDKService.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658C11F0E4CD30086351E /* AEDKService.h */; };
+		8F1658C41F0E4CD30086351E /* AEDKService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1658C21F0E4CD30086351E /* AEDKService.m */; };
+		8F1658C71F0F52960086351E /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658C51F0F52960086351E /* AEDKServer.h */; };
+		8F1658C81F0F52960086351E /* AEDKServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1658C61F0F52960086351E /* AEDKServer.m */; };
 		8F51A0611F0B9AA800B0FAA7 /* AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F51A05F1F0B9AA800B0FAA7 /* AEDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F0F6C111F136A280070AB84 /* AEDKProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKProcess.h; sourceTree = "<group>"; };
+		8F0F6C121F136A280070AB84 /* AEDKProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKProcess.m; sourceTree = "<group>"; };
+		8F0F6C151F1372200070AB84 /* AEDKServiceConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKServiceConfiguration.h; sourceTree = "<group>"; };
+		8F0F6C161F1372200070AB84 /* AEDKServiceConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKServiceConfiguration.m; sourceTree = "<group>"; };
 		8F1658B71F0BA6DF0086351E /* NSURLRequest+AEDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+AEDataKit.h"; sourceTree = "<group>"; };
 		8F1658B81F0BA6DF0086351E /* NSURLRequest+AEDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+AEDataKit.m"; sourceTree = "<group>"; };
 		8F1658BB1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+AEDataKit.h"; sourceTree = "<group>"; };
 		8F1658BC1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+AEDataKit.m"; sourceTree = "<group>"; };
+		8F1658BF1F0DE39F0086351E /* AEDKPlugProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKPlugProtocol.h; sourceTree = "<group>"; };
+		8F1658C11F0E4CD30086351E /* AEDKService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKService.h; sourceTree = "<group>"; };
+		8F1658C21F0E4CD30086351E /* AEDKService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKService.m; sourceTree = "<group>"; };
+		8F1658C51F0F52960086351E /* AEDKServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKServer.h; sourceTree = "<group>"; };
+		8F1658C61F0F52960086351E /* AEDKServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKServer.m; sourceTree = "<group>"; };
 		8F51A05C1F0B9AA800B0FAA7 /* AEDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F51A05F1F0B9AA800B0FAA7 /* AEDataKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEDataKit.h; sourceTree = "<group>"; };
 		8F51A0601F0B9AA800B0FAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +78,15 @@
 				8F1658B81F0BA6DF0086351E /* NSURLRequest+AEDataKit.m */,
 				8F1658BB1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.h */,
 				8F1658BC1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.m */,
+				8F1658BF1F0DE39F0086351E /* AEDKPlugProtocol.h */,
+				8F0F6C151F1372200070AB84 /* AEDKServiceConfiguration.h */,
+				8F0F6C161F1372200070AB84 /* AEDKServiceConfiguration.m */,
+				8F0F6C111F136A280070AB84 /* AEDKProcess.h */,
+				8F0F6C121F136A280070AB84 /* AEDKProcess.m */,
+				8F1658C11F0E4CD30086351E /* AEDKService.h */,
+				8F1658C21F0E4CD30086351E /* AEDKService.m */,
+				8F1658C51F0F52960086351E /* AEDKServer.h */,
+				8F1658C61F0F52960086351E /* AEDKServer.m */,
 			);
 			path = AEDataKit;
 			sourceTree = "<group>";
@@ -71,9 +98,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F1658C71F0F52960086351E /* AEDKServer.h in Headers */,
 				8F1658B91F0BA6DF0086351E /* NSURLRequest+AEDataKit.h in Headers */,
 				8F1658BD1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.h in Headers */,
+				8F0F6C131F136A280070AB84 /* AEDKProcess.h in Headers */,
+				8F1658C31F0E4CD30086351E /* AEDKService.h in Headers */,
 				8F51A0611F0B9AA800B0FAA7 /* AEDataKit.h in Headers */,
+				8F0F6C171F1372200070AB84 /* AEDKServiceConfiguration.h in Headers */,
+				8F1658C01F0DE39F0086351E /* AEDKPlugProtocol.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +180,10 @@
 			files = (
 				8F1658BE1F0BA6FB0086351E /* NSMutableURLRequest+AEDataKit.m in Sources */,
 				8F1658BA1F0BA6DF0086351E /* NSURLRequest+AEDataKit.m in Sources */,
+				8F1658C41F0E4CD30086351E /* AEDKService.m in Sources */,
+				8F0F6C141F136A280070AB84 /* AEDKProcess.m in Sources */,
+				8F1658C81F0F52960086351E /* AEDKServer.m in Sources */,
+				8F0F6C181F1372200070AB84 /* AEDKServiceConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,14 @@
 
 @interface NSURLRequest (AEDataKit)
 
+@property (nonatomic, assign) NSUInteger retryCount;
+
+@property (nonatomic, copy) NSString *queryPath;
+
+@property (nonatomic, strong) NSDictionary *parameter;
+
+@property (nonatomic, strong) NSURLRequest *nextRequest;
+
+@property (nonatomic, copy) NSString *associatedFilePath;
+
 @end
