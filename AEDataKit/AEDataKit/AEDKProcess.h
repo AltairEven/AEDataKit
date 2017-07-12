@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+    AEDKProcessStateReady,
     AEDKProcessStateProcessing,
     AEDKProcessStateSuspended,
     AEDKProcessStateCanceling,
@@ -17,14 +18,12 @@ typedef enum {
 
 @class AEDKServiceConfiguration;
 
-@interface AEDKProcess : NSObject
+@interface AEDKProcess : NSOperation
 
-@property (nonatomic, strong) AEDKServiceConfiguration *serviceConfiguration;
+@property (nonatomic, strong) NSURLRequest *request;
+
+@property (nonatomic, strong) AEDKServiceConfiguration *configuration;
 
 @property (nonatomic, readonly) AEDKProcessState state;
-
-- (void)resume;
-- (void)suspend;
-- (void)cancel;
 
 @end

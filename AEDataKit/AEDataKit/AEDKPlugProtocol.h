@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-typedef id (^ResponseAnalysis)(NSDictionary *originalResponse);
+#import "AEDKProcess.h"
 
 @protocol AEDKPlugProtocol <NSObject>
 
@@ -16,8 +15,8 @@ typedef id (^ResponseAnalysis)(NSDictionary *originalResponse);
 
 - (NSString *)plugIdentifier;
 
-- (void)canHandleRequest:(NSURLRequest *)request;
+- (BOOL)canHandleProcess:(AEDKProcess *)process;
 
-- (void)handleRequest:(NSURLRequest *)request withCompletion:(void(^)(NSURLRequest *executingReqeust, ResponseAnalysis responseAnalysis))completion;
+- (void)handleProcess:(AEDKProcess *)process;
 
 @end
