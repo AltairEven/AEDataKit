@@ -25,6 +25,7 @@
     config.displayDebugInfo = self.displayDebugInfo;
     config.BeforeProcess = self.BeforeProcess;
     config.Processing = self.Processing;
+    config.AfterProcess = self.AfterProcess;
     config.ProcessCompleted = self.ProcessCompleted;
     
     return config;
@@ -50,6 +51,7 @@
     config.displayDebugInfo = self.displayDebugInfo;
     config.BeforeProcess = self.BeforeProcess;
     config.Processing = self.Processing;
+    config.AfterProcess = self.AfterProcess;
     config.ProcessCompleted = self.ProcessCompleted;
     config.stringEncoding = self.stringEncoding;
     config.timeoutSeconds = self.timeoutSeconds;
@@ -57,7 +59,6 @@
     config.infoAppendingAfterQueryString = [self.infoAppendingAfterQueryString copy];
     config.infoInHttpHeader = [self.infoInHttpHeader copy];
     config.retryCount = self.retryCount;
-    config.ResponseValidation = self.ResponseValidation;
     
     return config;
 }

@@ -87,7 +87,7 @@
     if (self.configuration.ProcessCompleted) {
         __weak typeof(self) weakSelf = self;
         NSError *error = [NSError errorWithDomain:@"AEDataKit-process" code:AEDK_ERROR_CANCEL userInfo:@{NSLocalizedDescriptionKey : @"没有找到合适的请求代理"}];
-        self.configuration.ProcessCompleted(weakSelf, error);
+        self.configuration.ProcessCompleted(weakSelf, error, nil);
     }
 }
 

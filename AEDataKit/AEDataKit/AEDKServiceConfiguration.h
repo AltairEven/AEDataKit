@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL displayDebugInfo;
 
 /**
- 服务进程开始前
+ 服务进程开始前，该block返回新的配置
  */
-@property (nonatomic, copy) AEDKProcess *(^__nullable BeforeProcess)(AEDKProcess *currentProcess);
+@property (nonatomic, copy) AEDKServiceConfiguration *(^__nullable BeforeProcess)(AEDKServiceConfiguration *currentconfiguration);
 
 /**
  服务进程进行中
@@ -30,14 +30,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) void (^__nullable Processing)(int64_t totalAmount, int64_t currentAmount, NSURLRequest *currentRequest);
 
 /**
- 服务进程结束前
+ 服务进程结束前，该block返回解析后的数据模型
  */
 @property (nonatomic, copy) id (^__nullable AfterProcess)(id __nullable responseData);
 
 /**
- 服务进程完成后
+ 服务进程完成后，得到执行结果
  */
-@property (nonatomic, copy) void (^ ProcessCompleted)(AEDKProcess *currentProcess, NSError *error, id responseModel);
+@property (nonatomic, copy) void (^ ProcessCompleted)(AEDKProcess *currentProcess, NSError *error, id __nullable responseModel);
 
 /**
  默认配置
