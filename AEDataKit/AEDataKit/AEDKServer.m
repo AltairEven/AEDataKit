@@ -84,14 +84,80 @@ NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
     return self;
 }
 
+#pragma mark Private methods
+
+- (NSURLRequest *)standardRequest {
+    NSString *wholeString = [NSString stringWithFormat:@"%@://%@%@", self.protocol, self.domain, self.path];
+    NSURL *url = [NSURL URLWithString:wholeString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    return request;
+}
+
+#pragma mark - 正则相关
+- (BOOL)isValidateByRegex:(NSString *)regex forString:(NSString *)string{
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    return [pre evaluateWithObject:string];
+}
+
+- (BOOL)isValidHttpOrHttpsService {
+    NSString *regex = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
+    NSString *wholeString = [NSString stringWithFormat:@"%@://%@%@", self.protocol, self.domain, self.path];
+    
+    return [self isValidateByRegex:regex forString:wholeString];
+}
+
+- (BOOL)isValidCacheService {
+    BOOL isValid = NO;
+    if (![self.domain isKindOfClass:[NSString class]] || [self.domain length] == 0) {
+        return isValid;
+    }
+    if ([self.path isEqualToString:kAEDKServiceCachePathDisk] || [self.path isEqualToString:kAEDKServiceCachePathMemory] || [self.path isEqualToString:kAEDKServiceCachePathMemoryAndDisk]) {
+        isValid = YES;
+    }
+    return isValid;
+}
+
+- (BOOL)isValidFileService {
+    NSString *wholeString = [NSString stringWithFormat:@"%@", self.path];
+    NSURL *url = [NSURL URLWithString:wholeString];
+    return [url isFileURL];
+}
+
+- (BOOL)isValidDataBaseService {
+    BOOL isValid = NO;
+    if (![self.domain isKindOfClass:[NSString class]] || [self.domain length] == 0) {
+        return isValid;
+    }
+    if ([self.path isEqualToString:kAEDKServiceDataBasePathSimple] || [self.path isEqualToString:kAEDKServiceDataBasePathSQL]) {
+        isValid = YES;
+    }
+    return isValid;
+}
+
 #pragma mark Public methods
 
 - (BOOL)isValidService {
-    return YES;
+    BOOL isValid = NO;
+    if (![self.name isKindOfClass:[NSString class]] || [self.name length] == 0) {
+        return isValid;
+    }
+    if ([self.protocol isEqualToString:kAEDKServiceProtocolHttp] || [self.protocol isEqualToString:kAEDKServiceProtocolHttps]) {
+        isValid = [self isValidHttpOrHttpsService];
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
+        isValid = [self isValidCacheService];
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolFile]) {
+        isValid = [self isValidFileService];
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolDataBase]) {
+        isValid = [self isValidDataBaseService];
+    }
+    return isValid;
 }
 
 - (AEDKProcess *)assignExecutingProcess {
     AEDKProcess *process = [[AEDKProcess alloc] init];
+    process.request = [self standardRequest];
+    process.configuration = self.configuration;
     [self.processQueue addOperation:process];
     return process;
 }
@@ -121,7 +187,7 @@ static AEDKServer *_sharedInstance = nil;
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedInstance = [AEDKServer allocWithZone:zone];
+        _sharedInstance = [super allocWithZone:zone];
         _sharedInstance.services = [[NSMutableDictionary alloc] init];
         _sharedInstance.delegates = [[NSMutableDictionary alloc] init];
         _sharedInstance.processes = [[NSMutableDictionary alloc] init];

@@ -36,7 +36,8 @@
 @implementation AEDKHttpServiceConfiguration
 
 + (instancetype)defaultConfiguration {
-    AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)[AEDKServiceConfiguration defaultConfiguration];
+    AEDKHttpServiceConfiguration *config = [[AEDKHttpServiceConfiguration alloc] init];
+    config.displayDebugInfo = NO;
     [config setStringEncoding:NSUTF8StringEncoding];
     [config setTimeoutSeconds:10.0];
     [config setHttpMethod:@"GET"];

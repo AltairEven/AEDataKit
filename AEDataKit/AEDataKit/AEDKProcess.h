@@ -22,7 +22,7 @@ typedef enum {
 
 @property (nonatomic, strong) NSURLRequest *request;
 
-@property (nonatomic, strong) AEDKServiceConfiguration *configuration;
+@property (nonatomic, copy) AEDKServiceConfiguration *configuration;
 
 @property (nonatomic, readonly) AEDKProcessState state;
 

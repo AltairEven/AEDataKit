@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F0F6C131F136A280070AB84 /* AEDKProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C111F136A280070AB84 /* AEDKProcess.h */; };
+		8F0F6C131F136A280070AB84 /* AEDKProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C111F136A280070AB84 /* AEDKProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F0F6C141F136A280070AB84 /* AEDKProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F6C121F136A280070AB84 /* AEDKProcess.m */; };
-		8F0F6C171F1372200070AB84 /* AEDKServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C151F1372200070AB84 /* AEDKServiceConfiguration.h */; };
+		8F0F6C171F1372200070AB84 /* AEDKServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0F6C151F1372200070AB84 /* AEDKServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F0F6C181F1372200070AB84 /* AEDKServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0F6C161F1372200070AB84 /* AEDKServiceConfiguration.m */; };
-		8F1658C01F0DE39F0086351E /* AEDKPlugProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658BF1F0DE39F0086351E /* AEDKPlugProtocol.h */; };
-		8F1658C71F0F52960086351E /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658C51F0F52960086351E /* AEDKServer.h */; };
+		8F1658C01F0DE39F0086351E /* AEDKPlugProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658BF1F0DE39F0086351E /* AEDKPlugProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1658C71F0F52960086351E /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1658C51F0F52960086351E /* AEDKServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F1658C81F0F52960086351E /* AEDKServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1658C61F0F52960086351E /* AEDKServer.m */; };
 		8F51A0611F0B9AA800B0FAA7 /* AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F51A05F1F0B9AA800B0FAA7 /* AEDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
