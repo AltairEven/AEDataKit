@@ -135,7 +135,7 @@ extern NSString *const kAEDKServiceDataBasePathSQL;
 
 - (NSArray<id<AEDKPlugProtocol>> *__nullable)allDelegates;
 
-- (BOOL)removeDelegateWithIdentifier:(NSString *)identifier;
+- (BOOL)removeDelegateWithClassName:(NSString *)className;
 
 - (BOOL)removeDelegate:(id<AEDKPlugProtocol>)delegate;
 

@@ -20,9 +20,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL displayDebugInfo;
 
 /**
- 服务进程开始前，该block通知用户当前配置，如需修改则返回新的配置，否则直接返回该配置
+ 指定的服务代理（类名）
  */
-@property (nonatomic, copy) AEDKServiceConfiguration *(^__nullable BeforeProcess)(AEDKServiceConfiguration *currentconfiguration);
+@property (nonatomic, copy) NSString *specifiedServiceDelegate;
+
+/**
+ 服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil
+ */
+@property (nonatomic, strong) id requestBody;
+
+/**
+ 服务进程开始前，该block通知用户当前进程，如需修改则直接修改
+ */
+@property (nonatomic, copy) void (^__nullable BeforeProcess)(AEDKProcess *process);
 
 /**
  服务进程进行中
@@ -56,14 +66,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 
 /**
- 超时时间
+ 请求参数
  */
-@property (nonatomic, assign) NSTimeInterval timeoutSeconds;
+@property (nonatomic, copy) NSDictionary *requestParameter;
 
 /**
- method
+ 关联的文件路径，用于上传或下载
  */
-@property (nonatomic, copy) NSString *httpMethod;
+@property (nonatomic, copy) NSString *associatedFilePath;
 
 /**
  拼在链接后的用户信息

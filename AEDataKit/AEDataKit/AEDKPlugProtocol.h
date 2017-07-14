@@ -13,8 +13,6 @@
 
 @required
 
-- (NSString *)plugIdentifier;
-
 - (BOOL)canHandleProcess:(AEDKProcess *)process;
 
 - (void)handleProcess:(AEDKProcess *)process;

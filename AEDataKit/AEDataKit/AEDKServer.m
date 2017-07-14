@@ -89,7 +89,9 @@ NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
 - (NSURLRequest *)standardRequest {
     NSString *wholeString = [NSString stringWithFormat:@"%@://%@%@", self.protocol, self.domain, self.path];
     NSURL *url = [NSURL URLWithString:wholeString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setTimeoutInterval:10.0];
+    [request setHTTPMethod:@"GET"];
     
     return request;
 }
@@ -296,7 +298,7 @@ static AEDKServer *_sharedInstance = nil;
         return NO;
     }
     dispatch_barrier_async(self.delegateSynchronizationQueue, ^{
-        [self.delegates setObject:delegate forKey:[delegate plugIdentifier]];
+        [self.delegates setObject:delegate forKey:NSStringFromClass([delegate class])];
     });
     return YES;
 }
@@ -309,19 +311,22 @@ static AEDKServer *_sharedInstance = nil;
     return delegates;
 }
 
-- (BOOL)removeDelegateWithIdentifier:(NSString *)identifier {
-    if (![identifier isKindOfClass:[NSString class]] || [identifier length] == 0) {
+- (BOOL)removeDelegateWithClassName:(NSString *)className {
+    if (![className isKindOfClass:[NSString class]] || [className length] == 0) {
         return NO;
     }
     dispatch_barrier_sync(self.delegateSynchronizationQueue, ^{
-        [self.delegates removeObjectForKey:identifier];
+        [self.delegates removeObjectForKey:className];
     });
     return YES;
 }
 
 - (BOOL)removeDelegate:(id<AEDKPlugProtocol>)delegate {
+    if (!delegate || ![delegate conformsToProtocol:@protocol(AEDKPlugProtocol)]) {
+        return NO;
+    }
     dispatch_barrier_sync(self.delegateSynchronizationQueue, ^{
-        [self.delegates removeObjectForKey:[delegate plugIdentifier]];
+        [self.delegates removeObjectForKey:NSStringFromClass([delegate class])];
     });
     return YES;
 }

@@ -18,12 +18,16 @@ typedef enum {
 
 @class AEDKServiceConfiguration;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface AEDKProcess : NSOperation
 
-@property (nonatomic, strong) NSURLRequest *request;
+@property (nonatomic, copy) NSURLRequest *request;
 
 @property (nonatomic, copy) AEDKServiceConfiguration *configuration;
 
 @property (nonatomic, readonly) AEDKProcessState state;
 
 @end
+
+NS_ASSUME_NONNULL_END
