@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'PROJECT_Example' do
+  pod 'AEDataKit', :path => '../../../'
+
+  target 'PROJECT_Tests' do
+    inherit! :search_paths
+  end
+end

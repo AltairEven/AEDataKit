@@ -1,0 +1,16 @@
+PODS:
+  - AEDataKit (0.0.1)
+
+DEPENDENCIES:
+  - AEDataKit (from `../../../`)
+
+EXTERNAL SOURCES:
+  AEDataKit:
+    :path: "../../../"
+
+SPEC CHECKSUMS:
+  AEDataKit: df5a21c9fa167cbc886f34351b700edad03b9042
+
+PODFILE CHECKSUM: 2c594df96d25719405bcf9804ece9d9b69e309ca
+
+COCOAPODS: 1.1.1
