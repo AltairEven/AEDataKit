@@ -31,9 +31,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     AEDKProcess *process = [[AEDKServer server] requestServiceWithName:@"TestService"];
-    process.configuration.BeforeProcess = ^AEDKServiceConfiguration * _Nonnull(AEDKServiceConfiguration * _Nonnull currentconfiguration) {
+    process.configuration.BeforeProcess = ^(AEDKProcess * _Nonnull process) {
         NSLog(@"Before Process Callback.");
-        return currentconfiguration;
     };
     process.configuration.Processing = ^(int64_t totalAmount, int64_t currentAmount, NSURLRequest * _Nonnull currentRequest) {
         NSLog(@"Processing Callback.");
