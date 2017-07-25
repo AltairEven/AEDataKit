@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AEDataKit'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'This is a short description of AEDataKit.'
 
 # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/AltairEven/AEDataKit.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '${USER_NAME}' => '${USER_EMAIL}' }
+  s.author           = { 'Altair' => 'evendipper@163.com' }
   s.source           = { :git => 'https://github.com/AltairEven/AEDataKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
