@@ -10,7 +10,25 @@
 
 @class AEDKProcess;
 
+
 NS_ASSUME_NONNULL_BEGIN
+
+//数据服务处理方式
+extern NSString *const kAEDKServiceMethodGet;   //对应http/https协议的GET方式，或者其他协议的数据获取
+extern NSString *const kAEDKServiceMethodPOST;  //对应http/https协议的POST方式，或者其他协议的数据修改
+extern NSString *const kAEDKServiceMethodHEAD;  //对应http/https协议的HEAD方式，或者其他协议的数据描述获取
+extern NSString *const kAEDKServiceMethodDELETE;//对应http/https协议的DELETE方式，或者其他协议的数据删除
+extern NSString *const kAEDKServiceMethodPUT;   //对应http/https协议的PUT方式，或者其他协议的数据新增
+extern NSString *const kAEDKServiceMethodPATCH; //对应http/https协议的PATCH方式
+extern NSString *const kAEDKServiceMethodOPTIONS;   //对应http/https协议的OPTIONS方式
+extern NSString *const kAEDKServiceMethodTRACE; //对应http/https协议的TRACE方式
+extern NSString *const kAEDKServiceMethodCONNECT;   //对应http/https协议的CONNECT方式
+extern NSString *const kAEDKServiceMethodMOVE;  //对应http/https协议的MOVE方式
+extern NSString *const kAEDKServiceMethodCOPY;  //对应http/https协议的COPY方式
+extern NSString *const kAEDKServiceMethodLINK;  //对应http/https协议的LINK方式
+extern NSString *const kAEDKServiceMethodUNLINK;    //对应http/https协议的UNLINK方式
+extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的WRAPPED方式
+
 
 @interface AEDKServiceConfiguration : NSObject <NSCopying>
 
@@ -23,6 +41,11 @@ NS_ASSUME_NONNULL_BEGIN
  指定的服务代理（类名）
  */
 @property (nonatomic, copy) NSString *specifiedServiceDelegate;
+
+/**
+ 服务进程的操作方式
+ */
+@property (nonatomic, copy) NSString *method;
 
 /**
  服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil

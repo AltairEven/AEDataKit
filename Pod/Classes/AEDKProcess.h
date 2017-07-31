@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AEDKServiceConfiguration.h"
 
 typedef enum {
     AEDKProcessStateReady,
@@ -16,7 +17,6 @@ typedef enum {
     AEDKProcessStateCompleted
 }AEDKProcessState;
 
-@class AEDKServiceConfiguration;
 
 NS_ASSUME_NONNULL_BEGIN
 

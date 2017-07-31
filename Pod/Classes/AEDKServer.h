@@ -23,21 +23,6 @@ extern NSString *const kAEDKServiceProtocolFile;    //文件
 //extern NSString *const kAEDKServiceProtocolClass;   //类
 extern NSString *const kAEDKServiceProtocolDataBase;    //数据库
 
-//数据服务处理方式
-extern NSString *const kAEDKServiceMethodGet;   //对应http/https协议的GET方式，或者其他协议的数据获取
-extern NSString *const kAEDKServiceMethodPOST;  //对应http/https协议的POST方式，或者其他协议的数据修改
-extern NSString *const kAEDKServiceMethodHEAD;  //对应http/https协议的HEAD方式，或者其他协议的数据描述获取
-extern NSString *const kAEDKServiceMethodDELETE;//对应http/https协议的DELETE方式，或者其他协议的数据删除
-extern NSString *const kAEDKServiceMethodPUT;   //对应http/https协议的PUT方式，或者其他协议的数据新增
-extern NSString *const kAEDKServiceMethodPATCH; //对应http/https协议的PATCH方式
-extern NSString *const kAEDKServiceMethodOPTIONS;   //对应http/https协议的OPTIONS方式
-extern NSString *const kAEDKServiceMethodTRACE; //对应http/https协议的TRACE方式
-extern NSString *const kAEDKServiceMethodCONNECT;   //对应http/https协议的CONNECT方式
-extern NSString *const kAEDKServiceMethodMOVE;  //对应http/https协议的MOVE方式
-extern NSString *const kAEDKServiceMethodCOPY;  //对应http/https协议的COPY方式
-extern NSString *const kAEDKServiceMethodLINK;  //对应http/https协议的LINK方式
-extern NSString *const kAEDKServiceMethodUNLINK;    //对应http/https协议的UNLINK方式
-extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的WRAPPED方式
 
 
 //数据服务路径
@@ -55,9 +40,9 @@ extern NSString *const kAEDKServiceDataBasePathSQL;
  协议格式如下：
  http://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
  https://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
- cache://cacheIdentifier/memoryAndDisk?key=value
+ cache://cacheIdentifier/memoryAndDisk/keyname
  file://directory.searchPathDomainMask/path/filename.extension
- db://table.dbname/simple?key1=value1&key2=value2
+ db://table.dbname/simple?key1=keyname1&key2=kename2
  db://dbname/sql?urlencodedSQLQueryString
  */
 @interface AEDKService : NSObject

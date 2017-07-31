@@ -8,11 +8,29 @@
 
 #import "AEDKServiceConfiguration.h"
 
+
+NSString *const kAEDKServiceMethodGet = @"GET";
+NSString *const kAEDKServiceMethodPOST = @"POST";
+NSString *const kAEDKServiceMethodHEAD = @"HEAD";
+NSString *const kAEDKServiceMethodDELETE = @"DELETE";
+NSString *const kAEDKServiceMethodPUT = @"PUT";
+NSString *const kAEDKServiceMethodPATCH = @"PATCH";
+NSString *const kAEDKServiceMethodOPTIONS = @"OPTIONS";
+NSString *const kAEDKServiceMethodTRACE = @"TRACE";
+NSString *const kAEDKServiceMethodCONNECT = @"CONNECT";
+NSString *const kAEDKServiceMethodMOVE = @"MOVE";
+NSString *const kAEDKServiceMethodCOPY = @"COPY";
+NSString *const kAEDKServiceMethodLINK = @"LINK";
+NSString *const kAEDKServiceMethodUNLINK = @"UNLINK";
+NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
+
+
 @implementation AEDKServiceConfiguration
 
 + (instancetype)defaultConfiguration {
     AEDKServiceConfiguration *config = [[AEDKServiceConfiguration alloc] init];
     config.displayDebugInfo = NO;
+    config.method = kAEDKServiceMethodGet;
     
     return config;
 }
@@ -24,6 +42,7 @@
     AEDKServiceConfiguration *config = [[AEDKServiceConfiguration allocWithZone:zone] init];
     config.displayDebugInfo = self.displayDebugInfo;
     config.specifiedServiceDelegate = self.specifiedServiceDelegate;
+    config.method = self.method;
     config.requestBody = self.requestBody;
     config.BeforeProcess = self.BeforeProcess;
     config.Processing = self.Processing;
@@ -40,6 +59,7 @@
 + (instancetype)defaultConfiguration {
     AEDKHttpServiceConfiguration *config = [[AEDKHttpServiceConfiguration alloc] init];
     config.displayDebugInfo = NO;
+    config.method = kAEDKServiceMethodGet;
     [config setStringEncoding:NSUTF8StringEncoding];
     
     return config;
@@ -51,6 +71,7 @@
     AEDKHttpServiceConfiguration *config = [[AEDKHttpServiceConfiguration allocWithZone:zone] init];
     config.displayDebugInfo = self.displayDebugInfo;
     config.specifiedServiceDelegate = self.specifiedServiceDelegate;
+    config.method = self.method;
     config.requestBody = self.requestBody;
     config.BeforeProcess = self.BeforeProcess;
     config.Processing = self.Processing;

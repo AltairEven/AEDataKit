@@ -8,7 +8,6 @@
 
 #import "AEDKProcess.h"
 #import "AEDKServer.h"
-#import "AEDKServiceConfiguration.h"
 
 @implementation AEDKProcess
 

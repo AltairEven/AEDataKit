@@ -16,22 +16,6 @@ NSString *const kAEDKServiceProtocolFile = @"file";
 NSString *const kAEDKServiceProtocolDataBase = @"db";
 
 
-NSString *const kAEDKServiceMethodGet = @"GET";
-NSString *const kAEDKServiceMethodPOST = @"POST";
-NSString *const kAEDKServiceMethodHEAD = @"HEAD";
-NSString *const kAEDKServiceMethodDELETE = @"DELETE";
-NSString *const kAEDKServiceMethodPUT = @"PUT";
-NSString *const kAEDKServiceMethodPATCH = @"PATCH";
-NSString *const kAEDKServiceMethodOPTIONS = @"OPTIONS";
-NSString *const kAEDKServiceMethodTRACE = @"TRACE";
-NSString *const kAEDKServiceMethodCONNECT = @"CONNECT";
-NSString *const kAEDKServiceMethodMOVE = @"MOVE";
-NSString *const kAEDKServiceMethodCOPY = @"COPY";
-NSString *const kAEDKServiceMethodLINK = @"LINK";
-NSString *const kAEDKServiceMethodUNLINK = @"UNLINK";
-NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
-
-
 NSString *const kAEDKServiceCachePathMemory = @"kAEDKServiceCachePathMemory";
 NSString *const kAEDKServiceCachePathDisk = @"kAEDKServiceCachePathDisk";
 NSString *const kAEDKServiceCachePathMemoryAndDisk = @"kAEDKServiceCachePathMemoryAndDisk";
@@ -91,7 +75,7 @@ NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
     NSURL *url = [NSURL URLWithString:wholeString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setTimeoutInterval:10.0];
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:self.configuration.method ? self.configuration.method : kAEDKServiceMethodGet];
     
     return request;
 }
