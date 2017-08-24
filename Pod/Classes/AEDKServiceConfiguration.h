@@ -81,6 +81,8 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 
 @end
 
+@class AEDKHttpUploadDownloadConfiguration;
+
 @interface AEDKHttpServiceConfiguration : AEDKServiceConfiguration
 
 /**
@@ -94,9 +96,9 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 @property (nonatomic, copy) NSDictionary *requestParameter;
 
 /**
- 关联的文件路径，用于上传或下载
+ 上传下载配置
  */
-@property (nonatomic, copy) NSString *associatedFilePath;
+@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig;
 
 /**
  拼在链接后的用户信息
@@ -112,6 +114,34 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
  重试次数， 默认0
  */
 @property (nonatomic, assign) NSUInteger retryCount;
+
+@end
+
+typedef enum {
+    AEDKHttpFileUpload,
+    AEDKHttpFileDownload
+}AEDKHttpUploadDownloadType;
+
+@interface AEDKHttpUploadDownloadConfiguration : NSObject <NSCopying>
+
+/**
+ 上传下载类型
+ */
+@property (nonatomic, assign) AEDKHttpUploadDownloadType type;
+
+/**
+ 关联的文件路径，用于上传或下载
+ */
+@property (nonatomic, copy) NSString *associatedFilePath;
+
+/**
+ 初始化方法
+
+ @param type 上传下载类型
+ @param path 关联文件路径
+ @return 类实例
+ */
+- (instancetype)initWithType:(AEDKHttpUploadDownloadType)type accociatedFilePath:(NSString *)path;
 
 @end
 

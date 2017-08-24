@@ -87,3 +87,30 @@ NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
 
 
 @end
+
+@implementation AEDKHttpUploadDownloadConfiguration
+
+- (instancetype)initWithType:(AEDKHttpUploadDownloadType)type accociatedFilePath:(NSString *)path {
+    self = [super init];
+    if (self) {
+        self.type = type;
+        self.associatedFilePath = path;
+    }
+    return self;
+}
+
+
+#pragma mark NSCopying
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    AEDKHttpUploadDownloadConfiguration *config = [[AEDKHttpUploadDownloadConfiguration allocWithZone:zone] init];
+    config.type = self.type;
+    config.associatedFilePath = self.associatedFilePath;
+    
+    return config;
+}
+
+@end
+
+
+
