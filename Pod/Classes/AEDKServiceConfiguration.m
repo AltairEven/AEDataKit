@@ -60,6 +60,7 @@ NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
     AEDKHttpServiceConfiguration *config = [[AEDKHttpServiceConfiguration alloc] init];
     config.displayDebugInfo = NO;
     config.method = kAEDKServiceMethodGet;
+    config.mimeType = AEDKHttpServiceMimeTypeUndefine;
     [config setStringEncoding:NSUTF8StringEncoding];
     
     return config;
@@ -78,6 +79,7 @@ NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
     config.AfterProcess = self.AfterProcess;
     config.ProcessCompleted = self.ProcessCompleted;
     config.stringEncoding = self.stringEncoding;
+    config.mimeType = self.mimeType;
     config.infoAppendingAfterQueryString = [self.infoAppendingAfterQueryString copy];
     config.infoInHttpHeader = [self.infoInHttpHeader copy];
     config.retryCount = self.retryCount;

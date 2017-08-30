@@ -83,12 +83,24 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 
 @class AEDKHttpUploadDownloadConfiguration;
 
+typedef enum {
+    AEDKHttpServiceMimeTypeUndefine,
+    AEDKHttpServiceMimeTypeText,
+    AEDKHttpServiceMimeTypeImage,
+    AEDKHttpServiceMimeTypeOther
+}AEDKHttpServiceMimeType;
+
 @interface AEDKHttpServiceConfiguration : AEDKServiceConfiguration
 
 /**
  字符编码
  */
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
+
+/**
+ 请求类型，默认AEDKHttpServiceMimeTypeUndefine
+ */
+@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType;
 
 /**
  请求参数

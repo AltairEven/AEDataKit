@@ -34,6 +34,8 @@
 		6E094E8D4869BB584DB3D1EDB9656DBE /* AELDDiskCachePlug.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE6072643DD7359B06DC156ECBA662 /* AELDDiskCachePlug.m */; };
 		7F1B9799C3E8BCBFB827F6B4826C1FD2 /* AELDDiskCachePlug.h in Headers */ = {isa = PBXBuildFile; fileRef = B4933498116B98D6B3DD9751FE9ACABA /* AELDDiskCachePlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8197D3E61876B2EB4244075917329706 /* AELDPlugMode.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F469589F18B86F208A2D0025C32DA5 /* AELDPlugMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F4CE3431F55514000A37EC1 /* AEDKImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */; };
+		8F4CE3441F55514000A37EC1 /* AEDKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */; };
 		8FA3DC1F1F2B362200624B35 /* AEDKTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA3DC1D1F2B362200624B35 /* AEDKTools.h */; };
 		8FA3DC201F2B362200624B35 /* AEDKTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3DC1E1F2B362200624B35 /* AEDKTools.m */; };
 		8FE78AB03391371AC2746B6CAEF0D4F0 /* AELDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AABA78B70BF951FE5B70B012A54111CB /* AELDTools.m */; };
@@ -118,6 +120,8 @@
 		8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8A7841CDBE4E18701DB6279146ECB6FF /* AELDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDMemoryCache.m; path = AELocalDataKit/Classes/Cache/AELDMemoryCache.m; sourceTree = "<group>"; };
 		8E867C7741CE8E3D1080FF8B9FB88CEB /* AELDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDMemoryCache.h; path = AELocalDataKit/Classes/Cache/AELDMemoryCache.h; sourceTree = "<group>"; };
+		8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKImageLoader.h; sourceTree = "<group>"; };
+		8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKImageLoader.m; sourceTree = "<group>"; };
 		8FA3DC1D1F2B362200624B35 /* AEDKTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKTools.h; sourceTree = "<group>"; };
 		8FA3DC1E1F2B362200624B35 /* AEDKTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKTools.m; sourceTree = "<group>"; };
 		91A32D6F33567EA0C081A96820458449 /* Pods-PROJECT_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PROJECT_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				37DE595A2A1F7926537171F51DED9836 /* AELocalDataPlug.m */,
 				8FA3DC1D1F2B362200624B35 /* AEDKTools.h */,
 				8FA3DC1E1F2B362200624B35 /* AEDKTools.m */,
+				8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */,
+				8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				CB831E10CEBC9E8F36CE5F1228C149AF /* AEDKServiceConfiguration.h in Headers */,
 				F2E0A4B8AC2BABA1D57E4A800C389EDF /* AELocalDataPlug.h in Headers */,
 				8FA3DC1F1F2B362200624B35 /* AEDKTools.h in Headers */,
+				8F4CE3431F55514000A37EC1 /* AEDKImageLoader.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +558,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F3D821D9AD18FDA2C0ACAB163EB1BCA /* AEDataKit-dummy.m in Sources */,
+				8F4CE3441F55514000A37EC1 /* AEDKImageLoader.m in Sources */,
 				51134DF62EAD8B3D97402D7FE0D348A4 /* AEDKProcess.m in Sources */,
 				55B354CF7CC61F9E356E653BCE8279BD /* AEDKServer.m in Sources */,
 				3ADA995E089B0346C7517DB37A83DB0B /* AEDKServiceConfiguration.m in Sources */,

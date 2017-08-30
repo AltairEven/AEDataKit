@@ -68,12 +68,27 @@
 - (void)main {
     NSArray<id<AEDKPlugProtocol>> *delegates = [[AEDKServer server] allDelegates];
     BOOL hasDelegate = NO;
-    for (id<AEDKPlugProtocol> delegate in delegates) {
-        if ([delegate canHandleProcess:self]) {
-            [self setState:AEDKProcessStateReady];
-            [delegate handleProcess:self];
-            hasDelegate = YES;
-            break;
+    if ([self.configuration.specifiedServiceDelegate length] > 0) {
+        //有指定的服务代理
+        for (id<AEDKPlugProtocol> delegate in delegates) {
+            if ([self.configuration.specifiedServiceDelegate isEqualToString:NSStringFromClass([delegate class])]) {
+                if ([delegate canHandleProcess:self]) {
+                    [self setState:AEDKProcessStateReady];
+                    [delegate handleProcess:self];
+                    hasDelegate = YES;
+                }
+                break;
+            }
+        }
+    } else {
+        //没有指定的服务代理，则寻找到第一个可处理的代理
+        for (id<AEDKPlugProtocol> delegate in delegates) {
+            if ([delegate canHandleProcess:self]) {
+                [self setState:AEDKProcessStateReady];
+                [delegate handleProcess:self];
+                hasDelegate = YES;
+                break;
+            }
         }
     }
     if (!hasDelegate) {
