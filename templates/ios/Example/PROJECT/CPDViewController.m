@@ -11,6 +11,8 @@
 
 @interface CPDViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @end
 
 @implementation CPDViewController
@@ -18,11 +20,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor blueColor];
+    self.imageView.backgroundColor = [UIColor yellowColor];
     // Do any additional setup after loading the view, typically from a nib.
     AEDKHttpServiceConfiguration *config = [AEDKHttpServiceConfiguration defaultConfiguration];
     
     AEDKService *service = [[AEDKService alloc] initWithName:@"TestService" protocol:@"http" domain:@"test.alisports.com" path:@"/testPath" serviceConfiguration:config];
     [[AEDKServer server] registerService:service];
+    
+    AEDKImageViewPlaceholder *placeholder = [[AEDKImageViewPlaceholder alloc] init];
+    placeholder.placeholderImage = [UIImage imageNamed:@"80_80.jpg"];
+    placeholder.imageViewMinRatio = 0;
+    placeholder.imageViewMaxRatio = CGFLOAT_MAX;
+    placeholder.showMode = UIViewContentModeCenter;
+    
+    UIImage *image = [placeholder fitPlaceholderImageForView:self.imageView];
+    [self.imageView setImage:image];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

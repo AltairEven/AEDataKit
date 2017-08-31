@@ -7,55 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0BC5AC29A0AE0B11D06ABFEB9CD409BE /* AELDMemoryCachePlug.h in Headers */ = {isa = PBXBuildFile; fileRef = 11D3FB4DE4ACAA38EBE1B3263A5B5E51 /* AELDMemoryCachePlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C8F2C92711A5613F867F9115E9C650C /* AELDPlugMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B104B0169241D49997187B582D734 /* AELDPlugMode.m */; };
-		17F8DBB8CC72CB0CB2A90D73CD8A58C1 /* AELDOperationMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC22D3EA91DEE1F023CB64D73ABEF54 /* AELDOperationMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		00B6F6F122B0090349F9ABDF47F4D440 /* AELocalDataSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BF18FC22D6BA4804CBB15AAC5687AD1B /* AELocalDataSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E3AC172AB7F74651D1F13A96D2E90C3 /* AEDKWebImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 079EA6AFC92B586B4F12E9B739C2954F /* AEDKWebImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11398DD9EF3585B8E2B4067C62DA9094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
+		121111962D98A13A198921A523B7F8A7 /* AELocalDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E86BB9881D1D5DA8F366D730F0FC5478 /* AELocalDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1252BAD6E3CC8D2DDBD7B11DE988464F /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = A37D7BF4F3EED1DCE378A723D7B47845 /* AEDKServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12C52DA9709EB1F3D4B2E2BC9B99E57F /* AEReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6861F3BC6506CC029A98E4D159BD8A /* AEReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		185A980FB31A9DD4F3465C91CF8FDEF9 /* AEDKTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 681BA793EE5AA1BB0E45B803D8E142F2 /* AEDKTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		189CF5D841CAC76FA50A3075EB6BBB9E /* AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F1B3FFB34D74565095896D7FC4F69A /* AEDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19DD9FCF51069EEBF47FA2B724B9C065 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
 		1CE3B924A0083651BF8C3BA271333FD7 /* Pods-PROJECT_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A51A37E0F18C6E3AEC6CE89AE3AD85B /* Pods-PROJECT_Tests-dummy.m */; };
-		1F2DB6BB91ADAE305DDB5739B14816A8 /* AELDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7841CDBE4E18701DB6279146ECB6FF /* AELDMemoryCache.m */; };
+		1D05897CA63AA4393A881CE26D35E58D /* AEReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB9418F334F8E3BB9B1F5A13352EEEC /* AEReachability.m */; };
 		2256A6BB3CC51E411296D04CB798E28B /* Pods-PROJECT_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B8DFFB102959601DC16588C5C3083B /* Pods-PROJECT_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30F0CD4B08843939C1CD936BD4E87240 /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = CBD4C50C167199341434931397D94693 /* AEDKServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		236C501DADBE95F87A306D8C34C3B145 /* AELDCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 62465F17CAAFB8F8E0208AAF803323C7 /* AELDCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		242F65DA233DB5D92F32CEFD3F62719B /* AELDMemoryCachePlug.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3E16DC2EF1996CF2F389AB8B947BA9 /* AELDMemoryCachePlug.m */; };
+		26D4A42C032FF3209F38BF919E5335C5 /* AEDKServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 0338FA49ED2C21220081BEA52FAC3D8B /* AEDKServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32832F408906D19BE9A90369609B76A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
+		32A65D8DD689002AC8D23F792A25FE7F /* AEDKServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 827C04A85343E709CD6FB91ACE3FAB3D /* AEDKServer.m */; };
 		35C43A8DC1407A29A3920DF3FA921A65 /* Pods-PROJECT_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AAD82F1ACB5C4AB130CE057C2F4E6242 /* Pods-PROJECT_Example-dummy.m */; };
-		3ADA995E089B0346C7517DB37A83DB0B /* AEDKServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 41E22EE37B3FAAC312C5E46059F013D9 /* AEDKServiceConfiguration.m */; };
-		4109A8B5D8C7E5DE1165F6D1470F277C /* AELocalDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 623AFB22A624C314DE091A13E1E36E58 /* AELocalDataKit-dummy.m */; };
-		44C7086F4FCF8B06C2DDE8861B7D0FF5 /* AELDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AF28B3FB6274B7A727F3FD9C9EAF2 /* AELDDiskCache.m */; };
-		486B1C1181D971B9669AF5E98E86BB7F /* AEDKPlugProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 85130564826D7C25B420359B8242AF9E /* AEDKPlugProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4E7E0A8BC755352399FFB3506A0B74C2 /* AELDMemoryCachePlug.m in Sources */ = {isa = PBXBuildFile; fileRef = FB3E16DC2EF1996CF2F389AB8B947BA9 /* AELDMemoryCachePlug.m */; };
-		501E7F6184C0FC1E6F3F35BCABEAB315 /* AELocalDataPlug.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DE595A2A1F7926537171F51DED9836 /* AELocalDataPlug.m */; };
-		50810E356492F9203FAA7B73268132E3 /* AELDMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E867C7741CE8E3D1080FF8B9FB88CEB /* AELDMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51134DF62EAD8B3D97402D7FE0D348A4 /* AEDKProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 8048FE0EB4CC8E03F74BEBC2FCB2DD96 /* AEDKProcess.m */; };
-		55B354CF7CC61F9E356E653BCE8279BD /* AEDKServer.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F3186F06CF7BC509F61ABC7DF85031 /* AEDKServer.m */; };
-		5B944E8B9F0BD5957281CF1B56EC9755 /* AELDResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F7F939ED5898DBEED4681A0CCEE111 /* AELDResponse.m */; };
-		5F3D821D9AD18FDA2C0ACAB163EB1BCA /* AEDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A431EAC0FA342951BBA4718617063A6 /* AEDataKit-dummy.m */; };
-		67F192D56DC4B160206794DF2E745A7D /* AELocalDataSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BF18FC22D6BA4804CBB15AAC5687AD1B /* AELocalDataSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6866BDBE4CC4E10317CA6D20B52F7264 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
-		6B944CDA0209F027B0EA807645E69433 /* AELocalDataSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DED17239D07448D230B4DF398489D8 /* AELocalDataSocket.m */; };
-		6E094E8D4869BB584DB3D1EDB9656DBE /* AELDDiskCachePlug.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE6072643DD7359B06DC156ECBA662 /* AELDDiskCachePlug.m */; };
-		7F1B9799C3E8BCBFB827F6B4826C1FD2 /* AELDDiskCachePlug.h in Headers */ = {isa = PBXBuildFile; fileRef = B4933498116B98D6B3DD9751FE9ACABA /* AELDDiskCachePlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8197D3E61876B2EB4244075917329706 /* AELDPlugMode.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F469589F18B86F208A2D0025C32DA5 /* AELDPlugMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F4CE3431F55514000A37EC1 /* AEDKImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */; };
-		8F4CE3441F55514000A37EC1 /* AEDKImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */; };
-		8FA3DC1F1F2B362200624B35 /* AEDKTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA3DC1D1F2B362200624B35 /* AEDKTools.h */; };
-		8FA3DC201F2B362200624B35 /* AEDKTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA3DC1E1F2B362200624B35 /* AEDKTools.m */; };
-		8FE78AB03391371AC2746B6CAEF0D4F0 /* AELDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AABA78B70BF951FE5B70B012A54111CB /* AELDTools.m */; };
-		A92B0451F2CFF98B4E4CCE78704FD577 /* AELDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 258400F17FDECF8EB86B5570207782CF /* AELDTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA49E3C0A8236E9E271D98E3AFF5843A /* AELocalDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD427E72829B1E811D68DB53258603 /* AELocalDataKit.framework */; };
-		AB558BADDFC3EC6F4301C92BCC6D9519 /* AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = E88B2EAF137407136467E508FD4E7DFA /* AEDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE9904323A053DAD15A9844E8725C3CC /* AELocalDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E86BB9881D1D5DA8F366D730F0FC5478 /* AELocalDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B2D2F0BEAD245D85A3D8CA3484DBC4B0 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = D9E0FA8A3976F9783D5124B606CBE31A /* Info.plist */; };
-		B6D1CC494B51EF78D4DEF8EB571C3B1A /* AELDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A421F7B314A2C7A45E19220B2F25E2 /* AELDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9D9A59D3AC9E60DD4E50320319CDE7E /* AEDKProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = F19EAA2E2FC710ECE4562B0B7B767763 /* AEDKProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD38AED962C581DCB20A47C51BB4A656 /* AELDCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 62465F17CAAFB8F8E0208AAF803323C7 /* AELDCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD9FAC074396744EC3EC43D76AF8C495 /* AELDResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7426873D2C0BFD57FB2C66DA87A57B2E /* AELDResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA5056CD518A8C5A5BC69647EB5BAF5B /* AELDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D1F37E4F7BCC3373AADA3D756D0F56 /* AELDCache.m */; };
-		CB831E10CEBC9E8F36CE5F1228C149AF /* AEDKServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 99C8C81825B26586E444F075EB866C11 /* AEDKServiceConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE5D6E107BD0A9AC1E0F44F280C8735B /* AELocalDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD3A3835A50E4CDA61BD62F1BB5C69D /* AELocalDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CE965F16F59DBF2EB3534A8FBF9D9CDA /* AEDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD347397B4E8EAD72B39C5F14935847 /* AEDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D535C4E361D92B3BC39C4C73A6C70509 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
+		3C6DAED75389A128A23961C260DB66F4 /* AEDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BAD347397B4E8EAD72B39C5F14935847 /* AEDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		45AA1EAE7DAECF3A219EBCFC9F1CBC15 /* AELDPlugMode.h in Headers */ = {isa = PBXBuildFile; fileRef = D2F469589F18B86F208A2D0025C32DA5 /* AELDPlugMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5070776AA6EF2D0E0DA2630161BC66C4 /* AEDKProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E7F096FF8B351DE8B53FEC7DBDE8BB /* AEDKProcess.m */; };
+		53315DAB5E179C239A2155510653AC18 /* AELDDiskCachePlug.h in Headers */ = {isa = PBXBuildFile; fileRef = B4933498116B98D6B3DD9751FE9ACABA /* AELDDiskCachePlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5613496188D424DC20E8282AC5C8B381 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = D9E0FA8A3976F9783D5124B606CBE31A /* Info.plist */; };
+		5BBF1000DD97791D45F9C712507CAC2E /* AELDTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AABA78B70BF951FE5B70B012A54111CB /* AELDTools.m */; };
+		61EDD299B97FC247FEF9224989E73E1C /* AELDTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 258400F17FDECF8EB86B5570207782CF /* AELDTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6328ED29B18D16911690145996987CF0 /* AELDOperationMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EC22D3EA91DEE1F023CB64D73ABEF54 /* AELDOperationMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6395ADAD301C70DDBD013F5CC977A6EB /* AELDDiskCachePlug.m in Sources */ = {isa = PBXBuildFile; fileRef = C9DE6072643DD7359B06DC156ECBA662 /* AELDDiskCachePlug.m */; };
+		70D9118A537DF5CD83AFA85A564294C3 /* AELocalDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 623AFB22A624C314DE091A13E1E36E58 /* AELocalDataKit-dummy.m */; };
+		715C512BAF73B33BFD2D9FDF909CC2FB /* AEDKPlugProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 90CD3B1FB6654C62F4CEEEDEE609CFD1 /* AEDKPlugProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		814858B932223EE87A54C64A07D55375 /* AELDMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E867C7741CE8E3D1080FF8B9FB88CEB /* AELDMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81AD9B2E5A5A2CC05C49C84B6DEEF98D /* AELDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7841CDBE4E18701DB6279146ECB6FF /* AELDMemoryCache.m */; };
+		838536A47DD31FC6AE252EE871FBF4AA /* AELocalDataPlug.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AEA9A4FEC6BFC1C048FC209109561C /* AELocalDataPlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8404B09B6530AD78C67425466B0E64F0 /* AELDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AF28B3FB6274B7A727F3FD9C9EAF2 /* AELDDiskCache.m */; };
+		8864BFBE9DA7B1C4C0BCFC1C73369A18 /* AELDResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7426873D2C0BFD57FB2C66DA87A57B2E /* AELDResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90018E885AD4DF8EECB89CCAB95D57DD /* AELDOperationMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6711ED3ECD299058D19FCB240F8E3081 /* AELDOperationMode.m */; };
+		9AA3A3C31986DC39918AD2E6927F37D8 /* AELocalDataPlug.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8955E240523CF87FBA47454FB92F /* AELocalDataPlug.m */; };
+		A0B21756B5FC6AB9DED76D2D2A387C05 /* AEDKTools.m in Sources */ = {isa = PBXBuildFile; fileRef = AD1B9F6A11591751D7F0B83525A18778 /* AEDKTools.m */; };
+		A40C106A667AD0310F77DAF43C9D04F9 /* AEDKProcess.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E3EBA33005F5E1DC13B42D94C33079 /* AEDKProcess.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4C2C0C1B5711329DEDED4774F90D759 /* AELDPlugMode.m in Sources */ = {isa = PBXBuildFile; fileRef = B67B104B0169241D49997187B582D734 /* AELDPlugMode.m */; };
+		A55AE6955142472490D47BE1A4E312BC /* AEDKServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = CFF6F88199AFCB1C86E273C6558A126F /* AEDKServiceConfiguration.m */; };
+		A85728FD6C0E2A17EEC78C7FC6BF97A8 /* AENetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 791C15423175B8FE54605BC1942E9322 /* AENetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB8B9AB35860CDECA5DE0A8226F341DA /* AELDCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D1F37E4F7BCC3373AADA3D756D0F56 /* AELDCache.m */; };
+		AD6F93A04455B5255124679813A89E21 /* AELDResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F7F939ED5898DBEED4681A0CCEE111 /* AELDResponse.m */; };
+		ADB1190699E449AEBC8525DDDD5B89D0 /* AELocalDataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BD427E72829B1E811D68DB53258603 /* AELocalDataKit.framework */; };
+		BC75815377C2DEDBA4D7724C91ABFC3A /* AEDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A431EAC0FA342951BBA4718617063A6 /* AEDataKit-dummy.m */; };
+		C1EC1CF9D045A47FDEB37DB65FB69CD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */; };
+		C69D01AAC114A104CEA71A3CF6CE117A /* AEDKImageViewPlaceholder.h in Headers */ = {isa = PBXBuildFile; fileRef = AED1502A2C5749432E903CF7ED868DC1 /* AEDKImageViewPlaceholder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D65DA60C87A69B7E38CFCC387DE80DC4 /* Pods-PROJECT_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC215636D9E3A9E862E70C6B9CBBAF13 /* Pods-PROJECT_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED8D4B3D8186D84662B21AF98FB887C4 /* AELDOperationMode.m in Sources */ = {isa = PBXBuildFile; fileRef = 6711ED3ECD299058D19FCB240F8E3081 /* AELDOperationMode.m */; };
-		F2E0A4B8AC2BABA1D57E4A800C389EDF /* AELocalDataPlug.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3D566B2B338FC6F67F8E148DE6C1EA /* AELocalDataPlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC1A5770BA80E783D50DF531B334BD31 /* AENetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECB979AE549F0D41539073B0FCA4C07 /* AENetworkReachabilityManager.m */; };
+		DEF7ADE83A49562D07AEA15A96DDF406 /* AELocalDataSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DED17239D07448D230B4DF398489D8 /* AELocalDataSocket.m */; };
+		E4BCC2AFC9F8A584915D0D4493CD94B0 /* AEDKWebImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 104CE92627C4F1C88730FEB0DE42A6BB /* AEDKWebImageLoader.m */; };
+		E5CCECB7C784339AF381CB04A8C8CA97 /* AELocalDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FD3A3835A50E4CDA61BD62F1BB5C69D /* AELocalDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E79075D4419145EA8ADD01D1188ED186 /* AELDDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 55A421F7B314A2C7A45E19220B2F25E2 /* AELDDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED4A5617D073D2591704D3E8D9B47CD2 /* AELDMemoryCachePlug.h in Headers */ = {isa = PBXBuildFile; fileRef = 11D3FB4DE4ACAA38EBE1B3263A5B5E51 /* AELDMemoryCachePlug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED5292E1ED44742FBCE33179C6D8356 /* AEDKImageViewPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8521438D6798FA3D5F198F17B35031 /* AEDKImageViewPlaceholder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,42 +69,50 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A65CA0EFB53F50F3C5D3335D9962C584;
-			remoteInfo = AELocalDataKit;
-		};
-		2311B2D59056827E3B75D688A9C3C02B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A65CA0EFB53F50F3C5D3335D9962C584;
+			remoteGlobalIDString = E8180DC317AA4545147F7DC7978A3C2F;
 			remoteInfo = AELocalDataKit;
 		};
 		E3397EF30383677A7DE377405C9DEB5E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FF92980D211A98CEF741DA5775036E3F;
+			remoteGlobalIDString = CE0761C90A1B2608E7F22BAF13E84819;
 			remoteInfo = AEDataKit;
+		};
+		F559E7E658185FDAE9D15275B29F5E52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8180DC317AA4545147F7DC7978A3C2F;
+			remoteInfo = AELocalDataKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0005AEA3372CC57C18D78BCFE0E239CF /* AELocalDataKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AELocalDataKit-prefix.pch"; sourceTree = "<group>"; };
+		0338FA49ED2C21220081BEA52FAC3D8B /* AEDKServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKServiceConfiguration.h; sourceTree = "<group>"; };
 		061C34AC55F921F44EB77580A82EF29D /* Pods-PROJECT_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Example-frameworks.sh"; sourceTree = "<group>"; };
+		079EA6AFC92B586B4F12E9B739C2954F /* AEDKWebImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKWebImageLoader.h; sourceTree = "<group>"; };
 		0A51A37E0F18C6E3AEC6CE89AE3AD85B /* Pods-PROJECT_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PROJECT_Tests-dummy.m"; sourceTree = "<group>"; };
+		104CE92627C4F1C88730FEB0DE42A6BB /* AEDKWebImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKWebImageLoader.m; sourceTree = "<group>"; };
 		11D3FB4DE4ACAA38EBE1B3263A5B5E51 /* AELDMemoryCachePlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDMemoryCachePlug.h; path = AELocalDataKit/Classes/BuiltinPlugs/AELDMemoryCachePlug.h; sourceTree = "<group>"; };
+		18E7F096FF8B351DE8B53FEC7DBDE8BB /* AEDKProcess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKProcess.m; sourceTree = "<group>"; };
+		1C8521438D6798FA3D5F198F17B35031 /* AEDKImageViewPlaceholder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKImageViewPlaceholder.m; sourceTree = "<group>"; };
 		1FD3A3835A50E4CDA61BD62F1BB5C69D /* AELocalDataKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELocalDataKit.h; path = AELocalDataKit/Classes/AELocalDataKit.h; sourceTree = "<group>"; };
 		212F7CCA0602C91BCF71C5A089CC1435 /* Pods-PROJECT_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PROJECT_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		234DE4D8E7A1CFA10ABD75DD02354224 /* AELocalDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AELocalDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		234DE4D8E7A1CFA10ABD75DD02354224 /* AELocalDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AELocalDataKit.framework; path = AELocalDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		258400F17FDECF8EB86B5570207782CF /* AELDTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDTools.h; path = AELocalDataKit/Classes/Tools/AELDTools.h; sourceTree = "<group>"; };
+		25CE8955E240523CF87FBA47454FB92F /* AELocalDataPlug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AELocalDataPlug.m; sourceTree = "<group>"; };
+		27E3EBA33005F5E1DC13B42D94C33079 /* AEDKProcess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKProcess.h; sourceTree = "<group>"; };
 		2A431EAC0FA342951BBA4718617063A6 /* AEDataKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEDataKit-dummy.m"; sourceTree = "<group>"; };
 		2EC22D3EA91DEE1F023CB64D73ABEF54 /* AELDOperationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDOperationMode.h; path = AELocalDataKit/Classes/Interface/AELDOperationMode.h; sourceTree = "<group>"; };
-		37DE595A2A1F7926537171F51DED9836 /* AELocalDataPlug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AELocalDataPlug.m; sourceTree = "<group>"; };
 		38B8DFFB102959601DC16588C5C3083B /* Pods-PROJECT_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PROJECT_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3B0382B420DD23A74D980B0B1950BD3F /* Pods-PROJECT_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PROJECT_Tests.modulemap"; sourceTree = "<group>"; };
+		3A6861F3BC6506CC029A98E4D159BD8A /* AEReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEReachability.h; sourceTree = "<group>"; };
+		3B0382B420DD23A74D980B0B1950BD3F /* Pods-PROJECT_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PROJECT_Tests.modulemap"; sourceTree = "<group>"; };
 		41869B1A763EBC0CF9B4D76293BB3B26 /* Pods-PROJECT_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		41E22EE37B3FAAC312C5E46059F013D9 /* AEDKServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKServiceConfiguration.m; sourceTree = "<group>"; };
+		41F1B3FFB34D74565095896D7FC4F69A /* AEDataKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDataKit.h; sourceTree = "<group>"; };
 		432AF28B3FB6274B7A727F3FD9C9EAF2 /* AELDDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDDiskCache.m; path = AELocalDataKit/Classes/Cache/AELDDiskCache.m; sourceTree = "<group>"; };
+		4ECB979AE549F0D41539073B0FCA4C07 /* AENetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AENetworkReachabilityManager.m; sourceTree = "<group>"; };
 		5303CFBF7C92055914E5A918061FFD7F /* Pods-PROJECT_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Example-resources.sh"; sourceTree = "<group>"; };
 		555F440FEB099A4773FF918EE4F416FC /* Pods-PROJECT_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PROJECT_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		55A421F7B314A2C7A45E19220B2F25E2 /* AELDDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDDiskCache.h; path = AELocalDataKit/Classes/Cache/AELDDiskCache.h; sourceTree = "<group>"; };
@@ -108,30 +122,30 @@
 		646247F51DCB2A1202C940E19A40FF0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6711ED3ECD299058D19FCB240F8E3081 /* AELDOperationMode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDOperationMode.m; path = AELocalDataKit/Classes/Interface/AELDOperationMode.m; sourceTree = "<group>"; };
 		67F7F939ED5898DBEED4681A0CCEE111 /* AELDResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDResponse.m; path = AELocalDataKit/Classes/Interface/AELDResponse.m; sourceTree = "<group>"; };
+		681BA793EE5AA1BB0E45B803D8E142F2 /* AEDKTools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKTools.h; sourceTree = "<group>"; };
 		684E604E00B0D0DCC1773F7FC2DE9A50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C5D2FCECDBDF229F55105F4AB1608F2 /* AEDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEDataKit.xcconfig; sourceTree = "<group>"; };
-		70EAB8A8C4736E788FF12E989F9CF1DF /* AELocalDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AELocalDataKit.modulemap; sourceTree = "<group>"; };
+		70EAB8A8C4736E788FF12E989F9CF1DF /* AELocalDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AELocalDataKit.modulemap; sourceTree = "<group>"; };
 		7426873D2C0BFD57FB2C66DA87A57B2E /* AELDResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDResponse.h; path = AELocalDataKit/Classes/Interface/AELDResponse.h; sourceTree = "<group>"; };
 		76BD427E72829B1E811D68DB53258603 /* AELocalDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AELocalDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8048FE0EB4CC8E03F74BEBC2FCB2DD96 /* AEDKProcess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKProcess.m; sourceTree = "<group>"; };
-		832D5F933CD2DAFB1DABBCD843F79FA8 /* Pods-PROJECT_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PROJECT_Example.modulemap"; sourceTree = "<group>"; };
-		85130564826D7C25B420359B8242AF9E /* AEDKPlugProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKPlugProtocol.h; sourceTree = "<group>"; };
-		8A083740BBFD217220C5521B820CB8BA /* Pods_PROJECT_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PROJECT_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		791C15423175B8FE54605BC1942E9322 /* AENetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AENetworkReachabilityManager.h; sourceTree = "<group>"; };
+		827C04A85343E709CD6FB91ACE3FAB3D /* AEDKServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKServer.m; sourceTree = "<group>"; };
+		832D5F933CD2DAFB1DABBCD843F79FA8 /* Pods-PROJECT_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PROJECT_Example.modulemap"; sourceTree = "<group>"; };
+		8A083740BBFD217220C5521B820CB8BA /* Pods_PROJECT_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PROJECT_Tests.framework; path = "Pods-PROJECT_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A38DB932799A1AC96717C13DAE3E4DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8A7841CDBE4E18701DB6279146ECB6FF /* AELDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDMemoryCache.m; path = AELocalDataKit/Classes/Cache/AELDMemoryCache.m; sourceTree = "<group>"; };
 		8E867C7741CE8E3D1080FF8B9FB88CEB /* AELDMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDMemoryCache.h; path = AELocalDataKit/Classes/Cache/AELDMemoryCache.h; sourceTree = "<group>"; };
-		8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKImageLoader.h; sourceTree = "<group>"; };
-		8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKImageLoader.m; sourceTree = "<group>"; };
-		8FA3DC1D1F2B362200624B35 /* AEDKTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEDKTools.h; sourceTree = "<group>"; };
-		8FA3DC1E1F2B362200624B35 /* AEDKTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEDKTools.m; sourceTree = "<group>"; };
+		90CD3B1FB6654C62F4CEEEDEE609CFD1 /* AEDKPlugProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKPlugProtocol.h; sourceTree = "<group>"; };
 		91A32D6F33567EA0C081A96820458449 /* Pods-PROJECT_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PROJECT_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9413E1D8EEFEDBBC0F9083AC58C3C2DE /* Pods-PROJECT_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		97D1F37E4F7BCC3373AADA3D756D0F56 /* AELDCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDCache.m; path = AELocalDataKit/Classes/Cache/AELDCache.m; sourceTree = "<group>"; };
-		99C8C81825B26586E444F075EB866C11 /* AEDKServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKServiceConfiguration.h; sourceTree = "<group>"; };
-		A7F3186F06CF7BC509F61ABC7DF85031 /* AEDKServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKServer.m; sourceTree = "<group>"; };
+		A37D7BF4F3EED1DCE378A723D7B47845 /* AEDKServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKServer.h; sourceTree = "<group>"; };
 		AABA78B70BF951FE5B70B012A54111CB /* AELDTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDTools.m; path = AELocalDataKit/Classes/Tools/AELDTools.m; sourceTree = "<group>"; };
 		AAD82F1ACB5C4AB130CE057C2F4E6242 /* Pods-PROJECT_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PROJECT_Example-dummy.m"; sourceTree = "<group>"; };
+		AD1B9F6A11591751D7F0B83525A18778 /* AEDKTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKTools.m; sourceTree = "<group>"; };
+		AED1502A2C5749432E903CF7ED868DC1 /* AEDKImageViewPlaceholder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKImageViewPlaceholder.h; sourceTree = "<group>"; };
+		B1AEA9A4FEC6BFC1C048FC209109561C /* AELocalDataPlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AELocalDataPlug.h; sourceTree = "<group>"; };
 		B4933498116B98D6B3DD9751FE9ACABA /* AELDDiskCachePlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDDiskCachePlug.h; path = AELocalDataKit/Classes/BuiltinPlugs/AELDDiskCachePlug.h; sourceTree = "<group>"; };
 		B5F2E29A4EF2BC2FFBC29347222DF186 /* Pods-PROJECT_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B67B104B0169241D49997187B582D734 /* AELDPlugMode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDPlugMode.m; path = AELocalDataKit/Classes/Interface/AELDPlugMode.m; sourceTree = "<group>"; };
@@ -139,37 +153,26 @@
 		BAD347397B4E8EAD72B39C5F14935847 /* AEDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEDataKit-umbrella.h"; sourceTree = "<group>"; };
 		BF18FC22D6BA4804CBB15AAC5687AD1B /* AELocalDataSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELocalDataSocket.h; path = AELocalDataKit/Classes/Socket/AELocalDataSocket.h; sourceTree = "<group>"; };
 		BF1D9D4CF968BDECF52790AE5AFEDC9C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C3E54E12EFD9BD5DF79DB81F568B8993 /* AEDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AEDataKit.modulemap; sourceTree = "<group>"; };
+		BFB9418F334F8E3BB9B1F5A13352EEEC /* AEReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEReachability.m; sourceTree = "<group>"; };
+		C3E54E12EFD9BD5DF79DB81F568B8993 /* AEDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AEDataKit.modulemap; sourceTree = "<group>"; };
 		C4E7EB8E94AEED4043EB6C502C42394F /* Pods-PROJECT_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C9DE6072643DD7359B06DC156ECBA662 /* AELDDiskCachePlug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDDiskCachePlug.m; path = AELocalDataKit/Classes/BuiltinPlugs/AELDDiskCachePlug.m; sourceTree = "<group>"; };
-		CBD4C50C167199341434931397D94693 /* AEDKServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKServer.h; sourceTree = "<group>"; };
+		CFF6F88199AFCB1C86E273C6558A126F /* AEDKServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AEDKServiceConfiguration.m; sourceTree = "<group>"; };
 		D2F469589F18B86F208A2D0025C32DA5 /* AELDPlugMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDPlugMode.h; path = AELocalDataKit/Classes/Interface/AELDPlugMode.h; sourceTree = "<group>"; };
 		D3DED17239D07448D230B4DF398489D8 /* AELocalDataSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELocalDataSocket.m; path = AELocalDataKit/Classes/Socket/AELocalDataSocket.m; sourceTree = "<group>"; };
-		D63813E1C3AB462A13C80D43A03DD6EC /* Pods_PROJECT_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PROJECT_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D63813E1C3AB462A13C80D43A03DD6EC /* Pods_PROJECT_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PROJECT_Example.framework; path = "Pods-PROJECT_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66A808E6F4DFDF5950FE73AD6DCC75D /* Pods-PROJECT_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D9B5AFD416CFA40C65607276CF0DBDB4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9E0FA8A3976F9783D5124B606CBE31A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = AELocalDataKit/Classes/Info.plist; sourceTree = "<group>"; };
 		DD6ADBFE42F1FD989F55513402113E41 /* Pods-PROJECT_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Tests-resources.sh"; sourceTree = "<group>"; };
-		DDD3923A13DCE031A63D8B6496B65C3E /* AEDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDD3923A13DCE031A63D8B6496B65C3E /* AEDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEDataKit.framework; path = AEDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86BB9881D1D5DA8F366D730F0FC5478 /* AELocalDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AELocalDataKit-umbrella.h"; sourceTree = "<group>"; };
-		E88B2EAF137407136467E508FD4E7DFA /* AEDataKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDataKit.h; sourceTree = "<group>"; };
 		EE8EFF6255FBB83F212BB22773AFDBBC /* AELocalDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AELocalDataKit.xcconfig; sourceTree = "<group>"; };
-		F19EAA2E2FC710ECE4562B0B7B767763 /* AEDKProcess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AEDKProcess.h; sourceTree = "<group>"; };
-		FA3D566B2B338FC6F67F8E148DE6C1EA /* AELocalDataPlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AELocalDataPlug.h; sourceTree = "<group>"; };
 		FB3E16DC2EF1996CF2F389AB8B947BA9 /* AELDMemoryCachePlug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDMemoryCachePlug.m; path = AELocalDataKit/Classes/BuiltinPlugs/AELDMemoryCachePlug.m; sourceTree = "<group>"; };
 		FC215636D9E3A9E862E70C6B9CBBAF13 /* Pods-PROJECT_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PROJECT_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F1B142544FBA646B8A27CEF69F27918 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AA49E3C0A8236E9E271D98E3AFF5843A /* AELocalDataKit.framework in Frameworks */,
-				D535C4E361D92B3BC39C4C73A6C70509 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3192409C9808D84A6F70D9C8A2B09FFB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,11 +181,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50F7F2F4ED26096156A534D7D151B753 /* Frameworks */ = {
+		8275CE2E5991F0B3C159B9EA0B1ADF93 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6866BDBE4CC4E10317CA6D20B52F7264 /* Foundation.framework in Frameworks */,
+				ADB1190699E449AEBC8525DDDD5B89D0 /* AELocalDataKit.framework in Frameworks */,
+				11398DD9EF3585B8E2B4067C62DA9094 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		937891226893F481C5C5AD51DA3C9A76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1EC1CF9D045A47FDEB37DB65FB69CD1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,11 +283,12 @@
 			path = "Target Support Files/Pods-PROJECT_Tests";
 			sourceTree = "<group>";
 		};
-		2DFC15FBFC66F08FBA5A32503390523C /* Pod */ = {
+		40D76EFF7C51A5A23C48D4CE4B811ADB /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C0D1358C86D6851DE58BF43C34C7F567 /* Classes */,
+				AD0BCB34F7AF308F9D67B97B880D9AE8 /* Classes */,
 			);
+			name = Pod;
 			path = Pod;
 			sourceTree = "<group>";
 		};
@@ -306,6 +319,7 @@
 				D9E0FA8A3976F9783D5124B606CBE31A /* Info.plist */,
 				1C06627B44C09A3B90788061D5E8930D /* Support Files */,
 			);
+			name = AELocalDataKit;
 			path = AELocalDataKit;
 			sourceTree = "<group>";
 		};
@@ -356,6 +370,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		AD0BCB34F7AF308F9D67B97B880D9AE8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				41F1B3FFB34D74565095896D7FC4F69A /* AEDataKit.h */,
+				AED1502A2C5749432E903CF7ED868DC1 /* AEDKImageViewPlaceholder.h */,
+				1C8521438D6798FA3D5F198F17B35031 /* AEDKImageViewPlaceholder.m */,
+				90CD3B1FB6654C62F4CEEEDEE609CFD1 /* AEDKPlugProtocol.h */,
+				27E3EBA33005F5E1DC13B42D94C33079 /* AEDKProcess.h */,
+				18E7F096FF8B351DE8B53FEC7DBDE8BB /* AEDKProcess.m */,
+				A37D7BF4F3EED1DCE378A723D7B47845 /* AEDKServer.h */,
+				827C04A85343E709CD6FB91ACE3FAB3D /* AEDKServer.m */,
+				0338FA49ED2C21220081BEA52FAC3D8B /* AEDKServiceConfiguration.h */,
+				CFF6F88199AFCB1C86E273C6558A126F /* AEDKServiceConfiguration.m */,
+				681BA793EE5AA1BB0E45B803D8E142F2 /* AEDKTools.h */,
+				AD1B9F6A11591751D7F0B83525A18778 /* AEDKTools.m */,
+				079EA6AFC92B586B4F12E9B739C2954F /* AEDKWebImageLoader.h */,
+				104CE92627C4F1C88730FEB0DE42A6BB /* AEDKWebImageLoader.m */,
+				B1AEA9A4FEC6BFC1C048FC209109561C /* AELocalDataPlug.h */,
+				25CE8955E240523CF87FBA47454FB92F /* AELocalDataPlug.m */,
+				791C15423175B8FE54605BC1942E9322 /* AENetworkReachabilityManager.h */,
+				4ECB979AE549F0D41539073B0FCA4C07 /* AENetworkReachabilityManager.m */,
+				3A6861F3BC6506CC029A98E4D159BD8A /* AEReachability.h */,
+				BFB9418F334F8E3BB9B1F5A13352EEEC /* AEReachability.m */,
+			);
+			name = Classes;
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		B5EE7674096CCF1AC218852862D77FDA /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,31 +406,10 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		C0D1358C86D6851DE58BF43C34C7F567 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E88B2EAF137407136467E508FD4E7DFA /* AEDataKit.h */,
-				85130564826D7C25B420359B8242AF9E /* AEDKPlugProtocol.h */,
-				F19EAA2E2FC710ECE4562B0B7B767763 /* AEDKProcess.h */,
-				8048FE0EB4CC8E03F74BEBC2FCB2DD96 /* AEDKProcess.m */,
-				CBD4C50C167199341434931397D94693 /* AEDKServer.h */,
-				A7F3186F06CF7BC509F61ABC7DF85031 /* AEDKServer.m */,
-				99C8C81825B26586E444F075EB866C11 /* AEDKServiceConfiguration.h */,
-				41E22EE37B3FAAC312C5E46059F013D9 /* AEDKServiceConfiguration.m */,
-				FA3D566B2B338FC6F67F8E148DE6C1EA /* AELocalDataPlug.h */,
-				37DE595A2A1F7926537171F51DED9836 /* AELocalDataPlug.m */,
-				8FA3DC1D1F2B362200624B35 /* AEDKTools.h */,
-				8FA3DC1E1F2B362200624B35 /* AEDKTools.m */,
-				8F4CE3411F55514000A37EC1 /* AEDKImageLoader.h */,
-				8F4CE3421F55514000A37EC1 /* AEDKImageLoader.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		C42AFD06BD8D305B8B891DFF2FCC2DA9 /* AEDataKit */ = {
 			isa = PBXGroup;
 			children = (
-				2DFC15FBFC66F08FBA5A32503390523C /* Pod */,
+				40D76EFF7C51A5A23C48D4CE4B811ADB /* Pod */,
 				27530C67CA91CA395DDFF21AE185742A /* Support Files */,
 			);
 			name = AEDataKit;
@@ -406,25 +427,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		298E8907D59D7DF238180A63FFB55D40 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BD38AED962C581DCB20A47C51BB4A656 /* AELDCache.h in Headers */,
-				B6D1CC494B51EF78D4DEF8EB571C3B1A /* AELDDiskCache.h in Headers */,
-				7F1B9799C3E8BCBFB827F6B4826C1FD2 /* AELDDiskCachePlug.h in Headers */,
-				50810E356492F9203FAA7B73268132E3 /* AELDMemoryCache.h in Headers */,
-				0BC5AC29A0AE0B11D06ABFEB9CD409BE /* AELDMemoryCachePlug.h in Headers */,
-				17F8DBB8CC72CB0CB2A90D73CD8A58C1 /* AELDOperationMode.h in Headers */,
-				8197D3E61876B2EB4244075917329706 /* AELDPlugMode.h in Headers */,
-				BD9FAC074396744EC3EC43D76AF8C495 /* AELDResponse.h in Headers */,
-				A92B0451F2CFF98B4E4CCE78704FD577 /* AELDTools.h in Headers */,
-				AE9904323A053DAD15A9844E8725C3CC /* AELocalDataKit-umbrella.h in Headers */,
-				CE5D6E107BD0A9AC1E0F44F280C8735B /* AELocalDataKit.h in Headers */,
-				67F192D56DC4B160206794DF2E745A7D /* AELocalDataSocket.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2E4C645B634CA5083B587E7AD5DF30BD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -433,40 +435,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		811F803828F71EE338EA92AA7A0810DF /* Headers */ = {
+		5B04FC7F94BC721CE2EA0E5CB4C49CAA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE965F16F59DBF2EB3534A8FBF9D9CDA /* AEDataKit-umbrella.h in Headers */,
-				AB558BADDFC3EC6F4301C92BCC6D9519 /* AEDataKit.h in Headers */,
-				486B1C1181D971B9669AF5E98E86BB7F /* AEDKPlugProtocol.h in Headers */,
-				B9D9A59D3AC9E60DD4E50320319CDE7E /* AEDKProcess.h in Headers */,
-				30F0CD4B08843939C1CD936BD4E87240 /* AEDKServer.h in Headers */,
-				CB831E10CEBC9E8F36CE5F1228C149AF /* AEDKServiceConfiguration.h in Headers */,
-				F2E0A4B8AC2BABA1D57E4A800C389EDF /* AELocalDataPlug.h in Headers */,
-				8FA3DC1F1F2B362200624B35 /* AEDKTools.h in Headers */,
-				8F4CE3431F55514000A37EC1 /* AEDKImageLoader.h in Headers */,
+				236C501DADBE95F87A306D8C34C3B145 /* AELDCache.h in Headers */,
+				E79075D4419145EA8ADD01D1188ED186 /* AELDDiskCache.h in Headers */,
+				53315DAB5E179C239A2155510653AC18 /* AELDDiskCachePlug.h in Headers */,
+				814858B932223EE87A54C64A07D55375 /* AELDMemoryCache.h in Headers */,
+				ED4A5617D073D2591704D3E8D9B47CD2 /* AELDMemoryCachePlug.h in Headers */,
+				6328ED29B18D16911690145996987CF0 /* AELDOperationMode.h in Headers */,
+				45AA1EAE7DAECF3A219EBCFC9F1CBC15 /* AELDPlugMode.h in Headers */,
+				8864BFBE9DA7B1C4C0BCFC1C73369A18 /* AELDResponse.h in Headers */,
+				61EDD299B97FC247FEF9224989E73E1C /* AELDTools.h in Headers */,
+				121111962D98A13A198921A523B7F8A7 /* AELocalDataKit-umbrella.h in Headers */,
+				E5CCECB7C784339AF381CB04A8C8CA97 /* AELocalDataKit.h in Headers */,
+				00B6F6F122B0090349F9ABDF47F4D440 /* AELocalDataSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BEC496B36E6E0EAEF7664AAD7D2DFA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C6DAED75389A128A23961C260DB66F4 /* AEDataKit-umbrella.h in Headers */,
+				189CF5D841CAC76FA50A3075EB6BBB9E /* AEDataKit.h in Headers */,
+				C69D01AAC114A104CEA71A3CF6CE117A /* AEDKImageViewPlaceholder.h in Headers */,
+				715C512BAF73B33BFD2D9FDF909CC2FB /* AEDKPlugProtocol.h in Headers */,
+				A40C106A667AD0310F77DAF43C9D04F9 /* AEDKProcess.h in Headers */,
+				1252BAD6E3CC8D2DDBD7B11DE988464F /* AEDKServer.h in Headers */,
+				26D4A42C032FF3209F38BF919E5335C5 /* AEDKServiceConfiguration.h in Headers */,
+				185A980FB31A9DD4F3465C91CF8FDEF9 /* AEDKTools.h in Headers */,
+				0E3AC172AB7F74651D1F13A96D2E90C3 /* AEDKWebImageLoader.h in Headers */,
+				838536A47DD31FC6AE252EE871FBF4AA /* AELocalDataPlug.h in Headers */,
+				A85728FD6C0E2A17EEC78C7FC6BF97A8 /* AENetworkReachabilityManager.h in Headers */,
+				12C52DA9709EB1F3D4B2E2BC9B99E57F /* AEReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		A65CA0EFB53F50F3C5D3335D9962C584 /* AELocalDataKit */ = {
+		CE0761C90A1B2608E7F22BAF13E84819 /* AEDataKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 225B3D7A776B75542D5BE56D65FB2D67 /* Build configuration list for PBXNativeTarget "AELocalDataKit" */;
+			buildConfigurationList = 448F16C803DD0B2DEC8573BE0E801023 /* Build configuration list for PBXNativeTarget "AEDataKit" */;
 			buildPhases = (
-				FA8EA7D83C80CEA7DE0ED8A7CDA56828 /* Sources */,
-				50F7F2F4ED26096156A534D7D151B753 /* Frameworks */,
-				298E8907D59D7DF238180A63FFB55D40 /* Headers */,
+				4DD6878D146E6874AEFC913195E2CAAD /* Sources */,
+				8275CE2E5991F0B3C159B9EA0B1ADF93 /* Frameworks */,
+				9BEC496B36E6E0EAEF7664AAD7D2DFA0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				29850603373DF470EB1E5607E89A22A7 /* PBXTargetDependency */,
 			);
-			name = AELocalDataKit;
-			productName = AELocalDataKit;
-			productReference = 234DE4D8E7A1CFA10ABD75DD02354224 /* AELocalDataKit.framework */;
+			name = AEDataKit;
+			productName = AEDataKit;
+			productReference = DDD3923A13DCE031A63D8B6496B65C3E /* AEDataKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E11A6141AEF05093E17CF4E1747FA6BD /* Pods-PROJECT_Tests */ = {
@@ -486,6 +511,23 @@
 			productReference = 8A083740BBFD217220C5521B820CB8BA /* Pods_PROJECT_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E8180DC317AA4545147F7DC7978A3C2F /* AELocalDataKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB768A327D2A38BF574657DD23B33862 /* Build configuration list for PBXNativeTarget "AELocalDataKit" */;
+			buildPhases = (
+				2DCB52FD93C43B6A774EB8D5B431B0FA /* Sources */,
+				937891226893F481C5C5AD51DA3C9A76 /* Frameworks */,
+				5B04FC7F94BC721CE2EA0E5CB4C49CAA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AELocalDataKit;
+			productName = AELocalDataKit;
+			productReference = 234DE4D8E7A1CFA10ABD75DD02354224 /* AELocalDataKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		ED01395359EBD62ECB53E23BF501B8E9 /* Pods-PROJECT_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1A5DF55D38505A7C1C497EA8BA490A0 /* Build configuration list for PBXNativeTarget "Pods-PROJECT_Example" */;
@@ -503,24 +545,6 @@
 			name = "Pods-PROJECT_Example";
 			productName = "Pods-PROJECT_Example";
 			productReference = D63813E1C3AB462A13C80D43A03DD6EC /* Pods_PROJECT_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		FF92980D211A98CEF741DA5775036E3F /* AEDataKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C89F73785BEEA37CF578EB2738A56F8B /* Build configuration list for PBXNativeTarget "AEDataKit" */;
-			buildPhases = (
-				33F8F485892073A116FC0E0A569EDA01 /* Sources */,
-				1F1B142544FBA646B8A27CEF69F27918 /* Frameworks */,
-				811F803828F71EE338EA92AA7A0810DF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C6C0524CB6C4438FC47DB5082C65AEF0 /* PBXTargetDependency */,
-			);
-			name = AEDataKit;
-			productName = AEDataKit;
-			productReference = DDD3923A13DCE031A63D8B6496B65C3E /* AEDataKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -544,8 +568,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF92980D211A98CEF741DA5775036E3F /* AEDataKit */,
-				A65CA0EFB53F50F3C5D3335D9962C584 /* AELocalDataKit */,
+				CE0761C90A1B2608E7F22BAF13E84819 /* AEDataKit */,
+				E8180DC317AA4545147F7DC7978A3C2F /* AELocalDataKit */,
 				ED01395359EBD62ECB53E23BF501B8E9 /* Pods-PROJECT_Example */,
 				E11A6141AEF05093E17CF4E1747FA6BD /* Pods-PROJECT_Tests */,
 			);
@@ -553,17 +577,22 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		33F8F485892073A116FC0E0A569EDA01 /* Sources */ = {
+		2DCB52FD93C43B6A774EB8D5B431B0FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F3D821D9AD18FDA2C0ACAB163EB1BCA /* AEDataKit-dummy.m in Sources */,
-				8F4CE3441F55514000A37EC1 /* AEDKImageLoader.m in Sources */,
-				51134DF62EAD8B3D97402D7FE0D348A4 /* AEDKProcess.m in Sources */,
-				55B354CF7CC61F9E356E653BCE8279BD /* AEDKServer.m in Sources */,
-				3ADA995E089B0346C7517DB37A83DB0B /* AEDKServiceConfiguration.m in Sources */,
-				8FA3DC201F2B362200624B35 /* AEDKTools.m in Sources */,
-				501E7F6184C0FC1E6F3F35BCABEAB315 /* AELocalDataPlug.m in Sources */,
+				AB8B9AB35860CDECA5DE0A8226F341DA /* AELDCache.m in Sources */,
+				8404B09B6530AD78C67425466B0E64F0 /* AELDDiskCache.m in Sources */,
+				6395ADAD301C70DDBD013F5CC977A6EB /* AELDDiskCachePlug.m in Sources */,
+				81AD9B2E5A5A2CC05C49C84B6DEEF98D /* AELDMemoryCache.m in Sources */,
+				242F65DA233DB5D92F32CEFD3F62719B /* AELDMemoryCachePlug.m in Sources */,
+				90018E885AD4DF8EECB89CCAB95D57DD /* AELDOperationMode.m in Sources */,
+				A4C2C0C1B5711329DEDED4774F90D759 /* AELDPlugMode.m in Sources */,
+				AD6F93A04455B5255124679813A89E21 /* AELDResponse.m in Sources */,
+				5BBF1000DD97791D45F9C712507CAC2E /* AELDTools.m in Sources */,
+				70D9118A537DF5CD83AFA85A564294C3 /* AELocalDataKit-dummy.m in Sources */,
+				DEF7ADE83A49562D07AEA15A96DDF406 /* AELocalDataSocket.m in Sources */,
+				5613496188D424DC20E8282AC5C8B381 /* Info.plist in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,30 +604,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DD6878D146E6874AEFC913195E2CAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC75815377C2DEDBA4D7724C91ABFC3A /* AEDataKit-dummy.m in Sources */,
+				EED5292E1ED44742FBCE33179C6D8356 /* AEDKImageViewPlaceholder.m in Sources */,
+				5070776AA6EF2D0E0DA2630161BC66C4 /* AEDKProcess.m in Sources */,
+				32A65D8DD689002AC8D23F792A25FE7F /* AEDKServer.m in Sources */,
+				A55AE6955142472490D47BE1A4E312BC /* AEDKServiceConfiguration.m in Sources */,
+				A0B21756B5FC6AB9DED76D2D2A387C05 /* AEDKTools.m in Sources */,
+				E4BCC2AFC9F8A584915D0D4493CD94B0 /* AEDKWebImageLoader.m in Sources */,
+				9AA3A3C31986DC39918AD2E6927F37D8 /* AELocalDataPlug.m in Sources */,
+				DC1A5770BA80E783D50DF531B334BD31 /* AENetworkReachabilityManager.m in Sources */,
+				1D05897CA63AA4393A881CE26D35E58D /* AEReachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59A70F11B2FDC8613B3C2A23EF39D668 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1CE3B924A0083651BF8C3BA271333FD7 /* Pods-PROJECT_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA8EA7D83C80CEA7DE0ED8A7CDA56828 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CA5056CD518A8C5A5BC69647EB5BAF5B /* AELDCache.m in Sources */,
-				44C7086F4FCF8B06C2DDE8861B7D0FF5 /* AELDDiskCache.m in Sources */,
-				6E094E8D4869BB584DB3D1EDB9656DBE /* AELDDiskCachePlug.m in Sources */,
-				1F2DB6BB91ADAE305DDB5739B14816A8 /* AELDMemoryCache.m in Sources */,
-				4E7E0A8BC755352399FFB3506A0B74C2 /* AELDMemoryCachePlug.m in Sources */,
-				ED8D4B3D8186D84662B21AF98FB887C4 /* AELDOperationMode.m in Sources */,
-				0C8F2C92711A5613F867F9115E9C650C /* AELDPlugMode.m in Sources */,
-				5B944E8B9F0BD5957281CF1B56EC9755 /* AELDResponse.m in Sources */,
-				8FE78AB03391371AC2746B6CAEF0D4F0 /* AELDTools.m in Sources */,
-				4109A8B5D8C7E5DE1165F6D1470F277C /* AELocalDataKit-dummy.m in Sources */,
-				6B944CDA0209F027B0EA807645E69433 /* AELocalDataSocket.m in Sources */,
-				B2D2F0BEAD245D85A3D8CA3484DBC4B0 /* Info.plist in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,55 +635,55 @@
 		08A970C016C6C1AAF2BF4524ED6F72FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AELocalDataKit;
-			target = A65CA0EFB53F50F3C5D3335D9962C584 /* AELocalDataKit */;
+			target = E8180DC317AA4545147F7DC7978A3C2F /* AELocalDataKit */;
 			targetProxy = 0CEFE533A265F39E86E7FDF590BA830F /* PBXContainerItemProxy */;
+		};
+		29850603373DF470EB1E5607E89A22A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AELocalDataKit;
+			target = E8180DC317AA4545147F7DC7978A3C2F /* AELocalDataKit */;
+			targetProxy = F559E7E658185FDAE9D15275B29F5E52 /* PBXContainerItemProxy */;
 		};
 		C5D44C8C06EC97B6729F4B16E1783FC6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AEDataKit;
-			target = FF92980D211A98CEF741DA5775036E3F /* AEDataKit */;
+			target = CE0761C90A1B2608E7F22BAF13E84819 /* AEDataKit */;
 			targetProxy = E3397EF30383677A7DE377405C9DEB5E /* PBXContainerItemProxy */;
-		};
-		C6C0524CB6C4438FC47DB5082C65AEF0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AELocalDataKit;
-			target = A65CA0EFB53F50F3C5D3335D9962C584 /* AELocalDataKit */;
-			targetProxy = 2311B2D59056827E3B75D688A9C3C02B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14E8C81DC2E2645E134F0CBFE4CD4A14 /* Debug */ = {
+		207C61A4BDF3BD5479CE6C958F1F70D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C5D2FCECDBDF229F55105F4AB1608F2 /* AEDataKit.xcconfig */;
+			baseConfigurationReference = EE8EFF6255FBB83F212BB22773AFDBBC /* AELocalDataKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AEDataKit/AEDataKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AEDataKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AELocalDataKit/AELocalDataKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AELocalDataKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AEDataKit/AEDataKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AEDataKit;
+				MODULEMAP_FILE = "Target Support Files/AELocalDataKit/AELocalDataKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AELocalDataKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -705,38 +732,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		5033163190A2C8EC6628749F7F35FFD3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C5D2FCECDBDF229F55105F4AB1608F2 /* AEDataKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AEDataKit/AEDataKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AEDataKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AEDataKit/AEDataKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AEDataKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		585C1EE84AE6BBEA9236C5BA140535AA /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -926,7 +921,39 @@
 			};
 			name = Debug;
 		};
-		A75FA7AB718BE07216B54A9540A7C97B /* Debug */ = {
+		9B7BBB988E263766FD48C2CE393005E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C5D2FCECDBDF229F55105F4AB1608F2 /* AEDataKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AEDataKit/AEDataKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AEDataKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AEDataKit/AEDataKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AEDataKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DAB8696F650C9DFCA03B2D8309696DC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EE8EFF6255FBB83F212BB22773AFDBBC /* AELocalDataKit.xcconfig */;
 			buildSettings = {
@@ -958,9 +985,9 @@
 			};
 			name = Debug;
 		};
-		D763DF6BE12044B835736BD89EC7E193 /* Release */ = {
+		E9E86EA0E62E27A45B3F783C19C2827C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EE8EFF6255FBB83F212BB22773AFDBBC /* AELocalDataKit.xcconfig */;
+			baseConfigurationReference = 6C5D2FCECDBDF229F55105F4AB1608F2 /* AEDataKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -974,14 +1001,14 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AELocalDataKit/AELocalDataKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AELocalDataKit/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AEDataKit/AEDataKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AEDataKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AELocalDataKit/AELocalDataKit.modulemap";
+				MODULEMAP_FILE = "Target Support Files/AEDataKit/AEDataKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AELocalDataKit;
+				PRODUCT_NAME = AEDataKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -993,20 +1020,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		225B3D7A776B75542D5BE56D65FB2D67 /* Build configuration list for PBXNativeTarget "AELocalDataKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A75FA7AB718BE07216B54A9540A7C97B /* Debug */,
-				D763DF6BE12044B835736BD89EC7E193 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
 				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		448F16C803DD0B2DEC8573BE0E801023 /* Build configuration list for PBXNativeTarget "AEDataKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B7BBB988E263766FD48C2CE393005E7 /* Debug */,
+				E9E86EA0E62E27A45B3F783C19C2827C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1020,11 +1047,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C89F73785BEEA37CF578EB2738A56F8B /* Build configuration list for PBXNativeTarget "AEDataKit" */ = {
+		CB768A327D2A38BF574657DD23B33862 /* Build configuration list for PBXNativeTarget "AELocalDataKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				14E8C81DC2E2645E134F0CBFE4CD4A14 /* Debug */,
-				5033163190A2C8EC6628749F7F35FFD3 /* Release */,
+				DAB8696F650C9DFCA03B2D8309696DC4 /* Debug */,
+				207C61A4BDF3BD5479CE6C958F1F70D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

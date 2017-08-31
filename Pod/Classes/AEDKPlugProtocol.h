@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@protocol AEDKImageLoaderPlugProtocol <AEDKPlugProtocol>
+@protocol AEDKWebImageLoaderPlugProtocol <AEDKPlugProtocol>
 
 @optional
 

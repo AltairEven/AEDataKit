@@ -1,31 +1,38 @@
 //
-//  AEDKImageLoader.m
+//  AEDKWebImageLoader.m
 //  Pods
 //
-//  Created by Altair on 29/08/2017.
+//  Created by Altair on 30/08/2017.
 //
 //
 
-#import "AEDKImageLoader.h"
+#import "AEDKWebImageLoader.h"
 #import "AEDKServer.h"
+#import <objc/runtime.h>
 
-@implementation AEDKImageLoader
+@interface AEDKWebImageLoader ()
+
+@property (nonatomic, strong) NSMutableDictionary<NSString *, UIImage *> *defaultPlaceholderImages;
+
+@end
+
+@implementation AEDKWebImageLoader
+
+
 
 @end
 
 
-@implementation AEDKImageLoader (UIImage)
+@implementation AEDKWebImageLoader (UIImage)
 
 + (void)imageWithUrl:(NSURL *)url progress:(void (^)(int64_t, int64_t))progress completed:(void (^)(NSURL * _Nullable, UIImage * _Nullable, NSError * _Nullable))completedBlock {
     NSArray<id<AEDKPlugProtocol>> *delegates = [[AEDKServer server] allDelegates];
     BOOL hasDelegate = NO;
     //有指定的服务代理
     for (id delegate in delegates) {
-        if ([delegate conformsToProtocol:@protocol(AEDKImageLoaderPlugProtocol)]) {
-            if ([delegate respondsToSelector:@selector(imageWithUrl:progress:completed:)]) {
-                [delegate imageWithUrl:url progress:progress completed:completedBlock];
-                hasDelegate = YES;
-            }
+        if ([delegate conformsToProtocol:@protocol(AEDKWebImageLoaderPlugProtocol)] && [delegate respondsToSelector:@selector(imageWithUrl:progress:completed:)]) {
+            [delegate imageWithUrl:url progress:progress completed:completedBlock];
+            hasDelegate = YES;
             break;
         }
     }
@@ -38,34 +45,36 @@
 @end
 
 
-@implementation AEDKImageLoader (UIImageView)
+@implementation AEDKWebImageLoader (UIImageView)
 
-- (void)setDefaultPlaceholderImage:(UIImage *)defaultPlaceholderImage {
-    
+- (void)setDefaultPlaceholders:(NSArray<AEDKImageViewPlaceholder *> *)defaultPlaceholders {
+    objc_setAssociatedObject(self, @"AEDKWebImageLoader_defaultPlaceholders", defaultPlaceholders, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (UIImage *)defaultPlaceholderImage {
-    return nil;
+- (NSArray<AEDKImageViewPlaceholder *> *)defaultPlaceholders {
+    return objc_getAssociatedObject(self, @"AEDKWebImageLoader_defaultPlaceholders");
 }
 
-- (void)setDefaultContentMode:(UIViewContentMode)defaultContentMode {
-    
+#pragma mark Private methods
+
+- (UIImage *)getSuitablePlaceholderForImageView:(UIImageView *)imageView {
+    if (!imageView || ![imageView isKindOfClass:[UIImageView class]]) {
+        return nil;
+    }
+    UIImage *placeholder = nil;
+    for (AEDKImageViewPlaceholder *ph in self.defaultPlaceholders) {
+        placeholder = [ph fitPlaceholderImageForView:imageView];
+        if (placeholder) {
+            break;
+        }
+    }
+    return placeholder;
 }
 
-- (UIViewContentMode)defaultContentMode {
-    return UIViewContentModeTop;
-}
-
-- (void)setDefaultPlaceholderContentMode:(UIViewContentMode)defaultPlaceholderContentMode {
-
-}
-
-- (UIViewContentMode)defaultPlaceholderContentMode {
-    return UIViewContentModeTop;
-}
+#pragma mark Public methods
 
 - (void)setImageForImageView:(UIImageView *)imageView withUrl:(NSURL *)url {
-    [self setImageForImageView:imageView withURL:url placeholderImage:self.defaultPlaceholderImage progress:nil completed:nil];
+    [self setImageForImageView:imageView withURL:url placeholderImage:nil progress:nil completed:nil];
 }
 
 - (void)setImageForImageView:(UIImageView *)imageView withUrl:(NSURL *)url placeholderImage:(UIImage *)image {
@@ -73,7 +82,7 @@
 }
 
 - (void)setImageForImageView:(UIImageView *)imageView withURL:(NSURL *)url completed:(void (^)(NSURL * _Nullable, UIImage * _Nullable, NSError * _Nullable))completedBlock {
-    [self setImageForImageView:imageView withURL:url placeholderImage:self.defaultPlaceholderImage progress:nil completed:completedBlock];
+    [self setImageForImageView:imageView withURL:url placeholderImage:nil progress:nil completed:completedBlock];
 }
 
 - (void)setImageForImageView:(UIImageView *)imageView withURL:(NSURL *)url placeholderImage:(UIImage *)image completed:(void (^)(NSURL * _Nullable, UIImage * _Nullable, NSError * _Nullable))completedBlock {
@@ -81,7 +90,7 @@
 }
 
 - (void)setImageForImageView:(UIImageView *)imageView withURL:(NSURL *)url progress:(void (^)(int64_t, int64_t))progress completed:(void (^)(NSURL * _Nullable, UIImage * _Nullable, NSError * _Nullable))completedBlock {
-    [self setImageForImageView:imageView withURL:url placeholderImage:self.defaultPlaceholderImage progress:progress completed:completedBlock];
+    [self setImageForImageView:imageView withURL:url placeholderImage:nil progress:progress completed:completedBlock];
 }
 
 - (void)setImageForImageView:(UIImageView *)imageView withURL:(NSURL *)url placeholderImage:(UIImage *)placeholder progress:(void (^)(int64_t, int64_t))progress completed:(void (^)(NSURL * _Nullable, UIImage * _Nullable, NSError * _Nullable))completedBlock {
@@ -89,11 +98,12 @@
     BOOL hasDelegate = NO;
     //有指定的服务代理
     for (id delegate in delegates) {
-        if ([delegate conformsToProtocol:@protocol(AEDKImageLoaderPlugProtocol)]) {
-            if ([delegate respondsToSelector:@selector(setImageForImageView:withURL:placeholderImage:progress:completed:)]) {
-                [delegate setImageForImageView:imageView withURL:url placeholderImage:placeholder progress:progress completed:completedBlock];
-                hasDelegate = YES;
+        if ([delegate conformsToProtocol:@protocol(AEDKWebImageLoaderPlugProtocol)] && [delegate respondsToSelector:@selector(setImageForImageView:withURL:placeholderImage:progress:completed:)]) {
+            if (!placeholder) {
+                placeholder = [self getSuitablePlaceholderForImageView:imageView];
             }
+            [delegate setImageForImageView:imageView withURL:url placeholderImage:placeholder progress:progress completed:completedBlock];
+            hasDelegate = YES;
             break;
         }
     }

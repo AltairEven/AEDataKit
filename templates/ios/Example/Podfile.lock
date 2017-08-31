@@ -1,5 +1,5 @@
 PODS:
-  - AEDataKit (0.0.4):
+  - AEDataKit (0.0.7):
     - AELocalDataKit
   - AELocalDataKit (0.0.2)
 
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../../../"
 
 SPEC CHECKSUMS:
-  AEDataKit: 76af4c6f7d771f62d848051206dafc98469b44da
+  AEDataKit: cc74c7ff29fa56653ad04a4d0ef87db6782cc633
   AELocalDataKit: 809f617b4e6f27712f4942bece77879c597d6275
 
 PODFILE CHECKSUM: 2c594df96d25719405bcf9804ece9d9b69e309ca

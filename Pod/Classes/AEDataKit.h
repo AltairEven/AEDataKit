@@ -16,7 +16,11 @@ FOUNDATION_EXPORT const unsigned char AEDataKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <AEDataKit/PublicHeader.h>
 
+#import "AEDKImageViewPlaceholder.h"
 #import "AEDKPlugProtocol.h"
-#import "AEDKServiceConfiguration.h"
 #import "AEDKProcess.h"
 #import "AEDKServer.h"
+#import "AEDKServiceConfiguration.h"
+#import "AEDKWebImageLoader.h"
+#import "AELocalDataPlug.h"
+#import "AEReachability.h"
