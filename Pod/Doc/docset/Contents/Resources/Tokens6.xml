@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/AENetworkReachabilityStatus.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/AENetworkReachabilityStatus</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/AENetworkReachabilityStatusUnknown</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>AENetworkReachabilityStatusUnknown</Declaration>
+            
+            <DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/AENetworkReachabilityStatusNotReachable</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>AENetworkReachabilityStatusNotReachable</Declaration>
+            
+            <DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/AENetworkReachabilityStatusReachableViaWWAN</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>AENetworkReachabilityStatusReachableViaWWAN</Declaration>
+            
+            <DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/AENetworkReachabilityStatusReachableViaWiFi</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>AENetworkReachabilityStatusReachableViaWiFi</Declaration>
+            
+            <DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+            
+            <NodeRef refid="6"/>
+        </Token>
+        
+        
+	</File>
+</Tokens>

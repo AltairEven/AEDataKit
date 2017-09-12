@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/AEDKHttpUploadDownloadConfiguration.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKHttpUploadDownloadConfiguration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setType:</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			
+			
+			<Anchor>//api/name/type</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setAssociatedFilePath:</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/associatedFilePath</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/associatedFilePath</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			
+			
+			<Anchor>//api/name/associatedFilePath</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/initWithType:accociatedFilePath:</TokenIdentifier>
+			<Abstract type="html">初始化方法</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>- (instancetype)initWithType:(AEDKHttpUploadDownloadType)type accociatedFilePath:(NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>type</Name>
+					<Abstract type="html">上传下载类型</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract type="html">关联文件路径</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">类实例</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithType:accociatedFilePath:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+        
+	</File>
+</Tokens>

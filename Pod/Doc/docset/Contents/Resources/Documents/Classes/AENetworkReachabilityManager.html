@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AENetworkReachabilityManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AEDataKit </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Alisports</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/networkReachabilityStatus">networkReachabilityStatus</option>
+		
+		<option value="//api/name/reachable">reachable</option>
+		
+		<option value="//api/name/reachableViaWWAN">reachableViaWWAN</option>
+		
+		<option value="//api/name/reachableViaWiFi">reachableViaWiFi</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/manager">+ manager</option>
+		
+		<option value="//api/name/managerForAddress:">+ managerForAddress:</option>
+		
+		<option value="//api/name/managerForDomain:">+ managerForDomain:</option>
+		
+		<option value="//api/name/sharedManager">+ sharedManager</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/initWithReachability:">- initWithReachability:</option>
+		
+		<option value="//api/name/localizedNetworkReachabilityStatusString">- localizedNetworkReachabilityStatusString</option>
+		
+		<option value="//api/name/setReachabilityStatusChangeBlock:">- setReachabilityStatusChangeBlock:</option>
+		
+		<option value="//api/name/startMonitoring">- startMonitoring</option>
+		
+		<option value="//api/name/stopMonitoring">- stopMonitoring</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AENetworkReachabilityManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AENetworkReachabilityManager.h<br />AENetworkReachabilityManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AENetworkReachabilityManager</code> monitors the reachability of domains, and addresses for both WWAN and WiFi network interfaces.</p>
+
+<p>Reachability can be used to determine background information about why a network operation failed, or to trigger a network operation retrying when a connection is established. It should not be used to prevent a user from initiating a network request, as it&rsquo;s possible that an initial request may be required to establish reachability.</p>
+
+<p>See Apple&rsquo;s Reachability Sample Code ( <a href="https://developer.apple.com/library/ios/samplecode/reachability/">https://developer.apple.com/library/ios/samplecode/reachability/</a> )</p><div class="warning"><p><strong>Warning:</strong> Instances of <code>AENetworkReachabilityManager</code> must be started with <a href="#//api/name/startMonitoring"><code>startMonitoring</code></a> before reachability status can be determined.</p>
+
+<p>Queue a status change notification for the main thread.</p>
+
+<p>This is done to ensure that the notifications are received in the same order
+as they are sent. If notifications are sent directly, it is possible that
+a queued notification (for an earlier status condition) is processed AEter
+the later update, resulting in the listener being left in the wrong state.</p></div>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/networkReachabilityStatus" title="networkReachabilityStatus"></a>
+	<h3 class="method-title"><code><a href="#//api/name/networkReachabilityStatus">&nbsp;&nbsp;networkReachabilityStatus</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The current network reachability status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign) AENetworkReachabilityStatus networkReachabilityStatus</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reachable" title="reachable"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reachable">&nbsp;&nbsp;reachable</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not the network is currently reachable.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign, getter=isReachable) BOOL reachable</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reachableViaWWAN" title="reachableViaWWAN"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reachableViaWWAN">&nbsp;&nbsp;reachableViaWWAN</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not the network is currently <a href="#//api/name/reachable">reachable</a> via WWAN.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign, getter=isReachableViaWWAN) BOOL reachableViaWWAN</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reachableViaWiFi" title="reachableViaWiFi"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reachableViaWiFi">&nbsp;&nbsp;reachableViaWiFi</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Whether or not the network is currently <a href="#//api/name/reachable">reachable</a> via WiFi.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic, assign, getter=isReachableViaWiFi) BOOL reachableViaWiFi</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Initialization" name="task_Initialization"></a>
+						<h2 class="task-title">Initialization</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedManager" title="sharedManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedManager">+&nbsp;sharedManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the shared network reachability <a href="#//api/name/manager">manager</a>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)sharedManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/manager" title="manager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/manager">+&nbsp;manager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a network reachability manager with the default socket address.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)manager</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized network reachability manager, actively monitoring the default socket address.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managerForDomain:" title="managerForDomain:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managerForDomain:">+&nbsp;managerForDomain:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a network reachability <a href="#//api/name/manager">manager</a> for the specified domain.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)managerForDomain:(NSString *)<em>domain</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>domain</code></th>
+						<td><p>The domain used to evaluate network reachability.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized network reachability <a href="#//api/name/manager">manager</a>, actively monitoring the specified domain.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/managerForAddress:" title="managerForAddress:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/managerForAddress:">+&nbsp;managerForAddress:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates and returns a network reachability <a href="#//api/name/manager">manager</a> for the socket address.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)managerForAddress:(const void *)<em>address</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>address</code></th>
+						<td><p>The socket address (<code>sockaddr_in6</code>) used to evaluate network reachability.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized network reachability <a href="#//api/name/manager">manager</a>, actively monitoring the specified socket address.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/initWithReachability:" title="initWithReachability:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/initWithReachability:">&ndash;&nbsp;initWithReachability:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes an instance of a network reachability <a href="#//api/name/manager">manager</a> from the specified reachability object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (instancetype)initWithReachability:(SCNetworkReachabilityRef)<em>reachability</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>reachability</code></th>
+						<td><p>The reachability object to monitor.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An initialized network reachability <a href="#//api/name/manager">manager</a>, actively monitoring the specified reachability.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Starting &amp; Stopping Reachability Monitoring" name="task_Starting &amp; Stopping Reachability Monitoring"></a>
+						<h2 class="task-title">Starting &amp; Stopping Reachability Monitoring</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/startMonitoring" title="startMonitoring"></a>
+	<h3 class="method-title"><code><a href="#//api/name/startMonitoring">&ndash;&nbsp;startMonitoring</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Starts monitoring for changes in network reachability status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)startMonitoring</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/stopMonitoring" title="stopMonitoring"></a>
+	<h3 class="method-title"><code><a href="#//api/name/stopMonitoring">&ndash;&nbsp;stopMonitoring</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Stops monitoring for changes in network reachability status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)stopMonitoring</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Getting Localized Reachability Description" name="task_Getting Localized Reachability Description"></a>
+						<h2 class="task-title">Getting Localized Reachability Description</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/localizedNetworkReachabilityStatusString" title="localizedNetworkReachabilityStatusString"></a>
+	<h3 class="method-title"><code><a href="#//api/name/localizedNetworkReachabilityStatusString">&ndash;&nbsp;localizedNetworkReachabilityStatusString</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a localized string representation of the current network reachability status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *)localizedNetworkReachabilityStatusString</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						<a title="Setting Network Reachability Change Callback" name="task_Setting Network Reachability Change Callback"></a>
+						<h2 class="task-title">Setting Network Reachability Change Callback</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/setReachabilityStatusChangeBlock:" title="setReachabilityStatusChangeBlock:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setReachabilityStatusChangeBlock:">&ndash;&nbsp;setReachabilityStatusChangeBlock:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Sets a callback to be executed when the network availability of the <code>baseURL</code> host changes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setReachabilityStatusChangeBlock:(nullable void ( ^ ) ( AENetworkReachabilityStatus status ))<em>block</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>block</code></th>
+						<td><p>A block object to be executed when the network availability of the <code>baseURL</code> host changes.. This block has no return value and takes a single argument which represents the various reachability states from the device to the <code>baseURL</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AENetworkReachabilityManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Alisports. All rights reserved. Updated: 2017-09-12</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
