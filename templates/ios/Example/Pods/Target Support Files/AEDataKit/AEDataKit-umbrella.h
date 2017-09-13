@@ -19,8 +19,10 @@
 #import "AEDKTools.h"
 #import "AEDKWebImageLoader.h"
 #import "AELocalDataPlug.h"
+#import "AENetworkDataPlug.h"
 #import "AENetworkReachabilityManager.h"
 #import "AEReachability.h"
+#import "AEWebImagePlug.h"
 
 FOUNDATION_EXPORT double AEDataKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char AEDataKitVersionString[];

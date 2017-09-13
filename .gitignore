@@ -1,33 +1,45 @@
-# OS X
+# Ruby on Rails
+*.tmproj
+tmp/**/*
+config/database.yml
+config/*.sphinx.conf
+db/sphinx/**/*
+db/schema.rb
+log/*
+.rvmrc
+
+# Mac OS X Finder and whatnot
 .DS_Store
 
-# Xcode
-build/
-*.pbxuser
-!default.pbxuser
+# XCode (and ancestors) per-user config (very noisy, and not relevant)
+*.mode1
 *.mode1v3
-!default.mode1v3
 *.mode2v3
-!default.mode2v3
+*.perspective
 *.perspectivev3
-!default.perspectivev3
-xcuserdata/
-*.xccheckout
-profile
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
+*.pbxuser
+*.xcworkspace
+xcuserdata
 
-# Bundler
-.bundle
+# Generated files
+VersionX-revision.h
 
-Carthage
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
-# 
-# Note: if you ignore the Pods directory, make sure to uncomment
-# `pod install` in .travis.yml
-#
-# Pods/
+# build products
+build/
+
+# Other source repository archive directories (protects when importing)
+.hg
+.svn/*/**
+CVS
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+Pods/
+Podfile.lock

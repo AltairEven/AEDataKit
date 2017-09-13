@@ -1,7 +1,31 @@
 PODS:
-  - AEDataKit (0.0.7):
+  - AEDataKit (0.0.8):
     - AELocalDataKit
+    - AlisNetworking
   - AELocalDataKit (0.0.2)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - AlisNetworking (0.1.4):
+    - AFNetworking
+    - MJExtension
+    - SDWebImage
+  - MJExtension (3.0.13)
+  - SDWebImage (4.1.0):
+    - SDWebImage/Core (= 4.1.0)
+  - SDWebImage/Core (4.1.0)
 
 DEPENDENCIES:
   - AEDataKit (from `../../../`)
@@ -11,8 +35,12 @@ EXTERNAL SOURCES:
     :path: "../../../"
 
 SPEC CHECKSUMS:
-  AEDataKit: cc74c7ff29fa56653ad04a4d0ef87db6782cc633
+  AEDataKit: 6036ffbaf893322029d338575443a22babbf0765
   AELocalDataKit: 809f617b4e6f27712f4942bece77879c597d6275
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  AlisNetworking: bcc946ddbfd72b776d7a1fb4e9efd5eefce2f1e9
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
 
 PODFILE CHECKSUM: 2c594df96d25719405bcf9804ece9d9b69e309ca
 
