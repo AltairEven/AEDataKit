@@ -8,28 +8,12 @@
 
 #import "AEDKServer.h"
 
-NSString *const kAEDKServiceProtocolHttp = @"http";
-NSString *const kAEDKServiceProtocolHttps = @"https";
-NSString *const kAEDKServiceProtocolCache = @"cache";
-NSString *const kAEDKServiceProtocolFile = @"file";
-//NSString *const kAEDKServiceProtocolClass = @"class";
-NSString *const kAEDKServiceProtocolDataBase = @"db";
-
-
-NSString *const kAEDKServiceCachePathMemory = @"kAEDKServiceCachePathMemory";
-NSString *const kAEDKServiceCachePathDisk = @"kAEDKServiceCachePathDisk";
-NSString *const kAEDKServiceCachePathMemoryAndDisk = @"kAEDKServiceCachePathMemoryAndDisk";
-
-NSString *const kAEDKServiceDataBasePathSimple = @"kAEDKServiceDataBasePathSimple";
-NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
-
-
 
 #pragma mark AEDKService
 
 @interface AEDKService ()
 
-@property (nonatomic, strong) NSOperationQueue *processQueue;
+@property (nonatomic, weak) NSOperationQueue *processQueue;
 
 /**
  分配全新的服务执行进程
@@ -66,6 +50,23 @@ NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
         self.configuration = config;
     }
     return self;
+}
+
+- (AEDKServiceType)type {
+    AEDKServiceType type = AEDKServiceTypeUnkown;
+    if (![self.name isKindOfClass:[NSString class]] || [self.name length] == 0) {
+        return type;
+    }
+    if ([self.protocol isEqualToString:kAEDKServiceProtocolHttp] || [self.protocol isEqualToString:kAEDKServiceProtocolHttps]) {
+        type = AEDKServiceTypeHttp;
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
+        type = AEDKServiceTypeCache;
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolFile]) {
+        type = AEDKServiceTypeFile;
+    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolDataBase]) {
+        type = AEDKServiceTypeDB;
+    }
+    return type;
 }
 
 #pragma mark Private methods
@@ -123,26 +124,13 @@ NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
 
 #pragma mark Public methods
 
-- (BOOL)isValidService {
-    BOOL isValid = NO;
-    if (![self.name isKindOfClass:[NSString class]] || [self.name length] == 0) {
-        return isValid;
-    }
-    if ([self.protocol isEqualToString:kAEDKServiceProtocolHttp] || [self.protocol isEqualToString:kAEDKServiceProtocolHttps]) {
-        isValid = [self isValidHttpOrHttpsService];
-    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
-        isValid = [self isValidCacheService];
-    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolFile]) {
-        isValid = [self isValidFileService];
-    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolDataBase]) {
-        isValid = [self isValidDataBaseService];
-    }
-    return isValid;
-}
-
 - (AEDKProcess *)assignExecutingProcess {
     AEDKProcess *process = [[AEDKProcess alloc] init];
     process.request = [self standardRequest];
+    if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
+        //缓存操作的优先级最高
+        process.queuePriority = NSOperationQueuePriorityVeryHigh;
+    }
     process.configuration = self.configuration;
     [self.processQueue addOperation:process];
     return process;
@@ -166,6 +154,14 @@ static AEDKServer *_sharedInstance = nil;
 
 @property (nonatomic, strong) dispatch_queue_t delegateSynchronizationQueue;
 
+@property (nonatomic, strong) NSOperationQueue *httpProcessQueue;
+
+@property (nonatomic, strong) NSOperationQueue *cacheProcessQueue;
+
+@property (nonatomic, strong) NSOperationQueue *fileProcessQueue;
+
+@property (nonatomic, strong) NSOperationQueue *dbProcessQueue;
+
 @end
 
 @implementation AEDKServer
@@ -183,6 +179,11 @@ static AEDKServer *_sharedInstance = nil;
         
         NSString *delegateQueueName = [NSString stringWithFormat:@"com.altaireven.aedkserver-%@", [[NSUUID UUID] UUIDString]];
         _sharedInstance.delegateSynchronizationQueue = dispatch_queue_create([delegateQueueName cStringUsingEncoding:NSASCIIStringEncoding], DISPATCH_QUEUE_CONCURRENT);
+        
+        _sharedInstance.httpProcessQueue = [[NSOperationQueue alloc] init];
+        _sharedInstance.cacheProcessQueue = [[NSOperationQueue alloc] init];
+        _sharedInstance.fileProcessQueue = [[NSOperationQueue alloc] init];
+        _sharedInstance.dbProcessQueue = [[NSOperationQueue alloc] init];
     });
     return _sharedInstance;
 }
@@ -208,7 +209,7 @@ static AEDKServer *_sharedInstance = nil;
 #pragma mark Service
 
 - (BOOL)registerService:(AEDKService *)service {
-    if (![service isValidService]) {
+    if (service.type == AEDKServiceTypeUnkown) {
         return NO;
     }
     dispatch_barrier_async(self.serviceSynchronizationQueue, ^{
@@ -220,7 +221,7 @@ static AEDKServer *_sharedInstance = nil;
 - (void)registerServices:(NSArray<AEDKService *> *)services {
     dispatch_barrier_async(self.serviceSynchronizationQueue, ^{
         for (AEDKService *service in services) {
-            if (![service isValidService]) {
+            if (service.type == AEDKServiceTypeUnkown) {
                 continue;
             }
             [self.services setObject:service forKey:service.name];
@@ -269,10 +270,39 @@ static AEDKServer *_sharedInstance = nil;
 }
 
 - (AEDKProcess *)requestService:(AEDKService *)service {
-    if (![service isValidService]) {
+    AEDKServiceType serviceType = [service type];
+    if (serviceType == AEDKServiceTypeUnkown) {
         return nil;
     }
+    switch (serviceType) {
+        case AEDKServiceTypeHttp:
+        {
+            service.processQueue = self.httpProcessQueue;
+        }
+            break;
+        case AEDKServiceTypeCache:
+        {
+            service.processQueue = self.cacheProcessQueue;
+        }
+            break;
+        case AEDKServiceTypeFile:
+        {
+            service.processQueue = self.fileProcessQueue;
+        }
+            break;
+        case AEDKServiceTypeDB:
+        {
+            service.processQueue = self.dbProcessQueue;
+        }
+            break;
+        default:
+            break;
+    }
     return [service assignExecutingProcess];
+}
+
+- (AEDKProcess *)requestWithPerformer:(id<AEDKProtocol>)performer {
+    return [self requestService:[performer dataService]];
 }
 
 #pragma mark Delegate

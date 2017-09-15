@@ -11,9 +11,11 @@
 #endif
 
 #import "AEDataKit.h"
+#import "AEDKCacheOperation.h"
 #import "AEDKImageViewPlaceholder.h"
 #import "AEDKPlugProtocol.h"
 #import "AEDKProcess.h"
+#import "AEDKProtocol.h"
 #import "AEDKServer.h"
 #import "AEDKServiceConfiguration.h"
 #import "AEDKTools.h"

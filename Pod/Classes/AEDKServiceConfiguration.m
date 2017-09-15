@@ -9,6 +9,21 @@
 #import "AEDKServiceConfiguration.h"
 
 
+NSString *const kAEDKServiceProtocolHttp = @"http";
+NSString *const kAEDKServiceProtocolHttps = @"https";
+NSString *const kAEDKServiceProtocolCache = @"cache";
+NSString *const kAEDKServiceProtocolFile = @"file";
+//NSString *const kAEDKServiceProtocolClass = @"class";
+NSString *const kAEDKServiceProtocolDataBase = @"db";
+
+
+NSString *const kAEDKServiceCachePathMemory = @"kAEDKServiceCachePathMemory";
+NSString *const kAEDKServiceCachePathDisk = @"kAEDKServiceCachePathDisk";
+NSString *const kAEDKServiceCachePathMemoryAndDisk = @"kAEDKServiceCachePathMemoryAndDisk";
+
+NSString *const kAEDKServiceDataBasePathSimple = @"kAEDKServiceDataBasePathSimple";
+NSString *const kAEDKServiceDataBasePathSQL = @"kAEDKServiceDataBasePathSQL";
+
 NSString *const kAEDKServiceMethodGet = @"GET";
 NSString *const kAEDKServiceMethodPOST = @"POST";
 NSString *const kAEDKServiceMethodHEAD = @"HEAD";

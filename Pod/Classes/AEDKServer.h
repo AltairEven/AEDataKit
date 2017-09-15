@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AEDKPlugProtocol.h"
+#import "AEDKProtocol.h"
 
 @class AEDKServiceConfiguration;
 
@@ -15,25 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define AEDK_ERROR_CANCEL (-999)
 
-//数据服务协议
-extern NSString *const kAEDKServiceProtocolHttp;    //http
-extern NSString *const kAEDKServiceProtocolHttps;   //https
-extern NSString *const kAEDKServiceProtocolCache;    //缓存
-extern NSString *const kAEDKServiceProtocolFile;    //文件
-//extern NSString *const kAEDKServiceProtocolClass;   //类
-extern NSString *const kAEDKServiceProtocolDataBase;    //数据库
-
-
-
-//数据服务路径
-//缓存的服务路径
-extern NSString *const kAEDKServiceCachePathMemory;
-extern NSString *const kAEDKServiceCachePathDisk;
-extern NSString *const kAEDKServiceCachePathMemoryAndDisk;
-//数据库的服务路径
-extern NSString *const kAEDKServiceDataBasePathSimple;
-extern NSString *const kAEDKServiceDataBasePathSQL;
-
+typedef enum {
+    AEDKServiceTypeUnkown,
+    AEDKServiceTypeHttp,
+    AEDKServiceTypeCache,
+    AEDKServiceTypeFile,
+    AEDKServiceTypeDB
+}AEDKServiceType;
 
 /**
  数据服务，遵循数据服务协议的服务
@@ -79,16 +68,14 @@ extern NSString *const kAEDKServiceDataBasePathSQL;
  */
 @property (nonatomic, copy) AEDKServiceConfiguration * configuration;
 
+/**
+ 服务类型
+ */
+@property (nonatomic, readonly) AEDKServiceType type;
+
 - (instancetype)initWithName:(NSString *)name protocol:(NSString *)protocol serviceConfiguration:(AEDKServiceConfiguration *)config;
 
 - (instancetype)initWithName:(NSString *)name protocol:(NSString *)protocol domain:(NSString *__nullable)domain path:(NSString *__nullable)path serviceConfiguration:(AEDKServiceConfiguration *)config;
-
-/**
- 是否合理的数据服务
- 
- @return 是否合理
- */
-- (BOOL)isValidService;
 
 @end
 
@@ -113,6 +100,8 @@ extern NSString *const kAEDKServiceDataBasePathSQL;
 - (AEDKProcess *__nullable)requestServiceWithName:(NSString *)name;
 
 - (AEDKProcess *__nullable)requestService:(AEDKService *)service;
+
+- (AEDKProcess *__nullable)requestWithPerformer:(id<AEDKProtocol>)performer;
 
 //Delegate----------------------------------------------------
 

@@ -13,6 +13,25 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+//数据服务协议
+extern NSString *const kAEDKServiceProtocolHttp;    //http
+extern NSString *const kAEDKServiceProtocolHttps;   //https
+extern NSString *const kAEDKServiceProtocolCache;    //缓存
+extern NSString *const kAEDKServiceProtocolFile;    //文件
+//extern NSString *const kAEDKServiceProtocolClass;   //类
+extern NSString *const kAEDKServiceProtocolDataBase;    //数据库
+
+
+
+//数据服务路径
+//缓存的服务路径
+extern NSString *const kAEDKServiceCachePathMemory;
+extern NSString *const kAEDKServiceCachePathDisk;
+extern NSString *const kAEDKServiceCachePathMemoryAndDisk;
+//数据库的服务路径
+extern NSString *const kAEDKServiceDataBasePathSimple;
+extern NSString *const kAEDKServiceDataBasePathSQL;
+
 //数据服务处理方式
 extern NSString *const kAEDKServiceMethodGet;   //对应http/https协议的GET方式，或者其他协议的数据获取
 extern NSString *const kAEDKServiceMethodPOST;  //对应http/https协议的POST方式，或者其他协议的数据修改
