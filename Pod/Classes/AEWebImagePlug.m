@@ -12,10 +12,17 @@
 @implementation AEWebImagePlug
 
 - (BOOL)canHandleProcess:(AEDKProcess *)process{
-    //    AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
-    //    if (config.mimeType == AEDKHttpServiceMimeTypeImage) {
-    //        return YES;
-    //    }
+    if (!process || ![process isKindOfClass:[AEDKProcess class]]) {
+        return NO;
+    }
+    NSString *protocol = [process.request.URL scheme];
+    if (![protocol isEqualToString:kAEDKServiceProtocolHttp] || ![protocol isEqualToString:kAEDKServiceProtocolHttps]) {
+        return NO;
+    }
+    AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
+    if (config.mimeType == AEDKHttpServiceMimeTypeImage) {
+        return YES;
+    }
     
     return NO;
 }

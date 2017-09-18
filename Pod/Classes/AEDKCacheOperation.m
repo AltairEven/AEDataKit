@@ -8,23 +8,22 @@
 
 #import "AEDKCacheOperation.h"
 #import "AEDKServer.h"
+#import "AEDKTools.h"
 
 @interface AEDKCacheOperation ()
 
 @end
 
 @implementation AEDKCacheOperation
+@synthesize key = _key;
 
 + (instancetype)operation {
     AEDKCacheOperation *operation = [[AEDKCacheOperation alloc] init];
     return operation;
 }
 
-- (AEDKCacheOperationObjectChain)withCacheIdentifier {
-    return ^AEDKCacheOperation * (NSString *identifier) {
-        _cacheIdentifier = [identifier copy];
-        return self;
-    };
+- (NSString *)key {
+    return [AEDKTools urlDecodeString:_key];
 }
 
 - (AEDKCacheOperationIntegerChain)withOperationType {
@@ -43,7 +42,7 @@
 
 - (AEDKCacheOperationObjectChain)withKey {
     return ^AEDKCacheOperation * (NSString *key) {
-        _key = [key copy];
+        _key = [[AEDKTools urlEncodeString:key] copy];
         return self;
     };
 }
@@ -58,23 +57,16 @@
 #pragma mark AEDKProtocol
 
 - (AEDKService *)dataService {
-    if ([self.key length] == 0) {
-        return nil;
-    }
     NSString *name = [NSString stringWithFormat:@"com.altaireven.cacheoperation-%@", [[NSUUID UUID] UUIDString]];
-    NSString *domain = @"AEDKCacheOperation_NonPointedIdentifier";
     NSString *path = kAEDKServiceCachePathMemoryAndDisk;
-    if ([self.cacheIdentifier length] > 0) {
-        domain = self.cacheIdentifier;
-    }
-    if (self.route == AEDKCacheOperationRouteMemory) {
+    if (_route == AEDKCacheOperationRouteMemory) {
         path = kAEDKServiceCachePathMemory;
-    } else if (self.route == AEDKCacheOperationRouteDisk) {
+    } else if (_route == AEDKCacheOperationRouteDisk) {
         path = kAEDKServiceCachePathDisk;
     } else {
         path = kAEDKServiceCachePathMemoryAndDisk;
     }
-    path = [NSString stringWithFormat:@"%@/%@", path, self.key];
+    path = [NSString stringWithFormat:@"/%@/%@", path, self.key];
     
     AEDKServiceConfiguration *config = [AEDKServiceConfiguration defaultConfiguration];
     switch (self.type) {
@@ -100,9 +92,40 @@
     
     config.requestBody = self.value;
     
-    AEDKService *service = [[AEDKService alloc] initWithName:name protocol:@"cache" domain:domain path:path serviceConfiguration:config];
+    AEDKService *service = [[AEDKService alloc] initWithName:name protocol:@"cache" domain:@"AEDKCacheOperation" path:path serviceConfiguration:config];
     
     return service;
+}
+
+- (id)withResult {
+    AEDKProcess *quickProcess = [[AEDKServer server] requestWithPerformer:self];
+    __block id result = nil;
+    quickProcess.configuration.ProcessCompleted = ^(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseModel) {
+        result = responseModel;
+    };
+    [quickProcess start];
+    return result;
+}
+
+#pragma mark Quick Methods
+
++ (id)aedk_Cache_ObjectForKey:(NSString *)key {
+    key = [AEDKTools urlEncodeString:key];
+    return [[AEDKCacheOperation operation].withKey(key) withResult];
+}
+
++ (void)aedk_Cache_SetObject:(id)object forKey:(NSString *)key {
+    key = [AEDKTools urlEncodeString:key];
+    [[AEDKCacheOperation operation].withKey(key).withValue(object).withOperationType(AEDKCacheOperationTypeWrite) withResult];
+}
+
++ (void)aedk_Cache_RemoveObjectForKey:(NSString *)key {
+    key = [AEDKTools urlEncodeString:key];
+    [[AEDKCacheOperation operation].withKey(key).withOperationType(AEDKCacheOperationTypeRemove) withResult];
+}
+
++ (void)aedk_Cache_ClearMemoryCacheWithRoute:(AEDKCacheOperationRoute)route {
+    [[AEDKCacheOperation operation].withOperationType(AEDKCacheOperationTypeClear).from(route) withResult];
 }
 
 @end

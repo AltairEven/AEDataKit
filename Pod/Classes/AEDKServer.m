@@ -7,6 +7,9 @@
 //
 
 #import "AEDKServer.h"
+#import "AELocalDataPlug.h"
+#import "AENetworkDataPlug.h"
+#import "AEWebImagePlug.h"
 
 
 #pragma mark AEDKService
@@ -74,6 +77,13 @@
 - (NSURLRequest *)standardRequest {
     NSString *wholeString = [NSString stringWithFormat:@"%@://%@%@", self.protocol, self.domain, self.path];
     NSURL *url = [NSURL URLWithString:wholeString];
+    if (!url) {
+        //如果url创建失败，则可能请求字符串不符合 RFC 2396标准，所以使用filepath来转成url
+        url = [NSURL fileURLWithPath:wholeString];
+    }
+    if (!url) {
+        return nil;
+    }
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     [request setTimeoutInterval:10.0];
     [request setHTTPMethod:self.configuration.method ? self.configuration.method : kAEDKServiceMethodGet];
@@ -125,15 +135,18 @@
 #pragma mark Public methods
 
 - (AEDKProcess *)assignExecutingProcess {
-    AEDKProcess *process = [[AEDKProcess alloc] init];
-    process.request = [self standardRequest];
-    if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
-        //缓存操作的优先级最高
-        process.queuePriority = NSOperationQueuePriorityVeryHigh;
+    NSURLRequest *request = [self standardRequest];
+    if (request) {
+        AEDKProcess *process = [[AEDKProcess alloc] init];
+        process.request = request;
+        process.configuration = self.configuration;
+        process.processQueue = self.processQueue;
+        if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
+            process.configuration.isSynchronized = YES;
+        }
+        return process;
     }
-    process.configuration = self.configuration;
-    [self.processQueue addOperation:process];
-    return process;
+    return nil;
 }
 
 @end
@@ -184,6 +197,10 @@ static AEDKServer *_sharedInstance = nil;
         _sharedInstance.cacheProcessQueue = [[NSOperationQueue alloc] init];
         _sharedInstance.fileProcessQueue = [[NSOperationQueue alloc] init];
         _sharedInstance.dbProcessQueue = [[NSOperationQueue alloc] init];
+        
+        [_sharedInstance addDelegate:[[AELocalDataPlug alloc] init]];
+        [_sharedInstance addDelegate:[[AENetworkDataPlug alloc] init]];
+        [_sharedInstance addDelegate:[[AEWebImagePlug alloc] init]];
     });
     return _sharedInstance;
 }

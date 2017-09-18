@@ -28,6 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) AEDKProcessState state;
 
+@property (nonatomic, weak) NSOperationQueue *processQueue;
+
 @end
 
 NS_ASSUME_NONNULL_END

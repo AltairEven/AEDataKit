@@ -10,4 +10,8 @@
 
 @interface AEDKTools : NSObject
 
++ (NSString *)urlEncodeString:(NSString *)original;
+
++ (NSString *)urlDecodeString:(NSString *)original;
+
 @end

@@ -65,6 +65,14 @@
 
 #pragma mark Super methods
 
+- (void)start {
+    if (self.configuration.isSynchronized) {
+        [super start];
+    } else {
+        [self.processQueue addOperation:self];
+    }
+}
+
 - (void)main {
     NSArray<id<AEDKPlugProtocol>> *delegates = [[AEDKServer server] allDelegates];
     BOOL hasDelegate = NO;

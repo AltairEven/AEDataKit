@@ -45,19 +45,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [AEDKCacheOperation operation].withCacheIdentifier(@"id").withKey(@"key");
-    [AEDKCacheOperation operation].withCacheIdentifier(@"identifier").withOperationType(AEDKCacheOperationTypeWrite).withKey(@"key").withValue(@"this is a test").from(AEDKCacheOperationRouteMemory);
+    [AEDKCacheOperation aedk_Cache_SetObject:@"test quick set" forKey:@"test key"];
     
-    AEDKProcess *quickProcess = [[AEDKServer server] requestWithPerformer:[AEDKCacheOperation operation].withCacheIdentifier(@"identifier").withOperationType(AEDKCacheOperationTypeWrite).withKey(@"key").withValue(@"this is a test").from(AEDKCacheOperationRouteMemory)];
-    [quickProcess start];
-    
-    AEDKProcess *quickProcess2 = [[AEDKServer server] requestWithPerformer:[AEDKCacheOperation operation].withCacheIdentifier(@"identifier").withKey(@"key")];
-    [quickProcess2 start];
-    
-    id value = AEDKCacheObjectforkey(@"identifier", @"key");
-    
-    AEDKProcess *quickProcess3 = AEDKCacheObjectforkey(@"identifier", @"key");
-    [quickProcess3 start];
+    id value = [AEDKCacheOperation aedk_Cache_ObjectForKey:@"test key"];
+    NSLog(@"%@", value);
     
     AEDKProcess *process = [[AEDKServer server] requestServiceWithName:@"TestService"];
     process.configuration.BeforeProcess = ^(AEDKProcess * _Nonnull process) {
@@ -73,7 +64,6 @@
     process.configuration.ProcessCompleted = ^(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseModel) {
         NSLog(@"Process Completed Callback.");
     };
-    [process start];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

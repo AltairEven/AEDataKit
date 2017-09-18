@@ -67,6 +67,11 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 @property (nonatomic, copy) NSString *method;
 
 /**
+ 是否同步操作的服务
+ */
+@property (nonatomic, assign) BOOL isSynchronized;
+
+/**
  服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil
  */
 @property (nonatomic, strong) id requestBody;

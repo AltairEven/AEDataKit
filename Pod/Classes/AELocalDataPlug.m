@@ -71,21 +71,30 @@
     //生成操作模式
     AELDOperationMode *mode = [AELocalDataPlug operationModeFromProcess:process];
     id<AELocalDataPlugProtocal> localDataPlug = [[AELocalDataSocket publicSocket] plugSupportedOperationWithMode:mode];
-    [localDataPlug startOperation:mode response:^(AELDResponse * _Nonnull response) {
-        if (process.configuration.Processing) {
-            //处理进程
-            process.configuration.Processing(1, response.error ? 0 : 1, process.request);
-        }
+    if (!localDataPlug) {
         if (process.configuration.ProcessCompleted) {
-            id responseData = response.responseData;
-            if (process.configuration.AfterProcess) {
-                //处理返回值
-                responseData = process.configuration.AfterProcess(response.responseData);
-            }
             //处理结束
-            process.configuration.ProcessCompleted(process, response.error, responseData);
+            NSError *error = [NSError errorWithDomain:@"AELocalDataPlug" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"无法处理的操作"}];
+            process.configuration.ProcessCompleted(process, error, nil);
         }
-    }];
+    } else {
+        //处理
+        [localDataPlug startOperation:mode response:^(AELDResponse * _Nonnull response) {
+            if (process.configuration.Processing) {
+                //处理进程
+                process.configuration.Processing(1, response.error ? 0 : 1, process.request);
+            }
+            if (process.configuration.ProcessCompleted) {
+                id responseData = response.responseData;
+                if (process.configuration.AfterProcess) {
+                    //处理返回值
+                    responseData = process.configuration.AfterProcess(response.responseData);
+                }
+                //处理结束
+                process.configuration.ProcessCompleted(process, response.error, responseData);
+            }
+        }];
+    }
 }
 
 #pragma mark Private methods
@@ -109,7 +118,7 @@
         return nil;
     }
     NSString *key = [[process.request.URL absoluteString] lastPathComponent];
-    NSString *modeName = [NSString stringWithFormat:@"AELDOperationMode-%@", [[NSUUID UUID] UUIDString]];
+    NSString *modeName = @"AELDMemoryCachePlug";
     AELDOperationMode *mode = [AELDOperationMode modeWithName:modeName operationType:type];
     mode.key = key;
     mode.value = process.configuration.requestBody;

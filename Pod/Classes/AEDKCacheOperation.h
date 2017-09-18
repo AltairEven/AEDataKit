@@ -9,11 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "AEDKProtocol.h"
 
-#define AEDKCacheObjectforkey(id, key)  ([[AEDKServer server] requestWithPerformer:[AEDKCacheOperation operation].withCacheIdentifier(id).withKey(key)]); 
-
 @class AEDKCacheOperation;
 
-typedef AEDKCacheOperation *(^ AEDKCacheOperationChain)(id obj);
 typedef AEDKCacheOperation *(^ AEDKCacheOperationIntegerChain)(NSInteger obj);
 typedef AEDKCacheOperation *(^ AEDKCacheOperationObjectChain)(id obj);
 
@@ -24,26 +21,23 @@ typedef enum {
     AEDKCacheOperationTypeClear
 }AEDKCacheOperationType;
 
+
 typedef enum {
     AEDKCacheOperationRouteMemory = 1 << 0,
-    AEDKCacheOperationRouteDisk = 1 << 1,
+    AEDKCacheOperationRouteDisk = 1 << 1
 }AEDKCacheOperationRoute;
 
 @interface AEDKCacheOperation : NSObject <AEDKProtocol>
 
-@property (nonatomic, strong, readonly) NSString *cacheIdentifier;
-
 @property (nonatomic, readonly) AEDKCacheOperationType type;
-
-@property (nonatomic, readonly) AEDKCacheOperationRoute route;
 
 @property (nonatomic, strong, readonly) NSString *key;
 
 @property (nonatomic, strong, readonly) id value;
 
-+ (instancetype)operation;
+@property (nonatomic, readonly) AEDKCacheOperationRoute route;
 
-- (AEDKCacheOperationObjectChain)withCacheIdentifier;
++ (instancetype)operation;
 
 - (AEDKCacheOperationIntegerChain)withOperationType;
 
@@ -52,5 +46,17 @@ typedef enum {
 - (AEDKCacheOperationObjectChain)withKey;
 
 - (AEDKCacheOperationObjectChain)withValue;
+
+- (id)withResult;
+
+//快捷方法
+
++ (id)aedk_Cache_ObjectForKey:(NSString *)key;
+
++ (void)aedk_Cache_SetObject:(id)object forKey:(NSString *)key;
+
++ (void)aedk_Cache_RemoveObjectForKey:(NSString *)key;
+
++ (void)aedk_Cache_ClearMemoryCacheWithRoute:(AEDKCacheOperationRoute)route;
 
 @end
