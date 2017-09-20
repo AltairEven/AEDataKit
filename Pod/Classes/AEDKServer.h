@@ -20,7 +20,6 @@ typedef enum {
     AEDKServiceTypeUnkown,
     AEDKServiceTypeHttp,
     AEDKServiceTypeCache,
-    AEDKServiceTypeFile,
     AEDKServiceTypeDB
 }AEDKServiceType;
 
@@ -30,7 +29,6 @@ typedef enum {
  http://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
  https://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
  cache://cacheIdentifier/memoryAndDisk/keyname
- file://directory.searchPathDomainMask/path/filename.extension
  db://table.dbname/simple?key1=keyname1&key2=kename2
  db://dbname/sql?urlencodedSQLQueryString
  */

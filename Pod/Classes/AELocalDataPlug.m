@@ -68,9 +68,19 @@
         }
         return;
     }
+    NSString *path = [process.request.URL path];
+    path = [path substringToIndex:[path rangeOfString:@"/"].location];
+    AELDPlugMode *plugMode = nil;
+    if ([path isEqualToString:kAEDKServiceCachePathMemory]) {
+        plugMode = [AELDPlugMode modeWithName:@"AELDMemoryCachePlug" supportOperationType:AELDOperationTypeRead|AELDOperationTypeWrite|AELDOperationTypeDelete|AELDOperationTypeClear];
+    } else if ([path isEqualToString:kAEDKServiceCachePathDisk]) {
+        plugMode = [AELDPlugMode modeWithName:@"AELDDiskCachePlug" supportOperationType:AELDOperationTypeRead|AELDOperationTypeWrite|AELDOperationTypeDelete|AELDOperationTypeClear];
+    } else {
+        plugMode = [AELDPlugMode modeWithName:@"AELDIntegratedCachePlug" supportOperationType:AELDOperationTypeRead|AELDOperationTypeWrite|AELDOperationTypeDelete|AELDOperationTypeClear];
+    }
     //生成操作模式
     AELDOperationMode *mode = [AELocalDataPlug operationModeFromProcess:process];
-    id<AELocalDataPlugProtocal> localDataPlug = [[AELocalDataSocket publicSocket] plugSupportedOperationWithMode:mode];
+    id<AELocalDataPlugProtocal> localDataPlug = [[AELocalDataSocket publicSocket] plugWithMode:plugMode];
     if (!localDataPlug) {
         if (process.configuration.ProcessCompleted) {
             //处理结束

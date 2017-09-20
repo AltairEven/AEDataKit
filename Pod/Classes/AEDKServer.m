@@ -64,8 +64,6 @@
         type = AEDKServiceTypeHttp;
     } else if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
         type = AEDKServiceTypeCache;
-    } else if ([self.protocol isEqualToString:kAEDKServiceProtocolFile]) {
-        type = AEDKServiceTypeFile;
     } else if ([self.protocol isEqualToString:kAEDKServiceProtocolDataBase]) {
         type = AEDKServiceTypeDB;
     }
@@ -171,8 +169,6 @@ static AEDKServer *_sharedInstance = nil;
 
 @property (nonatomic, strong) NSOperationQueue *cacheProcessQueue;
 
-@property (nonatomic, strong) NSOperationQueue *fileProcessQueue;
-
 @property (nonatomic, strong) NSOperationQueue *dbProcessQueue;
 
 @end
@@ -195,7 +191,6 @@ static AEDKServer *_sharedInstance = nil;
         
         _sharedInstance.httpProcessQueue = [[NSOperationQueue alloc] init];
         _sharedInstance.cacheProcessQueue = [[NSOperationQueue alloc] init];
-        _sharedInstance.fileProcessQueue = [[NSOperationQueue alloc] init];
         _sharedInstance.dbProcessQueue = [[NSOperationQueue alloc] init];
         
         [_sharedInstance addDelegate:[[AELocalDataPlug alloc] init]];
@@ -300,11 +295,6 @@ static AEDKServer *_sharedInstance = nil;
         case AEDKServiceTypeCache:
         {
             service.processQueue = self.cacheProcessQueue;
-        }
-            break;
-        case AEDKServiceTypeFile:
-        {
-            service.processQueue = self.fileProcessQueue;
         }
             break;
         case AEDKServiceTypeDB:

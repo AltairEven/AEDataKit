@@ -11,7 +11,7 @@
 typedef enum {
     AELDBuiltInPlugStrategyMemoryCache      = 1 << 0,
     AELDBuiltInPlugStrategyDiskFileCache    = 1 << 1,
-    AELDBuiltInPlugStrategySQL              = 1 << 2,
+    AELDBuiltInPlugStrategySQL              = 1 << 2,   //暂不支持
 }AELDBuiltInPlugStrategy;
 
 @class AELDPlugMode;

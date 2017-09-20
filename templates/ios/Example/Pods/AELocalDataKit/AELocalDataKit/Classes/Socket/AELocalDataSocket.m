@@ -11,6 +11,7 @@
 #import "AELDResponse.h"
 #import "AELDMemoryCachePlug.h"
 #import "AELDDiskCachePlug.h"
+#import "AELDIntegratedCachePlug.h"
 
 @implementation AELocalDataSocket
 
@@ -32,6 +33,7 @@
     if ((strategy & AELDBuiltInPlugStrategyDiskFileCache) == AELDBuiltInPlugStrategyDiskFileCache) {
         [[AELocalDataSocket publicSocket] plugIn:[[AELDDiskCachePlug alloc] init]];
     }
+    [[AELocalDataSocket publicSocket] plugIn:[[AELDIntegratedCachePlug alloc] init]];
 }
 
 - (void)plugIn:(id<AELocalDataPlugProtocal>)plug {

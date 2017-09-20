@@ -12,6 +12,7 @@
 
 #import "AELocalDataKit.h"
 #import "AELDDiskCachePlug.h"
+#import "AELDIntegratedCachePlug.h"
 #import "AELDMemoryCachePlug.h"
 #import "AELDCache.h"
 #import "AELDDiskCache.h"
