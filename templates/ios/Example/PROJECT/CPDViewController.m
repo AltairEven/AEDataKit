@@ -64,6 +64,7 @@
     process.configuration.ProcessCompleted = ^(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseModel) {
         NSLog(@"Process Completed Callback.");
     };
+    [process start];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

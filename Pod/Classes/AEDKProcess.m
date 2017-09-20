@@ -9,6 +9,12 @@
 #import "AEDKProcess.h"
 #import "AEDKServer.h"
 
+@interface AEDKProcess ()
+
+@property (nonatomic, assign) BOOL maybeStarted;
+
+@end
+
 @implementation AEDKProcess
 
 #pragma mark Private methods
@@ -66,6 +72,10 @@
 #pragma mark Super methods
 
 - (void)start {
+    if (self.maybeStarted) {
+        return;
+    }
+    self.maybeStarted = YES;
     if (self.configuration.isSynchronized) {
         [super start];
     } else {
