@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AEDKServiceConfiguration.html">
+	<File path="Classes/AEDKService.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AEDKServiceConfiguration</TokenIdentifier>
-			<Abstract type="html"></Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKService</TokenIdentifier>
+			<Abstract type="html">数据服务，遵循数据服务协议的服务
+协议格式如下：
+http://domain/path?parameterKey1=parameterValue1&amp;amp;parameterKey2=parameterValue2
+https://domain/path?parameterKey1=parameterValue1&amp;amp;parameterKey2=parameterValue2
+cache://cacheIdentifier/memoryAndDisk/keyname
+db://table.dbname/simple?key1=keyname1&amp;amp;key2=kename2
+db://dbname/sql?urlencodedSQLQueryString</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
             
 			
 			<NodeRef refid="4"/>
@@ -13,230 +19,248 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setDisplayDebugInfo:</TokenIdentifier>
-			<Abstract type="html">是否开启日志，默认NO</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setName:</TokenIdentifier>
+			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/displayDebugInfo</Anchor>
+			<Anchor>//api/name/name</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/displayDebugInfo</TokenIdentifier>
-			<Abstract type="html">是否开启日志，默认NO</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/name</TokenIdentifier>
+			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/displayDebugInfo</Anchor>
+			<Anchor>//api/name/name</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/displayDebugInfo</TokenIdentifier>
-			<Abstract type="html">是否开启日志，默认NO</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/name</TokenIdentifier>
+			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
 			
 			
-			<Anchor>//api/name/displayDebugInfo</Anchor>
+			<Anchor>//api/name/name</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setSpecifiedServiceDelegate:</TokenIdentifier>
-			<Abstract type="html">指定的服务代理（类名）</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setProtocol:</TokenIdentifier>
+			<Abstract type="html">数据服务的协议</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
 			
 			
-			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
+			<Anchor>//api/name/protocol</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/specifiedServiceDelegate</TokenIdentifier>
-			<Abstract type="html">指定的服务代理（类名）</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/protocol</TokenIdentifier>
+			<Abstract type="html">数据服务的协议</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
 			
 			
-			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
+			<Anchor>//api/name/protocol</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/specifiedServiceDelegate</TokenIdentifier>
-			<Abstract type="html">指定的服务代理（类名）</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/protocol</TokenIdentifier>
+			<Abstract type="html">数据服务的协议</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
 			
 			
-			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
+			<Anchor>//api/name/protocol</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setMethod:</TokenIdentifier>
-			<Abstract type="html">服务进程的操作方式</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setDomain:</TokenIdentifier>
+			<Abstract type="html">数据服务的域
+如果是Http/Https，则表示url的domain；
+如果是Cache，则表示缓存名称，即缓存的id
+---如果是Class，则表示提供服务的类名（暂不使用）；
+如果是DataBase，则表示表名和数据库文件名。</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
 			
 			
-			<Anchor>//api/name/method</Anchor>
+			<Anchor>//api/name/domain</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/method</TokenIdentifier>
-			<Abstract type="html">服务进程的操作方式</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/domain</TokenIdentifier>
+			<Abstract type="html">数据服务的域
+如果是Http/Https，则表示url的domain；
+如果是Cache，则表示缓存名称，即缓存的id
+---如果是Class，则表示提供服务的类名（暂不使用）；
+如果是DataBase，则表示表名和数据库文件名。</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
 			
 			
-			<Anchor>//api/name/method</Anchor>
+			<Anchor>//api/name/domain</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/method</TokenIdentifier>
-			<Abstract type="html">服务进程的操作方式</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/domain</TokenIdentifier>
+			<Abstract type="html">数据服务的域
+如果是Http/Https，则表示url的domain；
+如果是Cache，则表示缓存名称，即缓存的id
+---如果是Class，则表示提供服务的类名（暂不使用）；
+如果是DataBase，则表示表名和数据库文件名。</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
 			
 			
-			<Anchor>//api/name/method</Anchor>
+			<Anchor>//api/name/domain</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setRequestBody:</TokenIdentifier>
-			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setPath:</TokenIdentifier>
+			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
+如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
+如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
 			
 			
-			<Anchor>//api/name/requestBody</Anchor>
+			<Anchor>//api/name/path</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/requestBody</TokenIdentifier>
-			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/path</TokenIdentifier>
+			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
+如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
+如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
 			
 			
-			<Anchor>//api/name/requestBody</Anchor>
+			<Anchor>//api/name/path</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/requestBody</TokenIdentifier>
-			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/path</TokenIdentifier>
+			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
+如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
+如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
 			
 			
-			<Anchor>//api/name/requestBody</Anchor>
+			<Anchor>//api/name/path</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/set__nullable:</TokenIdentifier>
-			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setConfiguration:</TokenIdentifier>
+			<Abstract type="html">服务配置项</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
+			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
 			
 			
-			<Anchor>//api/name/__nullable</Anchor>
+			<Anchor>//api/name/configuration</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/__nullable</TokenIdentifier>
-			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/configuration</TokenIdentifier>
+			<Abstract type="html">服务配置项</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
+			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
 			
 			
-			<Anchor>//api/name/__nullable</Anchor>
+			<Anchor>//api/name/configuration</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/__nullable</TokenIdentifier>
-			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/configuration</TokenIdentifier>
+			<Abstract type="html">服务配置项</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
+			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
 			
 			
-			<Anchor>//api/name/__nullable</Anchor>
+			<Anchor>//api/name/configuration</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setProcessCompleted:</TokenIdentifier>
-			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setType:</TokenIdentifier>
+			<Abstract type="html">服务类型</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
+			<Declaration>@property (nonatomic, readonly) AEDKServiceType type</Declaration>
 			
 			
-			<Anchor>//api/name/ProcessCompleted</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/ProcessCompleted</TokenIdentifier>
-			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/type</TokenIdentifier>
+			<Abstract type="html">服务类型</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
+			<Declaration>@property (nonatomic, readonly) AEDKServiceType type</Declaration>
 			
 			
-			<Anchor>//api/name/ProcessCompleted</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/ProcessCompleted</TokenIdentifier>
-			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/type</TokenIdentifier>
+			<Abstract type="html">服务类型</Abstract>
+			<DeclaredIn>AEDKServer.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
+			<Declaration>@property (nonatomic, readonly) AEDKServiceType type</Declaration>
 			
 			
-			<Anchor>//api/name/ProcessCompleted</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AEDKServiceConfiguration/defaultConfiguration</TokenIdentifier>
-			<Abstract type="html">默认配置</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/assignExecutingProcess</TokenIdentifier>
+			<Abstract type="html">分配全新的服务执行进程</Abstract>
+			<DeclaredIn>AEDKServer.m</DeclaredIn>
 			
-			<Declaration>+ (instancetype)defaultConfiguration</Declaration>
+			<Declaration>- (AEDKProcess *)assignExecutingProcess</Declaration>
 			
-			<ReturnValue><Abstract type="html">配置实例</Abstract></ReturnValue>
-			<Anchor>//api/name/defaultConfiguration</Anchor>
+			<ReturnValue><Abstract type="html">服务执行进程实例</Abstract></ReturnValue>
+			<Anchor>//api/name/assignExecutingProcess</Anchor>
             <NodeRef refid="4"/>
 		</Token>
 		

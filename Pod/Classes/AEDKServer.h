@@ -48,7 +48,6 @@ typedef enum {
  数据服务的域
  如果是Http/Https，则表示url的domain；
  如果是Cache，则表示缓存名称，即缓存的id
- 如果是File，则表示文件所在的NSSearchPathDirectory和NSSearchPathDomainMask；
  ---如果是Class，则表示提供服务的类名（暂不使用）；
  如果是DataBase，则表示表名和数据库文件名。
  */

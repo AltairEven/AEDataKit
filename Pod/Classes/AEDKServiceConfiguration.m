@@ -12,7 +12,6 @@
 NSString *const kAEDKServiceProtocolHttp = @"http";
 NSString *const kAEDKServiceProtocolHttps = @"https";
 NSString *const kAEDKServiceProtocolCache = @"cache";
-NSString *const kAEDKServiceProtocolFile = @"file";
 //NSString *const kAEDKServiceProtocolClass = @"class";
 NSString *const kAEDKServiceProtocolDataBase = @"db";
 

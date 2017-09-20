@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AEDKService.html">
+	<File path="Classes/AEDKHttpUploadDownloadConfiguration.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AEDKService</TokenIdentifier>
-			<Abstract type="html">数据服务，遵循数据服务协议的服务
-协议格式如下：
-http://domain/path?parameterKey1=parameterValue1&amp;amp;parameterKey2=parameterValue2
-https://domain/path?parameterKey1=parameterValue1&amp;amp;parameterKey2=parameterValue2
-cache://cacheIdentifier/memoryAndDisk/keyname
-file://directory.searchPathDomainMask/path/filename.extension
-db://table.dbname/simple?key1=keyname1&amp;amp;key2=kename2
-db://dbname/sql?urlencodedSQLQueryString</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKHttpUploadDownloadConfiguration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
             
 			
 			<NodeRef refid="3"/>
@@ -20,227 +13,94 @@ db://dbname/sql?urlencodedSQLQueryString</Abstract>
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setName:</TokenIdentifier>
-			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setType:</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/name</TokenIdentifier>
-			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/name</TokenIdentifier>
-			<Abstract type="html">数据服务的名称，用于区别不同的服务，同时唯一</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
+			<Abstract type="html">上传下载类型</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *name</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
 			
 			
-			<Anchor>//api/name/name</Anchor>
+			<Anchor>//api/name/type</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setProtocol:</TokenIdentifier>
-			<Abstract type="html">数据服务的协议</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setAssociatedFilePath:</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
 			
 			
-			<Anchor>//api/name/protocol</Anchor>
+			<Anchor>//api/name/associatedFilePath</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/protocol</TokenIdentifier>
-			<Abstract type="html">数据服务的协议</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
 			
 			
-			<Anchor>//api/name/protocol</Anchor>
+			<Anchor>//api/name/associatedFilePath</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/protocol</TokenIdentifier>
-			<Abstract type="html">数据服务的协议</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
+			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *protocol</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
 			
 			
-			<Anchor>//api/name/protocol</Anchor>
+			<Anchor>//api/name/associatedFilePath</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setDomain:</TokenIdentifier>
-			<Abstract type="html">数据服务的域
-如果是Http/Https，则表示url的domain；
-如果是Cache，则表示缓存名称，即缓存的id
-如果是File，则表示文件所在的NSSearchPathDirectory和NSSearchPathDomainMask；
----如果是Class，则表示提供服务的类名（暂不使用）；
-如果是DataBase，则表示表名和数据库文件名。</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/initWithType:accociatedFilePath:</TokenIdentifier>
+			<Abstract type="html">初始化方法</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
-			
-			
-			<Anchor>//api/name/domain</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/domain</TokenIdentifier>
-			<Abstract type="html">数据服务的域
-如果是Http/Https，则表示url的domain；
-如果是Cache，则表示缓存名称，即缓存的id
-如果是File，则表示文件所在的NSSearchPathDirectory和NSSearchPathDomainMask；
----如果是Class，则表示提供服务的类名（暂不使用）；
-如果是DataBase，则表示表名和数据库文件名。</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
-			
-			
-			<Anchor>//api/name/domain</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/domain</TokenIdentifier>
-			<Abstract type="html">数据服务的域
-如果是Http/Https，则表示url的domain；
-如果是Cache，则表示缓存名称，即缓存的id
-如果是File，则表示文件所在的NSSearchPathDirectory和NSSearchPathDomainMask；
----如果是Class，则表示提供服务的类名（暂不使用）；
-如果是DataBase，则表示表名和数据库文件名。</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) NSString *domain</Declaration>
-			
-			
-			<Anchor>//api/name/domain</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setPath:</TokenIdentifier>
-			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
-如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
-如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
-			
-			
-			<Anchor>//api/name/path</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/path</TokenIdentifier>
-			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
-如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
-如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
-			
-			
-			<Anchor>//api/name/path</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/path</TokenIdentifier>
-			<Abstract type="html">数据服务的路径，需用“/”隔开（第一位补“/”，如“/path1/path2/..”）。
-如果是Cache，则表示读取路径是从内存缓存，还是磁盘缓存，或者都有（参考kAEDKServiceCachePath）；
-如果是DataBase，则表示是简单的键值读写，还是sql语句执行（参考kAEDKServiceDataBasePath）</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) NSString *path</Declaration>
-			
-			
-			<Anchor>//api/name/path</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/setConfiguration:</TokenIdentifier>
-			<Abstract type="html">服务配置项</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
-			
-			
-			<Anchor>//api/name/configuration</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/configuration</TokenIdentifier>
-			<Abstract type="html">服务配置项</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
-			
-			
-			<Anchor>//api/name/configuration</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKService/configuration</TokenIdentifier>
-			<Abstract type="html">服务配置项</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) AEDKServiceConfiguration *configuration</Declaration>
-			
-			
-			<Anchor>//api/name/configuration</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/isValidService</TokenIdentifier>
-			<Abstract type="html">是否合理的数据服务</Abstract>
-			<DeclaredIn>AEDKServer.h</DeclaredIn>
-			
-			<Declaration>- (BOOL)isValidService</Declaration>
-			
-			<ReturnValue><Abstract type="html">是否合理</Abstract></ReturnValue>
-			<Anchor>//api/name/isValidService</Anchor>
-            <NodeRef refid="3"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKService/assignExecutingProcess</TokenIdentifier>
-			<Abstract type="html">分配全新的服务执行进程</Abstract>
-			<DeclaredIn>AEDKServer.m</DeclaredIn>
-			
-			<Declaration>- (AEDKProcess *)assignExecutingProcess</Declaration>
-			
-			<ReturnValue><Abstract type="html">服务执行进程实例</Abstract></ReturnValue>
-			<Anchor>//api/name/assignExecutingProcess</Anchor>
+			<Declaration>- (instancetype)initWithType:(AEDKHttpUploadDownloadType)type accociatedFilePath:(NSString *)path</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>type</Name>
+					<Abstract type="html">上传下载类型</Abstract>
+				</Parameter><Parameter>
+					<Name>path</Name>
+					<Abstract type="html">关联文件路径</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">类实例</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithType:accociatedFilePath:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

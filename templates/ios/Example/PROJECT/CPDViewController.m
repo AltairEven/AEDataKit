@@ -45,9 +45,9 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [AEDKCacheOperation aedk_Cache_SetObject:@"test quick set" forKey:@"test key"];
+    [AEDKCacheOperation setObject:@"test quick set" forKey:@"test key"];
     
-    id value = [AEDKCacheOperation aedk_Cache_ObjectForKey:@"test key"];
+    id value = [AEDKCacheOperation objectForKey:@"test key"];
     NSLog(@"%@", value);
     
     AEDKProcess *process = [[AEDKServer server] requestServiceWithName:@"TestService"];

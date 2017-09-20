@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AEDKHttpServiceConfiguration.html">
+	<File path="Classes/AEDKCacheOperation.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AEDKHttpServiceConfiguration</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKCacheOperation</TokenIdentifier>
 			<Abstract type="html"></Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
             
 			
 			<NodeRef refid="1"/>
@@ -13,266 +13,145 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setStringEncoding:</TokenIdentifier>
-			<Abstract type="html">字符编码</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKCacheOperation/operation</TokenIdentifier>
+			<Abstract type="html">缓存便捷操作的类实例</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
+			<Declaration>+ (instancetype)operation</Declaration>
 			
-			
-			<Anchor>//api/name/stringEncoding</Anchor>
+			<ReturnValue><Abstract type="html">类实例</Abstract></ReturnValue>
+			<Anchor>//api/name/operation</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/stringEncoding</TokenIdentifier>
-			<Abstract type="html">字符编码</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKCacheOperation/withOperationType</TokenIdentifier>
+			<Abstract type="html">使用的操作类型，传入AEDKCacheOperationType</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
+			<Declaration>- (AEDKCacheOperationIntegerChain)withOperationType</Declaration>
 			
-			
-			<Anchor>//api/name/stringEncoding</Anchor>
+			<ReturnValue><Abstract type="html">AEDKCacheOperationIntegerChain</Abstract></ReturnValue>
+			<Anchor>//api/name/withOperationType</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/stringEncoding</TokenIdentifier>
-			<Abstract type="html">字符编码</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKCacheOperation/from</TokenIdentifier>
+			<Abstract type="html">操作的缓存路径，传入AEDKCacheOperationRoute</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
+			<Declaration>- (AEDKCacheOperationIntegerChain)from</Declaration>
 			
-			
-			<Anchor>//api/name/stringEncoding</Anchor>
+			<ReturnValue><Abstract type="html">AEDKCacheOperationIntegerChain</Abstract></ReturnValue>
+			<Anchor>//api/name/from</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setMimeType:</TokenIdentifier>
-			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKCacheOperation/withKey</TokenIdentifier>
+			<Abstract type="html">操作使用的key</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
+			<Declaration>- (AEDKCacheOperationObjectChain)withKey</Declaration>
 			
-			
-			<Anchor>//api/name/mimeType</Anchor>
+			<ReturnValue><Abstract type="html">AEDKCacheOperationObjectChain</Abstract></ReturnValue>
+			<Anchor>//api/name/withKey</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/mimeType</TokenIdentifier>
-			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKCacheOperation/withValue</TokenIdentifier>
+			<Abstract type="html">操作使用的value</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
+			<Declaration>- (AEDKCacheOperationObjectChain)withValue</Declaration>
 			
-			
-			<Anchor>//api/name/mimeType</Anchor>
+			<ReturnValue><Abstract type="html">AEDKCacheOperationObjectChain</Abstract></ReturnValue>
+			<Anchor>//api/name/withValue</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/mimeType</TokenIdentifier>
-			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKCacheOperation/withResult</TokenIdentifier>
+			<Abstract type="html">操作结果，如果是读操作，则同步返回value</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
+			<Declaration>- (id)withResult</Declaration>
 			
-			
-			<Anchor>//api/name/mimeType</Anchor>
+			<ReturnValue><Abstract type="html">操作结果</Abstract></ReturnValue>
+			<Anchor>//api/name/withResult</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setRequestParameter:</TokenIdentifier>
-			<Abstract type="html">请求参数</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKCacheOperation/aedk_Cache_ObjectForKey:</TokenIdentifier>
+			<Abstract type="html">便捷的缓存读操作</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
-			
-			
-			<Anchor>//api/name/requestParameter</Anchor>
+			<Declaration>+ (id)aedk_Cache_ObjectForKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">操作使用的key</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">读取结果</Abstract></ReturnValue>
+			<Anchor>//api/name/aedk_Cache_ObjectForKey:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/requestParameter</TokenIdentifier>
-			<Abstract type="html">请求参数</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKCacheOperation/aedk_Cache_SetObject:forKey:</TokenIdentifier>
+			<Abstract type="html">便捷的缓存写操作</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
+			<Declaration>+ (void)aedk_Cache_SetObject:(id)object forKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>object</Name>
+					<Abstract type="html">需要写的value</Abstract>
+				</Parameter><Parameter>
+					<Name>key</Name>
+					<Abstract type="html">需要写的key</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/requestParameter</Anchor>
+			<Anchor>//api/name/aedk_Cache_SetObject:forKey:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/requestParameter</TokenIdentifier>
-			<Abstract type="html">请求参数</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKCacheOperation/aedk_Cache_RemoveObjectForKey:</TokenIdentifier>
+			<Abstract type="html">便捷的缓存删除操作</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
+			<Declaration>+ (void)aedk_Cache_RemoveObjectForKey:(NSString *)key</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>key</Name>
+					<Abstract type="html">操作使用的key</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/requestParameter</Anchor>
+			<Anchor>//api/name/aedk_Cache_RemoveObjectForKey:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setUploadDownloadConfig:</TokenIdentifier>
-			<Abstract type="html">上传下载配置</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKCacheOperation/aedk_Cache_ClearMemoryCacheWithRoute:</TokenIdentifier>
+			<Abstract type="html">便捷的缓存清理操作</Abstract>
+			<DeclaredIn>AEDKCacheOperation.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
+			<Declaration>+ (void)aedk_Cache_ClearMemoryCacheWithRoute:(AEDKCacheOperationRoute)route</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>route</Name>
+					<Abstract type="html">需要清理的路径</Abstract>
+				</Parameter>
+			</Parameters>
 			
-			
-			<Anchor>//api/name/uploadDownloadConfig</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/uploadDownloadConfig</TokenIdentifier>
-			<Abstract type="html">上传下载配置</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
-			
-			
-			<Anchor>//api/name/uploadDownloadConfig</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/uploadDownloadConfig</TokenIdentifier>
-			<Abstract type="html">上传下载配置</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
-			
-			
-			<Anchor>//api/name/uploadDownloadConfig</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setInfoAppendingAfterQueryString:</TokenIdentifier>
-			<Abstract type="html">拼在链接后的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
-			
-			
-			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/infoAppendingAfterQueryString</TokenIdentifier>
-			<Abstract type="html">拼在链接后的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
-			
-			
-			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/infoAppendingAfterQueryString</TokenIdentifier>
-			<Abstract type="html">拼在链接后的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
-			
-			
-			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setInfoInHttpHeader:</TokenIdentifier>
-			<Abstract type="html">http头中的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
-			
-			
-			<Anchor>//api/name/infoInHttpHeader</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/infoInHttpHeader</TokenIdentifier>
-			<Abstract type="html">http头中的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
-			
-			
-			<Anchor>//api/name/infoInHttpHeader</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/infoInHttpHeader</TokenIdentifier>
-			<Abstract type="html">http头中的用户信息</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
-			
-			
-			<Anchor>//api/name/infoInHttpHeader</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setRetryCount:</TokenIdentifier>
-			<Abstract type="html">重试次数， 默认0</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
-			
-			
-			<Anchor>//api/name/retryCount</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/retryCount</TokenIdentifier>
-			<Abstract type="html">重试次数， 默认0</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
-			
-			
-			<Anchor>//api/name/retryCount</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/retryCount</TokenIdentifier>
-			<Abstract type="html">重试次数， 默认0</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
-			
-			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
-			
-			
-			<Anchor>//api/name/retryCount</Anchor>
-            <NodeRef refid="1"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AEDKHttpServiceConfiguration/defaultConfiguration</TokenIdentifier>
-			<Abstract type="html">默认配置</Abstract>
-			<DeclaredIn>AEDKServiceConfiguration.m</DeclaredIn>
-			
-			<Declaration>+ (instancetype)defaultConfiguration</Declaration>
-			
-			<ReturnValue><Abstract type="html">配置实例</Abstract></ReturnValue>
-			<Anchor>//api/name/defaultConfiguration</Anchor>
+			<Anchor>//api/name/aedk_Cache_ClearMemoryCacheWithRoute:</Anchor>
             <NodeRef refid="1"/>
 		</Token>
 		

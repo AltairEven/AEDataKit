@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AENetworkReachabilityManager.html">
+	<File path="Classes/AEDKServiceConfiguration.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AENetworkReachabilityManager</TokenIdentifier>
-			<Abstract type="html">AENetworkReachabilityManager monitors the reachability of domains, and addresses for both WWAN and WiFi network interfaces.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKServiceConfiguration</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
             
 			
 			<NodeRef refid="5"/>
@@ -13,274 +13,266 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/setNetworkReachabilityStatus:</TokenIdentifier>
-			<Abstract type="html">The current network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setDisplayDebugInfo:</TokenIdentifier>
+			<Abstract type="html">是否开启日志，默认NO</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign) AENetworkReachabilityStatus networkReachabilityStatus</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
 			
 			
-			<Anchor>//api/name/networkReachabilityStatus</Anchor>
+			<Anchor>//api/name/displayDebugInfo</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/networkReachabilityStatus</TokenIdentifier>
-			<Abstract type="html">The current network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/displayDebugInfo</TokenIdentifier>
+			<Abstract type="html">是否开启日志，默认NO</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign) AENetworkReachabilityStatus networkReachabilityStatus</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
 			
 			
-			<Anchor>//api/name/networkReachabilityStatus</Anchor>
+			<Anchor>//api/name/displayDebugInfo</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AENetworkReachabilityManager/networkReachabilityStatus</TokenIdentifier>
-			<Abstract type="html">The current network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/displayDebugInfo</TokenIdentifier>
+			<Abstract type="html">是否开启日志，默认NO</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign) AENetworkReachabilityStatus networkReachabilityStatus</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL displayDebugInfo</Declaration>
 			
 			
-			<Anchor>//api/name/networkReachabilityStatus</Anchor>
+			<Anchor>//api/name/displayDebugInfo</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/setReachable:</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setSpecifiedServiceDelegate:</TokenIdentifier>
+			<Abstract type="html">指定的服务代理（类名）</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachable) BOOL reachable</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/reachable</Anchor>
+			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/isReachable</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/specifiedServiceDelegate</TokenIdentifier>
+			<Abstract type="html">指定的服务代理（类名）</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachable) BOOL reachable</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/reachable</Anchor>
+			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AENetworkReachabilityManager/reachable</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/specifiedServiceDelegate</TokenIdentifier>
+			<Abstract type="html">指定的服务代理（类名）</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachable) BOOL reachable</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *specifiedServiceDelegate</Declaration>
 			
 			
-			<Anchor>//api/name/reachable</Anchor>
+			<Anchor>//api/name/specifiedServiceDelegate</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/setReachableViaWWAN:</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WWAN.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setMethod:</TokenIdentifier>
+			<Abstract type="html">服务进程的操作方式</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWWAN) BOOL reachableViaWWAN</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWWAN</Anchor>
+			<Anchor>//api/name/method</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/isReachableViaWWAN</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WWAN.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/method</TokenIdentifier>
+			<Abstract type="html">服务进程的操作方式</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWWAN) BOOL reachableViaWWAN</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWWAN</Anchor>
+			<Anchor>//api/name/method</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AENetworkReachabilityManager/reachableViaWWAN</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WWAN.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/method</TokenIdentifier>
+			<Abstract type="html">服务进程的操作方式</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWWAN) BOOL reachableViaWWAN</Declaration>
+			<Declaration>@property (nonatomic, copy) NSString *method</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWWAN</Anchor>
+			<Anchor>//api/name/method</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/setReachableViaWiFi:</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WiFi.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setIsSynchronized:</TokenIdentifier>
+			<Abstract type="html">是否同步操作的服务</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWiFi) BOOL reachableViaWiFi</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isSynchronized</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWiFi</Anchor>
+			<Anchor>//api/name/isSynchronized</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/isReachableViaWiFi</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WiFi.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/isSynchronized</TokenIdentifier>
+			<Abstract type="html">是否同步操作的服务</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWiFi) BOOL reachableViaWiFi</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isSynchronized</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWiFi</Anchor>
+			<Anchor>//api/name/isSynchronized</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AENetworkReachabilityManager/reachableViaWiFi</TokenIdentifier>
-			<Abstract type="html">Whether or not the network is currently reachable via WiFi.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/isSynchronized</TokenIdentifier>
+			<Abstract type="html">是否同步操作的服务</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (readonly, nonatomic, assign, getter=isReachableViaWiFi) BOOL reachableViaWiFi</Declaration>
+			<Declaration>@property (nonatomic, assign) BOOL isSynchronized</Declaration>
 			
 			
-			<Anchor>//api/name/reachableViaWiFi</Anchor>
+			<Anchor>//api/name/isSynchronized</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AENetworkReachabilityManager/sharedManager</TokenIdentifier>
-			<Abstract type="html">Returns the shared network reachability manager.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setRequestBody:</TokenIdentifier>
+			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)sharedManager</Declaration>
+			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
 			
 			
-			<Anchor>//api/name/sharedManager</Anchor>
+			<Anchor>//api/name/requestBody</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AENetworkReachabilityManager/manager</TokenIdentifier>
-			<Abstract type="html">Creates and returns a network reachability manager with the default socket address.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/requestBody</TokenIdentifier>
+			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)manager</Declaration>
+			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
 			
-			<ReturnValue><Abstract type="html">An initialized network reachability manager, actively monitoring the default socket address.</Abstract></ReturnValue>
-			<Anchor>//api/name/manager</Anchor>
+			
+			<Anchor>//api/name/requestBody</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AENetworkReachabilityManager/managerForDomain:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a network reachability manager for the specified domain.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/requestBody</TokenIdentifier>
+			<Abstract type="html">服务进程携带的操作实体，如http/https请求中的dataBody，file保存请求中需要操作的对象实体，或者cache请求中的缓存实体等，默认nil</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)managerForDomain:(NSString *)domain</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>domain</Name>
-					<Abstract type="html">The domain used to evaluate network reachability.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized network reachability manager, actively monitoring the specified domain.</Abstract></ReturnValue>
-			<Anchor>//api/name/managerForDomain:</Anchor>
+			<Declaration>@property (nonatomic, strong) id requestBody</Declaration>
+			
+			
+			<Anchor>//api/name/requestBody</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/clm/AENetworkReachabilityManager/managerForAddress:</TokenIdentifier>
-			<Abstract type="html">Creates and returns a network reachability manager for the socket address.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/set__nullable:</TokenIdentifier>
+			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>+ (instancetype)managerForAddress:(const void *)address</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>address</Name>
-					<Abstract type="html">The socket address (sockaddr_in6) used to evaluate network reachability.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized network reachability manager, actively monitoring the specified socket address.</Abstract></ReturnValue>
-			<Anchor>//api/name/managerForAddress:</Anchor>
+			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
+			
+			
+			<Anchor>//api/name/__nullable</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/initWithReachability:</TokenIdentifier>
-			<Abstract type="html">Initializes an instance of a network reachability manager from the specified reachability object.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/__nullable</TokenIdentifier>
+			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithReachability:(SCNetworkReachabilityRef)reachability</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>reachability</Name>
-					<Abstract type="html">The reachability object to monitor.</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">An initialized network reachability manager, actively monitoring the specified reachability.</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithReachability:</Anchor>
+			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
+			
+			
+			<Anchor>//api/name/__nullable</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/startMonitoring</TokenIdentifier>
-			<Abstract type="html">Starts monitoring for changes in network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/__nullable</TokenIdentifier>
+			<Abstract type="html">服务进程开始前，该block通知用户当前进程，如需修改则直接修改</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (void)startMonitoring</Declaration>
+			<Declaration>@property (nonatomic, copy) void ( ^ BeforeProcess ) ( AEDKProcess *process ) __nullable</Declaration>
 			
 			
-			<Anchor>//api/name/startMonitoring</Anchor>
+			<Anchor>//api/name/__nullable</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/stopMonitoring</TokenIdentifier>
-			<Abstract type="html">Stops monitoring for changes in network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/setProcessCompleted:</TokenIdentifier>
+			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (void)stopMonitoring</Declaration>
+			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
 			
 			
-			<Anchor>//api/name/stopMonitoring</Anchor>
+			<Anchor>//api/name/ProcessCompleted</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/localizedNetworkReachabilityStatusString</TokenIdentifier>
-			<Abstract type="html">Returns a localized string representation of the current network reachability status.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKServiceConfiguration/ProcessCompleted</TokenIdentifier>
+			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (NSString *)localizedNetworkReachabilityStatusString</Declaration>
+			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
 			
 			
-			<Anchor>//api/name/localizedNetworkReachabilityStatusString</Anchor>
+			<Anchor>//api/name/ProcessCompleted</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AENetworkReachabilityManager/setReachabilityStatusChangeBlock:</TokenIdentifier>
-			<Abstract type="html">Sets a callback to be executed when the network availability of the baseURL host changes.</Abstract>
-			<DeclaredIn>AENetworkReachabilityManager.h</DeclaredIn>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKServiceConfiguration/ProcessCompleted</TokenIdentifier>
+			<Abstract type="html">服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (void)setReachabilityStatusChangeBlock:(nullable void ( ^ ) ( AENetworkReachabilityStatus status ))block</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>block</Name>
-					<Abstract type="html">A block object to be executed when the network availability of the baseURL host changes.. This block has no return value and takes a single argument which represents the various reachability states from the device to the baseURL.</Abstract>
-				</Parameter>
-			</Parameters>
+			<Declaration>@property (nonatomic, copy) void ( ^ ) ( AEDKProcess *currentProcess , NSError *error , id __nullable responseModel ) ProcessCompleted</Declaration>
 			
-			<Anchor>//api/name/setReachabilityStatusChangeBlock:</Anchor>
+			
+			<Anchor>//api/name/ProcessCompleted</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKServiceConfiguration/defaultConfiguration</TokenIdentifier>
+			<Abstract type="html">默认配置</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)defaultConfiguration</Declaration>
+			
+			<ReturnValue><Abstract type="html">配置实例</Abstract></ReturnValue>
+			<Anchor>//api/name/defaultConfiguration</Anchor>
             <NodeRef refid="5"/>
 		</Token>
 		

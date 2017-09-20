@@ -37,26 +37,78 @@ typedef enum {
 
 @property (nonatomic, readonly) AEDKCacheOperationRoute route;
 
+/**
+ 缓存便捷操作的类实例
+
+ @return 类实例
+ */
 + (instancetype)operation;
 
+/**
+ 使用的操作类型，传入AEDKCacheOperationType
+
+ @return AEDKCacheOperationIntegerChain
+ */
 - (AEDKCacheOperationIntegerChain)withOperationType;
 
+/**
+ 操作的缓存路径，传入AEDKCacheOperationRoute
+ 
+ @return AEDKCacheOperationIntegerChain
+ */
 - (AEDKCacheOperationIntegerChain)from;
 
+/**
+ 操作使用的key
+ 
+ @return AEDKCacheOperationObjectChain
+ */
 - (AEDKCacheOperationObjectChain)withKey;
 
+/**
+ 操作使用的value
+ 
+ @return AEDKCacheOperationObjectChain
+ */
 - (AEDKCacheOperationObjectChain)withValue;
 
+/**
+ 操作结果，如果是读操作，则同步返回value
+
+ @return 操作结果
+ */
 - (id)withResult;
 
 //快捷方法
 
-+ (id)aedk_Cache_ObjectForKey:(NSString *)key;
+/**
+ 便捷的缓存读操作
 
-+ (void)aedk_Cache_SetObject:(id)object forKey:(NSString *)key;
+ @param key 操作使用的key
+ @return 读取结果
+ */
++ (id)objectForKey:(NSString *)key;
 
-+ (void)aedk_Cache_RemoveObjectForKey:(NSString *)key;
+/**
+ 便捷的缓存写操作
 
-+ (void)aedk_Cache_ClearMemoryCacheWithRoute:(AEDKCacheOperationRoute)route;
+ @param object 需要写的value
+ @param key 需要写的key
+ */
++ (void)setObject:(id)object forKey:(NSString *)key;
+
+/**
+ 便捷的缓存删除操作
+
+ @param key 操作使用的key
+ */
++ (void)removeObjectForKey:(NSString *)key;
+
+/**
+ 便捷的缓存清理操作
+
+ @param route 需要清理的路径
+ */
++ (void)clearWithRoute:(AEDKCacheOperationRoute)route;
 
 @end

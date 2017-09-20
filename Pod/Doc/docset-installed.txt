@@ -1,4 +1,4 @@
 Documentation set was installed to Xcode!
 
 Path: /Users/Altair/Library/Developer/Shared/Documentation/DocSets/com.alisports.AEDataKit.docset
-Time: 2017-09-12 09:25:55 +0000
+Time: 2017-09-20 08:25:51 +0000

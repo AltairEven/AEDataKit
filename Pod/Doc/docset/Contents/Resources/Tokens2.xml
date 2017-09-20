@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tokens version="1.0">
-	<File path="Classes/AEDKHttpUploadDownloadConfiguration.html">
+	<File path="Classes/AEDKHttpServiceConfiguration.html">
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/cl/AEDKHttpUploadDownloadConfiguration</TokenIdentifier>
+			<TokenIdentifier>//apple_ref/occ/cl/AEDKHttpServiceConfiguration</TokenIdentifier>
 			<Abstract type="html"></Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
             
@@ -13,94 +13,266 @@
 		
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setType:</TokenIdentifier>
-			<Abstract type="html">上传下载类型</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setStringEncoding:</TokenIdentifier>
+			<Abstract type="html">字符编码</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
 			
 			
-			<Anchor>//api/name/type</Anchor>
+			<Anchor>//api/name/stringEncoding</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
-			<Abstract type="html">上传下载类型</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/stringEncoding</TokenIdentifier>
+			<Abstract type="html">字符编码</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
 			
 			
-			<Anchor>//api/name/type</Anchor>
+			<Anchor>//api/name/stringEncoding</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/type</TokenIdentifier>
-			<Abstract type="html">上传下载类型</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/stringEncoding</TokenIdentifier>
+			<Abstract type="html">字符编码</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, assign) AEDKHttpUploadDownloadType type</Declaration>
+			<Declaration>@property (nonatomic, assign) NSStringEncoding stringEncoding</Declaration>
 			
 			
-			<Anchor>//api/name/type</Anchor>
+			<Anchor>//api/name/stringEncoding</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/setAssociatedFilePath:</TokenIdentifier>
-			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setMimeType:</TokenIdentifier>
+			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
 			
 			
-			<Anchor>//api/name/associatedFilePath</Anchor>
+			<Anchor>//api/name/mimeType</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
-			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/mimeType</TokenIdentifier>
+			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
 			
 			
-			<Anchor>//api/name/associatedFilePath</Anchor>
+			<Anchor>//api/name/mimeType</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpUploadDownloadConfiguration/associatedFilePath</TokenIdentifier>
-			<Abstract type="html">关联的文件路径，用于上传或下载</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/mimeType</TokenIdentifier>
+			<Abstract type="html">请求类型，默认AEDKHttpServiceMimeTypeUndefine</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>@property (nonatomic, copy) NSString *associatedFilePath</Declaration>
+			<Declaration>@property (nonatomic, assign) AEDKHttpServiceMimeType mimeType</Declaration>
 			
 			
-			<Anchor>//api/name/associatedFilePath</Anchor>
+			<Anchor>//api/name/mimeType</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpUploadDownloadConfiguration/initWithType:accociatedFilePath:</TokenIdentifier>
-			<Abstract type="html">初始化方法</Abstract>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setRequestParameter:</TokenIdentifier>
+			<Abstract type="html">请求参数</Abstract>
 			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
 			
-			<Declaration>- (instancetype)initWithType:(AEDKHttpUploadDownloadType)type accociatedFilePath:(NSString *)path</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>type</Name>
-					<Abstract type="html">上传下载类型</Abstract>
-				</Parameter><Parameter>
-					<Name>path</Name>
-					<Abstract type="html">关联文件路径</Abstract>
-				</Parameter>
-			</Parameters>
-			<ReturnValue><Abstract type="html">类实例</Abstract></ReturnValue>
-			<Anchor>//api/name/initWithType:accociatedFilePath:</Anchor>
+			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
+			
+			
+			<Anchor>//api/name/requestParameter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/requestParameter</TokenIdentifier>
+			<Abstract type="html">请求参数</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
+			
+			
+			<Anchor>//api/name/requestParameter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/requestParameter</TokenIdentifier>
+			<Abstract type="html">请求参数</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) NSDictionary *requestParameter</Declaration>
+			
+			
+			<Anchor>//api/name/requestParameter</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setUploadDownloadConfig:</TokenIdentifier>
+			<Abstract type="html">上传下载配置</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
+			
+			
+			<Anchor>//api/name/uploadDownloadConfig</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/uploadDownloadConfig</TokenIdentifier>
+			<Abstract type="html">上传下载配置</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
+			
+			
+			<Anchor>//api/name/uploadDownloadConfig</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/uploadDownloadConfig</TokenIdentifier>
+			<Abstract type="html">上传下载配置</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, copy) AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig</Declaration>
+			
+			
+			<Anchor>//api/name/uploadDownloadConfig</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setInfoAppendingAfterQueryString:</TokenIdentifier>
+			<Abstract type="html">拼在链接后的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
+			
+			
+			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/infoAppendingAfterQueryString</TokenIdentifier>
+			<Abstract type="html">拼在链接后的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
+			
+			
+			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/infoAppendingAfterQueryString</TokenIdentifier>
+			<Abstract type="html">拼在链接后的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoAppendingAfterQueryString</Declaration>
+			
+			
+			<Anchor>//api/name/infoAppendingAfterQueryString</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setInfoInHttpHeader:</TokenIdentifier>
+			<Abstract type="html">http头中的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
+			
+			
+			<Anchor>//api/name/infoInHttpHeader</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/infoInHttpHeader</TokenIdentifier>
+			<Abstract type="html">http头中的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
+			
+			
+			<Anchor>//api/name/infoInHttpHeader</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/infoInHttpHeader</TokenIdentifier>
+			<Abstract type="html">http头中的用户信息</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSDictionary&lt;NSString*NSString*&gt; *infoInHttpHeader</Declaration>
+			
+			
+			<Anchor>//api/name/infoInHttpHeader</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/setRetryCount:</TokenIdentifier>
+			<Abstract type="html">重试次数， 默认0</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
+			
+			
+			<Anchor>//api/name/retryCount</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AEDKHttpServiceConfiguration/retryCount</TokenIdentifier>
+			<Abstract type="html">重试次数， 默认0</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
+			
+			
+			<Anchor>//api/name/retryCount</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AEDKHttpServiceConfiguration/retryCount</TokenIdentifier>
+			<Abstract type="html">重试次数， 默认0</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSUInteger retryCount</Declaration>
+			
+			
+			<Anchor>//api/name/retryCount</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AEDKHttpServiceConfiguration/defaultConfiguration</TokenIdentifier>
+			<Abstract type="html">默认配置</Abstract>
+			<DeclaredIn>AEDKServiceConfiguration.m</DeclaredIn>
+			
+			<Declaration>+ (instancetype)defaultConfiguration</Declaration>
+			
+			<ReturnValue><Abstract type="html">配置实例</Abstract></ReturnValue>
+			<Anchor>//api/name/defaultConfiguration</Anchor>
             <NodeRef refid="2"/>
 		</Token>
 		

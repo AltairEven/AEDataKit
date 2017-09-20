@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSString *const kAEDKServiceProtocolHttp;    //http
 extern NSString *const kAEDKServiceProtocolHttps;   //https
 extern NSString *const kAEDKServiceProtocolCache;    //缓存
-extern NSString *const kAEDKServiceProtocolFile;    //文件
 //extern NSString *const kAEDKServiceProtocolClass;   //类
 extern NSString *const kAEDKServiceProtocolDataBase;    //数据库
 

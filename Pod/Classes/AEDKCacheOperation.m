@@ -109,22 +109,22 @@
 
 #pragma mark Quick Methods
 
-+ (id)aedk_Cache_ObjectForKey:(NSString *)key {
++ (id)objectForKey:(NSString *)key {
     key = [AEDKTools urlEncodeString:key];
     return [[AEDKCacheOperation operation].withKey(key) withResult];
 }
 
-+ (void)aedk_Cache_SetObject:(id)object forKey:(NSString *)key {
++ (void)setObject:(id)object forKey:(NSString *)key {
     key = [AEDKTools urlEncodeString:key];
     [[AEDKCacheOperation operation].withKey(key).withValue(object).withOperationType(AEDKCacheOperationTypeWrite) withResult];
 }
 
-+ (void)aedk_Cache_RemoveObjectForKey:(NSString *)key {
++ (void)removeObjectForKey:(NSString *)key {
     key = [AEDKTools urlEncodeString:key];
     [[AEDKCacheOperation operation].withKey(key).withOperationType(AEDKCacheOperationTypeRemove) withResult];
 }
 
-+ (void)aedk_Cache_ClearMemoryCacheWithRoute:(AEDKCacheOperationRoute)route {
++ (void)clearWithRoute:(AEDKCacheOperationRoute)route {
     [[AEDKCacheOperation operation].withOperationType(AEDKCacheOperationTypeClear).from(route) withResult];
 }
 

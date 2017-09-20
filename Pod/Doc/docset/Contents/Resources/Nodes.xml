@@ -16,6 +16,7 @@
 						<NodeRef refid="3"/>
 						<NodeRef refid="4"/>
 						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
 						
 					</Subnodes>
 				</Node>
@@ -27,7 +28,7 @@
 					<Name>Constants</Name>
 					<Path>index.html</Path>
 					<Subnodes>
-						<NodeRef refid="6"/>
+						<NodeRef refid="7"/>
 						
 					</Subnodes>
 				</Node>
@@ -37,7 +38,9 @@
                     <Name>Blocks</Name>
                     <Path>index.html</Path>
                     <Subnodes>
-                        <NodeRef refid="7"/>
+                        <NodeRef refid="8"/>
+                        <NodeRef refid="9"/>
+                        <NodeRef refid="10"/>
                         
                     </Subnodes>
                 </Node>
@@ -48,6 +51,39 @@
 	<Library>
 		
 		<Node id="1" type="file" documentType="reference">
+            <Name>AEDKCacheOperation</Name>
+            <Path>Classes/AEDKCacheOperation.html</Path>
+            
+                <Subnodes>
+                <Node type="section">
+                    <Path>Classes/AEDKCacheOperation.html</Path>
+                    <Name>Overview</Name>
+                    <Anchor>overview</Anchor>
+                </Node>
+                <Node type="section">
+                    <Path>Classes/AEDKCacheOperation.html</Path>
+                    <Name>Tasks</Name>
+                    <Anchor>tasks</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/AEDKCacheOperation.html</Path>
+                    <Name>Class Methods</Name>
+                    <Anchor>class_methods</Anchor>
+                </Node>
+                
+                
+                <Node type="section">
+                    <Path>Classes/AEDKCacheOperation.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
+            </Subnodes>
+            
+        </Node>
+		<Node id="2" type="file" documentType="reference">
             <Name>AEDKHttpServiceConfiguration</Name>
             <Path>Classes/AEDKHttpServiceConfiguration.html</Path>
             
@@ -80,7 +116,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="2" type="file" documentType="reference">
+		<Node id="3" type="file" documentType="reference">
             <Name>AEDKHttpUploadDownloadConfiguration</Name>
             <Path>Classes/AEDKHttpUploadDownloadConfiguration.html</Path>
             
@@ -113,7 +149,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="3" type="file" documentType="reference">
+		<Node id="4" type="file" documentType="reference">
             <Name>AEDKService</Name>
             <Path>Classes/AEDKService.html</Path>
             
@@ -146,7 +182,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="4" type="file" documentType="reference">
+		<Node id="5" type="file" documentType="reference">
             <Name>AEDKServiceConfiguration</Name>
             <Path>Classes/AEDKServiceConfiguration.html</Path>
             
@@ -179,7 +215,7 @@
             </Subnodes>
             
         </Node>
-		<Node id="5" type="file" documentType="reference">
+		<Node id="6" type="file" documentType="reference">
             <Name>AENetworkReachabilityManager</Name>
             <Path>Classes/AENetworkReachabilityManager.html</Path>
             
@@ -221,13 +257,23 @@
 		
 		
         
-        <Node id="6" type="file" documentType="reference">
+        <Node id="7" type="file" documentType="reference">
             <Name>AENetworkReachabilityStatus</Name>
             <Path>Constants/AENetworkReachabilityStatus.html</Path>
             
         </Node>
 		
-        <Node id="7" type="file" documentType="reference">
+        <Node id="8" type="file" documentType="reference">
+            <Name>AEDKCacheOperationIntegerChain</Name>
+            <Path>Blocks/AEDKCacheOperationIntegerChain.html</Path>
+            
+        </Node>
+        <Node id="9" type="file" documentType="reference">
+            <Name>AEDKCacheOperationObjectChain</Name>
+            <Path>Blocks/AEDKCacheOperationObjectChain.html</Path>
+            
+        </Node>
+        <Node id="10" type="file" documentType="reference">
             <Name>AENetworkReachabilityStatusBlock</Name>
             <Path>Blocks/AENetworkReachabilityStatusBlock.html</Path>
             
