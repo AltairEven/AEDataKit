@@ -135,9 +135,7 @@
 - (AEDKProcess *)assignExecutingProcess {
     NSURLRequest *request = [self standardRequest];
     if (request) {
-        AEDKProcess *process = [[AEDKProcess alloc] init];
-        process.request = request;
-        process.configuration = self.configuration;
+        AEDKProcess *process = [[AEDKProcess alloc] initWithRequest:request configuration:self.configuration];
         process.processQueue = self.processQueue;
         if ([self.protocol isEqualToString:kAEDKServiceProtocolCache]) {
             process.configuration.isSynchronized = YES;

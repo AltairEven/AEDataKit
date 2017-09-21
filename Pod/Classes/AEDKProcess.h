@@ -22,13 +22,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AEDKProcess : NSOperation
 
-@property (nonatomic, copy) NSURLRequest *request;
+@property (nonatomic, copy, readonly) NSURLRequest *request;
 
 @property (nonatomic, copy) AEDKServiceConfiguration *configuration;
 
 @property (nonatomic, readonly) AEDKProcessState state;
 
 @property (nonatomic, weak) NSOperationQueue *processQueue;
+
+- (instancetype)initWithRequest:(NSURLRequest *)reqeust configuration:(AEDKServiceConfiguration *)configuration;
 
 @end
 

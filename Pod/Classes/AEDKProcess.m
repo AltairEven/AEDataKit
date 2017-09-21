@@ -17,6 +17,15 @@
 
 @implementation AEDKProcess
 
+- (instancetype)initWithRequest:(NSURLRequest *)reqeust configuration:(AEDKServiceConfiguration *)configuration {
+    self = [super init];
+    if (self) {
+        _request = reqeust;
+        _configuration = configuration;
+    }
+    return self;
+}
+
 #pragma mark Private methods
 
 - (void)setState:(AEDKProcessState)state {
@@ -73,6 +82,7 @@
 
 - (void)start {
     if (self.maybeStarted) {
+        [super start];
         return;
     }
     self.maybeStarted = YES;
