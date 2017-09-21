@@ -29,13 +29,13 @@ typedef enum {
 
 @interface AEDKCacheOperation : NSObject <AEDKProtocol>
 
-@property (nonatomic, readonly) AEDKCacheOperationType type;
+@property (nonatomic, assign) AEDKCacheOperationType type;
 
-@property (nonatomic, strong, readonly) NSString *key;
+@property (nonatomic, copy) NSString *key;
 
-@property (nonatomic, strong, readonly) id value;
+@property (nonatomic, strong) id value;
 
-@property (nonatomic, readonly) AEDKCacheOperationRoute route;
+@property (nonatomic, assign) AEDKCacheOperationRoute route;
 
 /**
  缓存便捷操作的类实例
