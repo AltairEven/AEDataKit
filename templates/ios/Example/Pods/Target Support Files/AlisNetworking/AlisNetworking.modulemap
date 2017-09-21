@@ -1,6 +1,0 @@
-framework module AlisNetworking {
-  umbrella header "AlisNetworking-umbrella.h"
-
-  export *
-  module * { export * }
-}

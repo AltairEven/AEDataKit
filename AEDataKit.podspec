@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AEDataKit'
-  s.version          = '0.0.12'
+  s.version          = '0.0.13'
   s.summary          = 'This is a short description of AEDataKit.'
 
 # This description is used to generate tags and improve search results.
@@ -39,5 +39,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'AELocalDataKit'
-  s.dependency 'AlisNetworking'
+  #s.dependency 'AlisNetworking'
 end
