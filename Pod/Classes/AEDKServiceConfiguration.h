@@ -66,6 +66,11 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 @property (nonatomic, copy) NSString *method;
 
 /**
+ 请求参数
+ */
+@property (nonatomic, copy) NSDictionary *requestParameter;
+
+/**
  是否同步操作的服务
  */
 @property (nonatomic, assign) BOOL isSynchronized;
@@ -124,11 +129,6 @@ typedef enum {
  请求类型，默认AEDKHttpServiceMimeTypeUndefine
  */
 @property (nonatomic, assign) AEDKHttpServiceMimeType mimeType;
-
-/**
- 请求参数
- */
-@property (nonatomic, copy) NSDictionary *requestParameter;
 
 /**
  上传下载配置

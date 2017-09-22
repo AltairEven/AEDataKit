@@ -28,7 +28,7 @@ typedef enum {
  协议格式如下：
  http://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
  https://domain/path?parameterKey1=parameterValue1&parameterKey2=parameterValue2
- cache://cacheIdentifier/memoryAndDisk/keyname
+ cache://cacheIdentifier/memoryAndDisk?key=keyname
  db://table.dbname/simple?key1=keyname1&key2=kename2
  db://dbname/sql?urlencodedSQLQueryString
  */

@@ -128,7 +128,9 @@
         default:
             break;
     }
-    
+    if (self.key) {
+        config.requestParameter = @{@"key" : self.key};
+    }
     config.requestBody = self.value;
     
     AEDKService *service = [[AEDKService alloc] initWithName:name protocol:@"cache" domain:@"AEDKCacheOperation" path:path serviceConfiguration:config];

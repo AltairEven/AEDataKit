@@ -117,7 +117,16 @@
     if (![protocol isEqualToString:kAEDKServiceProtocolCache]) {
         return nil;
     }
-    NSString *key = [[process.request.URL absoluteString] lastPathComponent];
+    NSString *query = [process.request.URL query];
+    NSArray *keyArray = [query componentsSeparatedByString:@"&"];
+    NSString *key = nil;
+    for (NSString *param in keyArray) {
+        NSArray *paramArray = [param componentsSeparatedByString:@"="];
+        NSString *paramKey = [paramArray firstObject];
+        if ([paramKey isEqualToString:@"key"]) {
+            key = [paramArray lastObject];
+        }
+    }
     AELDOperationType type = AELDOperationTypeRead;
     if ([process.request.HTTPMethod isEqualToString:kAEDKServiceMethodGet]) {
         type = AELDOperationTypeRead;

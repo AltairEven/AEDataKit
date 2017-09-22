@@ -74,6 +74,17 @@
 
 - (NSURLRequest *)standardRequest {
     NSString *wholeString = [NSString stringWithFormat:@"%@://%@%@", self.protocol, self.domain, self.path];
+    if ([self.protocol isEqualToString:kAEDKServiceProtocolCache] && [self.configuration.requestParameter count] > 0) {
+        //Cache 参数
+        NSMutableArray *keyValues = [[NSMutableArray alloc] init];
+        [self.configuration.requestParameter enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            NSString *string = [NSString stringWithFormat:@"%@=%@",key, obj];
+            [keyValues addObject:string];
+        }];
+        NSString *queryString = [keyValues componentsJoinedByString:@"&"];
+        
+        wholeString = [NSString stringWithFormat:@"%@?%@", wholeString, queryString];
+    }
     NSURL *url = [NSURL URLWithString:wholeString];
     if (!url) {
         //如果url创建失败，则可能请求字符串不符合 RFC 2396标准，所以使用filepath来转成url

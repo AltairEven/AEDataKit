@@ -57,6 +57,7 @@ NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
     config.displayDebugInfo = self.displayDebugInfo;
     config.specifiedServiceDelegate = self.specifiedServiceDelegate;
     config.method = self.method;
+    config.requestParameter = self.requestParameter;
     config.isSynchronized = self.isSynchronized;
     config.requestBody = self.requestBody;
     config.BeforeProcess = self.BeforeProcess;
