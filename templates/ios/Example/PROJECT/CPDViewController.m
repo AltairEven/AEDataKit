@@ -57,7 +57,7 @@
     process.configuration.Processing = ^(int64_t totalAmount, int64_t currentAmount, NSURLRequest * _Nonnull currentRequest) {
         NSLog(@"Processing Callback.");
     };
-    process.configuration.AfterProcess = ^id _Nonnull(id  _Nullable responseData) {
+    process.configuration.AfterProcess = ^id _Nonnull(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseData) {
         NSLog(@"After Process Callback.");
         return responseData;
     };

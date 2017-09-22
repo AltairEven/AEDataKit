@@ -93,7 +93,7 @@ extern NSString *const kAEDKServiceMethodWRAPPED;   //对应http/https协议的W
 /**
  服务进程结束前，该block通知用户当前服务的返回数据，需要用户返回解析后的数据模型
  */
-@property (nonatomic, copy) id (^__nullable AfterProcess)(id __nullable responseData);
+@property (nonatomic, copy) id (^__nullable AfterProcess)(AEDKProcess *currentProcess, NSError *error, id __nullable responseData);
 
 /**
  服务进程完成后，得到执行结果。如果用户实现了AfterProcess，则返回用户解析后的数据模型，否则返回原始数据

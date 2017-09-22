@@ -58,12 +58,12 @@
         }
         if (process.configuration.ProcessCompleted) {
             id responseData = nil;
+            NSError *error = [NSError errorWithDomain:@"AELocalDataPlug" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"无法处理的操作"}];
             if (process.configuration.AfterProcess) {
                 //处理返回值
-                responseData = process.configuration.AfterProcess(nil);
+                responseData = process.configuration.AfterProcess(process, error, nil);
             }
             //处理结束
-            NSError *error = [NSError errorWithDomain:@"AELocalDataPlug" code:-1 userInfo:@{NSLocalizedDescriptionKey : @"无法处理的操作"}];
             process.configuration.ProcessCompleted(process, error, responseData);
         }
         return;
@@ -98,7 +98,7 @@
                 id responseData = response.responseData;
                 if (process.configuration.AfterProcess) {
                     //处理返回值
-                    responseData = process.configuration.AfterProcess(response.responseData);
+                    responseData = process.configuration.AfterProcess(process, response.error, response.responseData);
                 }
                 //处理结束
                 process.configuration.ProcessCompleted(process, response.error, responseData);
