@@ -117,18 +117,22 @@
     if (![protocol isEqualToString:kAEDKServiceProtocolCache]) {
         return nil;
     }
+    NSString *key = [[process.request.URL absoluteString] lastPathComponent];
     AELDOperationType type = AELDOperationTypeRead;
     if ([process.request.HTTPMethod isEqualToString:kAEDKServiceMethodGet]) {
         type = AELDOperationTypeRead;
     } else if ([process.request.HTTPMethod isEqualToString:kAEDKServiceMethodPOST] || [process.request.HTTPMethod isEqualToString:kAEDKServiceMethodPUT]) {
         type = AELDOperationTypeWrite;
     } else if ([process.request.HTTPMethod isEqualToString:kAEDKServiceMethodDELETE]) {
-        type = AELDOperationTypeDelete;
+        if ([key length] == 0) {
+            type = AELDOperationTypeClear;
+        } else {
+            type = AELDOperationTypeDelete;
+        }
     } else {
         return nil;
     }
-    NSString *key = [[process.request.URL absoluteString] lastPathComponent];
-    NSString *modeName = @"AELDMemoryCachePlug";
+    NSString *modeName = @"AELocalDataPlug";
     AELDOperationMode *mode = [AELDOperationMode modeWithName:modeName operationType:type];
     mode.key = key;
     mode.value = process.configuration.requestBody;
