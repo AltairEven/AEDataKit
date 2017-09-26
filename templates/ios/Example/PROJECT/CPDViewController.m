@@ -8,6 +8,7 @@
 
 #import "CPDViewController.h"
 #import <AEDataKit/AEDataKit.h>
+#import "PostCodeModel.h"
 
 @interface CPDViewController ()
 
@@ -36,6 +37,10 @@
     
     UIImage *image = [placeholder fitPlaceholderImageForView:self.imageView];
     [self.imageView setImage:image];
+    
+    
+    [self testImageView];
+    [self normalRequest];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -83,6 +88,40 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)testImageView{
+    AEDKWebImageLoader *loader = [[AEDKWebImageLoader alloc]init]; 
+    [loader setImageForImageView:_imageView withURL:[NSURL URLWithString:@"http://img3.redocn.com/tupian/20150312/haixinghezhenzhubeikeshiliangbeijing_3937174.jpg"] placeholderImage:nil progress:^(int64_t totalAmount, int64_t currentAmount) {
+        
+    } completed:^(NSURL * _Nullable imageUrl, UIImage * _Nullable image, NSError * _Nullable error) {
+        NSLog(@"图片请求结束");
+    }];
+    
+    
+}
+
+- (void)normalRequest{
+    AEDKProcess *process = [[AEDKServer server] requestServiceWithName:@"AskPostCodes"];
+    process.configuration.BeforeProcess = ^(AEDKProcess * _Nonnull process) {
+        //        if ([process.configuration isKindOfClass:[AEDKHttpServiceConfiguration class]]) {
+        //            AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
+        //            config.requestParameter = @{@"f":@"f"};
+        //        }
+    };
+    process.configuration.Processing = ^(int64_t totalAmount, int64_t currentAmount, NSURLRequest * _Nonnull currentRequest) {
+    };
+    
+    process.configuration.AfterProcess = ^id _Nonnull(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseData) {
+        NSArray *modelArray = [PostCodeModel allPostcode:(NSDictionary *)responseData];
+        return modelArray;
+    };
+    
+    process.configuration.ProcessCompleted = ^(AEDKProcess * _Nonnull currentProcess, NSError * _Nonnull error, id  _Nullable responseModel) {
+        // final result
+        NSLog(@"请求完全结束");
+    };
+    [process start];
 }
 
 @end

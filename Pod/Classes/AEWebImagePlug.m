@@ -1,3 +1,4 @@
+
 //
 //  AEWebImagePlug.m
 //  Pods
@@ -7,6 +8,8 @@
 //
 
 #import "AEWebImagePlug.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <AlisNetworking/AlisNetworking.h>
 
 @implementation AEWebImagePlug
 
@@ -29,5 +32,46 @@
 - (void)handleProcess:(AEDKProcess *)process{
 }
 
+- (void)imageWithUrl:(NSURL * __nullable)url
+            progress:(void(^ __nullable)(int64_t totalAmount, int64_t currentAmount))progress
+           completed:(void(^ __nullable)(NSURL *__nullable imageUrl, UIImage *__nullable image, NSError *__nullable error))completedBlock{
+    AlisRequestFinishBlock imageCompletedBlock = ^(AlisRequest *request ,AlisResponse *response ,AlisError *error) {
+        if (completedBlock) {
+            completedBlock([NSURL URLWithString:request.url] ,response.originalData ,error.originalError);
+        }
+    };
+    
+    AlisRequestProgressBlock imageProcessBlock = ^(AlisRequest *request ,long long receivedSize, long long expectedSize){
+        if (progress) {
+            progress(expectedSize ,receivedSize);
+        }
+    };
+    
+    AlisRequest *request = [[AlisRequest alloc]init];
+    request.mimeType = AlisHttpRequestMimeTypeImage;
+    request.httpMethod = AlisHTTPMethodGET;
+    request.url = [url absoluteString];
+    request.finishBlock = imageCompletedBlock;
+    request.progressBlock = imageProcessBlock;
+    
+    [[AlisRequestManager manager] startRequest:request]; 
+}
+
+- (void)setImageForImageView:(UIImageView *)imageView
+                     withURL:(NSURL * __nullable)url
+            placeholderImage:(UIImage * __nullable)placeholder
+                    progress:(void(^ __nullable)(int64_t totalAmount, int64_t currentAmount))progress
+                   completed:(void(^ __nullable)(NSURL *__nullable imageUrl, UIImage *__nullable image, NSError *__nullable error))completedBlock{
+    
+    [imageView alis_setImageWithURL:[url absoluteString] placeholderImage:placeholder options:0 progress:^(AlisRequest *request, long long receivedSize, long long expectedSize) {
+        if (progress) {
+            progress(expectedSize , receivedSize);
+        }
+    } completed:^(AlisRequest *request, AlisResponse *response, AlisError *error) {
+        if (completedBlock) {
+            completedBlock([NSURL URLWithString:request.url] , response.originalData , error.originalError);
+        }
+    }];
+}
 
 @end

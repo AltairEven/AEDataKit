@@ -7,12 +7,14 @@
 //
 
 #import "AENetworkDataPlug.h"
-
-@interface AENetworkDataPlug()
-
-@end
+#import <AFNetworking/AFNetworking.h>
+#import <AlisNetworking/AlisNetworking.h>
 
 @implementation AENetworkDataPlug
+
+- (NSString *)plugIdentifier{
+    return  NSStringFromClass([self class]);
+}
 
 - (BOOL)canHandleProcess:(AEDKProcess *)process{
     if (!process || ![process isKindOfClass:[AEDKProcess class]]) {
@@ -31,6 +33,84 @@
 
 - (void)handleProcess:(AEDKProcess *)process{
     
+    if (process.configuration == nil) return;
+    if (![process.configuration isKindOfClass:[AEDKHttpServiceConfiguration class]])
+        return;
+    
+    AlisRequest *alisRequest = [self convertAEDKProcess:process];
+    [[AlisRequestManager sharedManager]startRequest:alisRequest];
+    
+}
+
+- (AlisRequest *)convertAEDKProcess:(AEDKProcess *)process{
+    if (process.configuration == nil) return nil;
+    if (![process.configuration isKindOfClass:[AEDKHttpServiceConfiguration class]])
+        return nil;
+    
+    AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
+    
+    AlisRequest *alisRequest = [[AlisRequest alloc]init];
+    NSURLRequest *urlRequet = process.request;
+    alisRequest.url = [urlRequet.URL absoluteString];
+    alisRequest.parameters = config.requestParameter;
+    alisRequest.httpMethod = [self httpMethodConverter:urlRequet.HTTPMethod];
+    alisRequest.retryCount = config.retryCount;
+    alisRequest.header = urlRequet.allHTTPHeaderFields;
+    alisRequest.timeoutInterval = urlRequet.timeoutInterval;
+    
+    if (config.mimeType == AEDKHttpServiceMimeTypeText) {
+        alisRequest.mimeType = AlisHttpRequestMimeTypeText;
+    }else if (config.mimeType == AEDKHttpServiceMimeTypeImage) {
+        alisRequest.mimeType = AlisHttpRequestMimeTypeImage;
+    }
+    
+    
+    if (config.uploadDownloadConfig == nil) {
+        alisRequest.requestType = AlisRequestNormal;
+    }
+    else if (config.uploadDownloadConfig.type == AEDKHttpFileUpload) {
+        alisRequest.requestType = AlisRequestUpload;
+    }
+    else if (config.uploadDownloadConfig.type == AEDKHttpFileDownload) {
+        alisRequest.requestType = AlisRequestDownload;
+    }
+    
+    alisRequest.startBlock = ^{
+        config.BeforeProcess(process);
+    };
+    
+    alisRequest.progressBlock = ^(AlisRequest *request, long long receivedSize, long long expectedSize) {
+        config.Processing(expectedSize, receivedSize, process.request);
+    };
+    
+    alisRequest.cancelBlock = ^{
+    };
+    
+    alisRequest.finishBlock = ^(AlisRequest *request, AlisResponse *response, AlisError *error) {
+        id parseredData= config.AfterProcess( process , error.originalError,response.originalData);
+        config.ProcessCompleted(process, error.originalError, parseredData);
+    };
+    
+    return alisRequest;
+    
+}
+
+- (AlisHTTPMethodType)httpMethodConverter:(NSString *)HTTPMethod{
+    if ([HTTPMethod isEqualToString:@"GET"]) {
+        return AlisHTTPMethodGET;
+    }else if ([HTTPMethod isEqualToString:@"POST"]) {
+        return AlisHTTPMethodPOST;
+    }else if ([HTTPMethod isEqualToString:@"HEAD"] ) {
+        return AlisHTTPMethodHEAD;
+    }else if ([HTTPMethod isEqualToString:@"DELETE"]) {
+        return AlisHTTPMethodDELETE;
+    }else if ([HTTPMethod isEqualToString:@"PUT"]) {
+        return AlisHTTPMethodPUT;
+    }else if ([HTTPMethod isEqualToString:@"PATCH"]) {
+        return AlisHTTPMethodPATCH;
+    }
+    
+    return AlisHTTPMethodGET;
 }
 
 @end

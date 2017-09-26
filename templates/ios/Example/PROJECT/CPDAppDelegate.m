@@ -5,7 +5,7 @@
 //  Created by PROJECT_OWNER on TODAYS_DATE.
 //  Copyright (c) TODAYS_YEAR PROJECT_OWNER. All rights reserved.
 //
-
+#import <AEDataKit/AEDataKit.h>
 #import "CPDAppDelegate.h"
 
 @implementation CPDAppDelegate
@@ -13,6 +13,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    AEDKHttpServiceConfiguration *httpConfiguration = [[AEDKHttpServiceConfiguration alloc]init];
+    httpConfiguration.mimeType = AEDKHttpServiceMimeTypeText;
+    AEDKHttpUploadDownloadConfiguration *uploadDownloadConfig = [[AEDKHttpUploadDownloadConfiguration alloc]initWithType:AEDKHttpFileUpload accociatedFilePath:@"/temp/xyz"];
+    httpConfiguration.uploadDownloadConfig = uploadDownloadConfig;
+    
+    
+    AEDKService *service = [[AEDKService alloc]initWithName:@"AskPostCodes" protocol:kAEDKServiceProtocolHttp domain:@"olympic-public.oss-cn-shanghai.aliyuncs.com" path:@"/api/address/addr_4_1111_1_amap.json" serviceConfiguration:httpConfiguration];//[AEDKServiceConfiguration defaultConfiguration]]
+    [[AEDKServer server] registerService:service];
+    
     return YES;
 }
 

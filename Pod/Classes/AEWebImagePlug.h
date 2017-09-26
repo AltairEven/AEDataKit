@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "AEDKPlugProtocol.h"
 
-@interface AEWebImagePlug : NSObject <AEDKPlugProtocol>
+@interface AEWebImagePlug : NSObject <AEDKWebImageLoaderPlugProtocol>
 
 @end
