@@ -24,9 +24,11 @@
     if (![protocol isEqualToString:kAEDKServiceProtocolHttp] && ![protocol isEqualToString:kAEDKServiceProtocolHttps]) {
         return NO;
     }
-    AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
-    if (! (config.mimeType == AEDKHttpServiceMimeTypeImage)) {
-        return YES;
+    if ([process.configuration isKindOfClass:[AEDKHttpServiceConfiguration class]]) {
+        AEDKHttpServiceConfiguration *config = (AEDKHttpServiceConfiguration *)(process.configuration);
+        if (config.mimeType != AEDKHttpServiceMimeTypeImage) {
+            return YES;
+        }
     }
     return NO;
 }
