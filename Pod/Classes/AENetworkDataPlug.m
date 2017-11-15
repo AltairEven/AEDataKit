@@ -7,7 +7,6 @@
 //
 
 #import "AENetworkDataPlug.h"
-#import <AFNetworking/AFNetworking.h>
 #import <AlisNetworking/AlisNetworking.h>
 
 @implementation AENetworkDataPlug
