@@ -77,19 +77,31 @@
     }
     
     alisRequest.startBlock = ^{
-        config.BeforeProcess(process);
+        if (config.BeforeProcess) {
+            config.BeforeProcess(process);
+        }
     };
     
     alisRequest.progressBlock = ^(AlisRequest *request, long long receivedSize, long long expectedSize) {
-        config.Processing(expectedSize, receivedSize, process.request);
+        if (config.Processing) {
+            config.Processing(expectedSize, receivedSize, process.request);
+        }
     };
     
     alisRequest.cancelBlock = ^{
     };
     
     alisRequest.finishBlock = ^(AlisRequest *request, AlisResponse *response, AlisError *error) {
-        id parseredData= config.AfterProcess( process , error.originalError,response.originalData);
-        config.ProcessCompleted(process, error.originalError, parseredData);
+        if (config.AfterProcess) {
+            id parseredData = config.AfterProcess( process , error.originalError,response.originalData);
+            if (config.ProcessCompleted) {
+                config.ProcessCompleted(process, error.originalError, parseredData);
+            }
+            return;
+        }
+        if (config.ProcessCompleted) {
+            config.ProcessCompleted(process, error.originalError, response.originalData);
+        }
     };
     
     return alisRequest;
