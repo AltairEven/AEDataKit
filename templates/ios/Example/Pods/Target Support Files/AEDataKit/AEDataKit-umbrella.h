@@ -16,6 +16,7 @@
 #import "AEDKPlugProtocol.h"
 #import "AEDKProcess.h"
 #import "AEDKProtocol.h"
+#import "AEDKReachability.h"
 #import "AEDKServer.h"
 #import "AEDKServiceConfiguration.h"
 #import "AEDKTools.h"
@@ -23,7 +24,6 @@
 #import "AELocalDataPlug.h"
 #import "AENetworkDataPlug.h"
 #import "AENetworkReachabilityManager.h"
-#import "AEReachability.h"
 #import "AEWebImagePlug.h"
 
 FOUNDATION_EXPORT double AEDataKitVersionNumber;

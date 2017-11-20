@@ -6,19 +6,19 @@
 //  Copyright © 2016年 StarDust. All rights reserved.
 //
 
-#import "AEReachability.h"
+#import "AEDKReachability.h"
 #import "AENetworkReachabilityManager.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
-static AEReachability *_sharedManager = nil;
+static AEDKReachability *_sharedManager = nil;
 
-@interface AEReachability ()
+@interface AEDKReachability ()
 
 @property (nonatomic, strong) AENetworkReachabilityManager *reachabilityManager;
 
 @end
 
-@implementation AEReachability
+@implementation AEDKReachability
 @synthesize domain;
 @synthesize isNetworkStatusOK = _isNetworkStatusOK;
 @synthesize reachabilityManager;
@@ -42,7 +42,7 @@ static AEReachability *_sharedManager = nil;
     static dispatch_once_t predicate = 0;
     
     dispatch_once(&predicate, ^ (void) {
-        _sharedManager = [[AEReachability alloc] init];
+        _sharedManager = [[AEDKReachability alloc] init];
     });
     
     return _sharedManager;
@@ -50,7 +50,7 @@ static AEReachability *_sharedManager = nil;
 
 
 
-- (void)startNetworkMonitoringWithStatusChangeBlock:(void (^)(AENetworkStatus))block
+- (void)startNetworkMonitoringWithStatusChangeBlock:(void (^)(AEDKNetworkStatus))block
 {
     //初始化网络状态监控
     if (self.domain && ![self.domain isEqualToString:@""]) {
@@ -63,20 +63,20 @@ static AEReachability *_sharedManager = nil;
     
     __weak typeof(self) weakSelf = self;
     [weakSelf.reachabilityManager setReachabilityStatusChangeBlock:^(AENetworkReachabilityStatus status){
-        AENetworkStatus netStatus = AENetworkStatusUnknown;
+        AEDKNetworkStatus netStatus = AEDKNetworkStatusUnknown;
         switch (status) {
             case AENetworkReachabilityStatusUnknown:
             {
                 _isNetworkStatusOK = NO;
-                _status = AENetworkStatusUnknown;
-                netStatus = AENetworkStatusUnknown;
+                _status = AEDKNetworkStatusUnknown;
+                netStatus = AEDKNetworkStatusUnknown;
             }
                 break;
             case AENetworkReachabilityStatusNotReachable:
             {
                 _isNetworkStatusOK = NO;
-                _status = AENetworkStatusNotReachable;
-                netStatus = AENetworkStatusNotReachable;
+                _status = AEDKNetworkStatusNotReachable;
+                netStatus = AEDKNetworkStatusNotReachable;
             }
                 break;
             case AENetworkReachabilityStatusReachableViaWWAN:
@@ -87,14 +87,14 @@ static AEReachability *_sharedManager = nil;
                 NSString *currentRadioAccessTechnology = info.currentRadioAccessTechnology;
                 if (currentRadioAccessTechnology) {
                     if ([currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyLTE]) {
-                        _status = AENetworkStatusCellType4G;
-                        netStatus = AENetworkStatusCellType4G;
+                        _status = AEDKNetworkStatusCellType4G;
+                        netStatus = AEDKNetworkStatusCellType4G;
                     } else if ([currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyEdge] || [currentRadioAccessTechnology isEqualToString:CTRadioAccessTechnologyGPRS]) {
-                        _status = AENetworkStatusCellType2G;
-                        netStatus = AENetworkStatusCellType2G;
+                        _status = AEDKNetworkStatusCellType2G;
+                        netStatus = AEDKNetworkStatusCellType2G;
                     } else {
-                        _status = AENetworkStatusCellType3G;
-                        netStatus = AENetworkStatusCellType3G;
+                        _status = AEDKNetworkStatusCellType3G;
+                        netStatus = AEDKNetworkStatusCellType3G;
                     }
                 }
             }
@@ -102,8 +102,8 @@ static AEReachability *_sharedManager = nil;
             case AENetworkReachabilityStatusReachableViaWiFi:
             {
                 _isNetworkStatusOK = YES;
-                _status = AENetworkStatusReachableViaWiFi;
-                netStatus = AENetworkStatusReachableViaWiFi;
+                _status = AEDKNetworkStatusReachableViaWiFi;
+                netStatus = AEDKNetworkStatusReachableViaWiFi;
             }
                 break;
             default:

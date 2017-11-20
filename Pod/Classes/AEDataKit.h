@@ -23,5 +23,5 @@ FOUNDATION_EXPORT const unsigned char AEDataKitVersionString[];
 #import "AEDKServer.h"
 #import "AEDKWebImageLoader.h"
 #import "AELocalDataPlug.h"
-#import "AEReachability.h"
+#import "AEDKReachability.h"
 #import "AEDKCacheOperation.h"

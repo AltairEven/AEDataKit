@@ -8,7 +8,6 @@
 //
 
 #import "AEWebImagePlug.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import <AlisNetworking/AlisNetworking.h>
 
 @implementation AEWebImagePlug

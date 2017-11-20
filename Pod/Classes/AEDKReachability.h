@@ -9,28 +9,28 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
-    AENetworkStatusUnknown = -1,
-    AENetworkStatusNotReachable = 0,
-    AENetworkStatusCellType2G = 1,
-    AENetworkStatusCellType3G = 2,
-    AENetworkStatusCellType4G = 3,
-    AENetworkStatusReachableViaWiFi = 4,
-}AENetworkStatus;
+    AEDKNetworkStatusUnknown = -1,
+    AEDKNetworkStatusNotReachable = 0,
+    AEDKNetworkStatusCellType2G = 1,
+    AEDKNetworkStatusCellType3G = 2,
+    AEDKNetworkStatusCellType4G = 3,
+    AEDKNetworkStatusReachableViaWiFi = 4,
+}AEDKNetworkStatus;
 
-@interface AEReachability : NSObject
+@interface AEDKReachability : NSObject
 
 @property (strong, nonatomic) NSString *domain;
 
 @property (nonatomic, readonly) BOOL isNetworkStatusOK;
 
-@property (nonatomic, readonly) AENetworkStatus status;
+@property (nonatomic, readonly) AEDKNetworkStatus status;
 
 @property (nonatomic, readonly) BOOL isMonitoring;
 
 + (instancetype)sharedInstance;
 
 //开始网络状态监控
-- (void)startNetworkMonitoringWithStatusChangeBlock:(void(^)(AENetworkStatus status))block;
+- (void)startNetworkMonitoringWithStatusChangeBlock:(void(^)(AEDKNetworkStatus status))block;
 //停止网络状态监控
 - (void)stopNetworkStatusMonitoring;
 

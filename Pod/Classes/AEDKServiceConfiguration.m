@@ -76,7 +76,7 @@ NSString *const kAEDKServiceMethodWRAPPED = @"WRAPPED";
     AEDKHttpServiceConfiguration *config = [[AEDKHttpServiceConfiguration alloc] init];
     config.displayDebugInfo = NO;
     config.method = kAEDKServiceMethodGet;
-    config.mimeType = AEDKHttpServiceMimeTypeUndefine;
+    config.mimeType = AEDKHttpServiceMimeTypeText;
     [config setStringEncoding:NSUTF8StringEncoding];
     
     return config;
