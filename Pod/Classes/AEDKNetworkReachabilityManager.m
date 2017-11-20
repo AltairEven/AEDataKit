@@ -33,7 +33,7 @@ NSString * const AEDKNetworkingReachabilityNotificationStatusItem = @"AEDKNetwor
 
 typedef void (^AEDKNetworkReachabilityStatusBlock)(AEDKNetworkReachabilityStatus status);
 
-NSString * AEStringFromNetworkReachabilityStatus(AEDKNetworkReachabilityStatus status) {
+NSString * AEDKStringFromNetworkReachabilityStatus(AEDKNetworkReachabilityStatus status) {
     switch (status) {
         case AEDKNetworkReachabilityStatusNotReachable:
             return NSLocalizedStringFromTable(@"Not Reachable", @"AENetworking", nil);
@@ -240,7 +240,7 @@ static void AEDKNetworkReachabilityReleaseCallback(const void *info) {
 #pragma mark -
 
 - (NSString *)localizedNetworkReachabilityStatusString {
-    return AEStringFromNetworkReachabilityStatus(self.networkReachabilityStatus);
+    return AEDKStringFromNetworkReachabilityStatus(self.networkReachabilityStatus);
 }
 
 #pragma mark -

@@ -200,7 +200,7 @@ FOUNDATION_EXPORT NSString * const AEDKNetworkingReachabilityNotificationStatusI
 /**
  Returns a localized string representation of an `AEDKNetworkReachabilityStatus` value.
  */
-FOUNDATION_EXPORT NSString * AEStringFromNetworkReachabilityStatus(AEDKNetworkReachabilityStatus status);
+FOUNDATION_EXPORT NSString * AEDKStringFromNetworkReachabilityStatus(AEDKNetworkReachabilityStatus status);
 
 NS_ASSUME_NONNULL_END
 #endif
