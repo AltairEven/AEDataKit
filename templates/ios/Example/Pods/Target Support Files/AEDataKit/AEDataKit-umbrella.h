@@ -23,7 +23,7 @@
 #import "AEDKWebImageLoader.h"
 #import "AELocalDataPlug.h"
 #import "AENetworkDataPlug.h"
-#import "AENetworkReachabilityManager.h"
+#import "AEDKNetworkReachabilityManager.h"
 #import "AEWebImagePlug.h"
 
 FOUNDATION_EXPORT double AEDataKitVersionNumber;

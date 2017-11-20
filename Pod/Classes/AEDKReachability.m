@@ -7,14 +7,14 @@
 //
 
 #import "AEDKReachability.h"
-#import "AENetworkReachabilityManager.h"
+#import "AEDKNetworkReachabilityManager.h"
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 
 static AEDKReachability *_sharedManager = nil;
 
 @interface AEDKReachability ()
 
-@property (nonatomic, strong) AENetworkReachabilityManager *reachabilityManager;
+@property (nonatomic, strong) AEDKNetworkReachabilityManager *reachabilityManager;
 
 @end
 
@@ -54,32 +54,32 @@ static AEDKReachability *_sharedManager = nil;
 {
     //初始化网络状态监控
     if (self.domain && ![self.domain isEqualToString:@""]) {
-        self.reachabilityManager = [AENetworkReachabilityManager managerForDomain:self.domain];
+        self.reachabilityManager = [AEDKNetworkReachabilityManager managerForDomain:self.domain];
     } else {
-        self.reachabilityManager = [AENetworkReachabilityManager sharedManager];
+        self.reachabilityManager = [AEDKNetworkReachabilityManager sharedManager];
     }
     [self.reachabilityManager startMonitoring];
     _isMonitoring = YES;
     
     __weak typeof(self) weakSelf = self;
-    [weakSelf.reachabilityManager setReachabilityStatusChangeBlock:^(AENetworkReachabilityStatus status){
+    [weakSelf.reachabilityManager setReachabilityStatusChangeBlock:^(AEDKNetworkReachabilityStatus status){
         AEDKNetworkStatus netStatus = AEDKNetworkStatusUnknown;
         switch (status) {
-            case AENetworkReachabilityStatusUnknown:
+            case AEDKNetworkReachabilityStatusUnknown:
             {
                 _isNetworkStatusOK = NO;
                 _status = AEDKNetworkStatusUnknown;
                 netStatus = AEDKNetworkStatusUnknown;
             }
                 break;
-            case AENetworkReachabilityStatusNotReachable:
+            case AEDKNetworkReachabilityStatusNotReachable:
             {
                 _isNetworkStatusOK = NO;
                 _status = AEDKNetworkStatusNotReachable;
                 netStatus = AEDKNetworkStatusNotReachable;
             }
                 break;
-            case AENetworkReachabilityStatusReachableViaWWAN:
+            case AEDKNetworkReachabilityStatusReachableViaWWAN:
             {
                 _isNetworkStatusOK = YES;
                 //os version > 7.0
@@ -99,7 +99,7 @@ static AEDKReachability *_sharedManager = nil;
                 }
             }
                 break;
-            case AENetworkReachabilityStatusReachableViaWiFi:
+            case AEDKNetworkReachabilityStatusReachableViaWiFi:
             {
                 _isNetworkStatusOK = YES;
                 _status = AEDKNetworkStatusReachableViaWiFi;
@@ -120,7 +120,7 @@ static AEDKReachability *_sharedManager = nil;
 
 - (void)stopNetworkStatusMonitoring
 {
-    [[AENetworkReachabilityManager sharedManager] stopMonitoring];
+    [[AEDKNetworkReachabilityManager sharedManager] stopMonitoring];
     
     _isNetworkStatusOK = NO;
     _isMonitoring = NO;

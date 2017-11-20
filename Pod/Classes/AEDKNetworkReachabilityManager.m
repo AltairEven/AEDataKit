@@ -1,4 +1,4 @@
-// AENetworkReachabilityManager.m
+// AEDKNetworkReachabilityManager.m
 // Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,7 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "AENetworkReachabilityManager.h"
+#import "AEDKNetworkReachabilityManager.h"
 #if !TARGET_OS_WATCH
 
 #import <netinet/in.h>
@@ -28,43 +28,43 @@
 #import <ifaddrs.h>
 #import <netdb.h>
 
-NSString * const AENetworkingReachabilityDidChangeNotification = @"com.alamofire.networking.reachability.change";
-NSString * const AENetworkingReachabilityNotificationStatusItem = @"AENetworkingReachabilityNotificationStatusItem";
+NSString * const AEDKNetworkingReachabilityDidChangeNotification = @"com.alamofire.networking.reachability.change";
+NSString * const AEDKNetworkingReachabilityNotificationStatusItem = @"AEDKNetworkingReachabilityNotificationStatusItem";
 
-typedef void (^AENetworkReachabilityStatusBlock)(AENetworkReachabilityStatus status);
+typedef void (^AEDKNetworkReachabilityStatusBlock)(AEDKNetworkReachabilityStatus status);
 
-NSString * AEStringFromNetworkReachabilityStatus(AENetworkReachabilityStatus status) {
+NSString * AEStringFromNetworkReachabilityStatus(AEDKNetworkReachabilityStatus status) {
     switch (status) {
-        case AENetworkReachabilityStatusNotReachable:
+        case AEDKNetworkReachabilityStatusNotReachable:
             return NSLocalizedStringFromTable(@"Not Reachable", @"AENetworking", nil);
-        case AENetworkReachabilityStatusReachableViaWWAN:
+        case AEDKNetworkReachabilityStatusReachableViaWWAN:
             return NSLocalizedStringFromTable(@"Reachable via WWAN", @"AENetworking", nil);
-        case AENetworkReachabilityStatusReachableViaWiFi:
+        case AEDKNetworkReachabilityStatusReachableViaWiFi:
             return NSLocalizedStringFromTable(@"Reachable via WiFi", @"AENetworking", nil);
-        case AENetworkReachabilityStatusUnknown:
+        case AEDKNetworkReachabilityStatusUnknown:
         default:
             return NSLocalizedStringFromTable(@"Unknown", @"AENetworking", nil);
     }
 }
 
-static AENetworkReachabilityStatus AENetworkReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
+static AEDKNetworkReachabilityStatus AEDKNetworkReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
     BOOL isReachable = ((flags & kSCNetworkReachabilityFlagsReachable) != 0);
     BOOL needsConnection = ((flags & kSCNetworkReachabilityFlagsConnectionRequired) != 0);
     BOOL canConnectionAutomatically = (((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) || ((flags & kSCNetworkReachabilityFlagsConnectionOnTraffic) != 0));
     BOOL canConnectWithoutUserInteraction = (canConnectionAutomatically && (flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0);
     BOOL isNetworkReachable = (isReachable && (!needsConnection || canConnectWithoutUserInteraction));
     
-    AENetworkReachabilityStatus status = AENetworkReachabilityStatusUnknown;
+    AEDKNetworkReachabilityStatus status = AEDKNetworkReachabilityStatusUnknown;
     if (isNetworkReachable == NO) {
-        status = AENetworkReachabilityStatusNotReachable;
+        status = AEDKNetworkReachabilityStatusNotReachable;
     }
 #if	TARGET_OS_IPHONE
     else if ((flags & kSCNetworkReachabilityFlagsIsWWAN) != 0) {
-        status = AENetworkReachabilityStatusReachableViaWWAN;
+        status = AEDKNetworkReachabilityStatusReachableViaWWAN;
     }
 #endif
     else {
-        status = AENetworkReachabilityStatusReachableViaWiFi;
+        status = AEDKNetworkReachabilityStatusReachableViaWiFi;
     }
     
     return status;
@@ -78,43 +78,43 @@ static AENetworkReachabilityStatus AENetworkReachabilityStatusForFlags(SCNetwork
  * a queued notification (for an earlier status condition) is processed AEter
  * the later update, resulting in the listener being left in the wrong state.
  */
-static void AEPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, AENetworkReachabilityStatusBlock block) {
-    AENetworkReachabilityStatus status = AENetworkReachabilityStatusForFlags(flags);
+static void AEDKPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, AEDKNetworkReachabilityStatusBlock block) {
+    AEDKNetworkReachabilityStatus status = AEDKNetworkReachabilityStatusForFlags(flags);
     dispatch_async(dispatch_get_main_queue(), ^{
         if (block) {
             block(status);
         }
         NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-        NSDictionary *userInfo = @{ AENetworkingReachabilityNotificationStatusItem: @(status) };
-        [notificationCenter postNotificationName:AENetworkingReachabilityDidChangeNotification object:nil userInfo:userInfo];
+        NSDictionary *userInfo = @{ AEDKNetworkingReachabilityNotificationStatusItem: @(status) };
+        [notificationCenter postNotificationName:AEDKNetworkingReachabilityDidChangeNotification object:nil userInfo:userInfo];
     });
 }
 
-static void AENetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, void *info) {
-    AEPostReachabilityStatusChange(flags, (__bridge AENetworkReachabilityStatusBlock)info);
+static void AEDKNetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, void *info) {
+    AEDKPostReachabilityStatusChange(flags, (__bridge AEDKNetworkReachabilityStatusBlock)info);
 }
 
 
-static const void * AENetworkReachabilityRetainCallback(const void *info) {
+static const void * AEDKNetworkReachabilityRetainCallback(const void *info) {
     return Block_copy(info);
 }
 
-static void AENetworkReachabilityReleaseCallback(const void *info) {
+static void AEDKNetworkReachabilityReleaseCallback(const void *info) {
     if (info) {
         Block_release(info);
     }
 }
 
-@interface AENetworkReachabilityManager ()
+@interface AEDKNetworkReachabilityManager ()
 @property (readonly, nonatomic, assign) SCNetworkReachabilityRef networkReachability;
-@property (readwrite, nonatomic, assign) AENetworkReachabilityStatus networkReachabilityStatus;
-@property (readwrite, nonatomic, copy) AENetworkReachabilityStatusBlock networkReachabilityStatusBlock;
+@property (readwrite, nonatomic, assign) AEDKNetworkReachabilityStatus networkReachabilityStatus;
+@property (readwrite, nonatomic, copy) AEDKNetworkReachabilityStatusBlock networkReachabilityStatusBlock;
 @end
 
-@implementation AENetworkReachabilityManager
+@implementation AEDKNetworkReachabilityManager
 
 + (instancetype)sharedManager {
-    static AENetworkReachabilityManager *_sharedManager = nil;
+    static AEDKNetworkReachabilityManager *_sharedManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedManager = [self manager];
@@ -126,7 +126,7 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
 + (instancetype)managerForDomain:(NSString *)domain {
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [domain UTF8String]);
     
-    AENetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
+    AEDKNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
     
     CFRelease(reachability);
     
@@ -135,7 +135,7 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
 
 + (instancetype)managerForAddress:(const void *)address {
     SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, (const struct sockaddr *)address);
-    AENetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
+    AEDKNetworkReachabilityManager *manager = [[self alloc] initWithReachability:reachability];
     
     CFRelease(reachability);
     
@@ -165,7 +165,7 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
     }
     
     _networkReachability = CFRetain(reachability);
-    self.networkReachabilityStatus = AENetworkReachabilityStatusUnknown;
+    self.networkReachabilityStatus = AEDKNetworkReachabilityStatusUnknown;
     
     return self;
 }
@@ -190,11 +190,11 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
 }
 
 - (BOOL)isReachableViaWWAN {
-    return self.networkReachabilityStatus == AENetworkReachabilityStatusReachableViaWWAN;
+    return self.networkReachabilityStatus == AEDKNetworkReachabilityStatusReachableViaWWAN;
 }
 
 - (BOOL)isReachableViaWiFi {
-    return self.networkReachabilityStatus == AENetworkReachabilityStatusReachableViaWiFi;
+    return self.networkReachabilityStatus == AEDKNetworkReachabilityStatusReachableViaWiFi;
 }
 
 #pragma mark -
@@ -207,7 +207,7 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
     }
     
     __weak __typeof(self)weakSelf = self;
-    AENetworkReachabilityStatusBlock callback = ^(AENetworkReachabilityStatus status) {
+    AEDKNetworkReachabilityStatusBlock callback = ^(AEDKNetworkReachabilityStatus status) {
         __strong __typeof(weakSelf)strongSelf = weakSelf;
         
         strongSelf.networkReachabilityStatus = status;
@@ -217,14 +217,14 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
         
     };
     
-    SCNetworkReachabilityContext context = {0, (__bridge void *)callback, AENetworkReachabilityRetainCallback, AENetworkReachabilityReleaseCallback, NULL};
-    SCNetworkReachabilitySetCallback(self.networkReachability, AENetworkReachabilityCallback, &context);
+    SCNetworkReachabilityContext context = {0, (__bridge void *)callback, AEDKNetworkReachabilityRetainCallback, AEDKNetworkReachabilityReleaseCallback, NULL};
+    SCNetworkReachabilitySetCallback(self.networkReachability, AEDKNetworkReachabilityCallback, &context);
     SCNetworkReachabilityScheduleWithRunLoop(self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
         SCNetworkReachabilityFlags flags;
         if (SCNetworkReachabilityGetFlags(self.networkReachability, &flags)) {
-            AEPostReachabilityStatusChange(flags, callback);
+            AEDKPostReachabilityStatusChange(flags, callback);
         }
     });
 }
@@ -245,7 +245,7 @@ static void AENetworkReachabilityReleaseCallback(const void *info) {
 
 #pragma mark -
 
-- (void)setReachabilityStatusChangeBlock:(void (^)(AENetworkReachabilityStatus status))block {
+- (void)setReachabilityStatusChangeBlock:(void (^)(AEDKNetworkReachabilityStatus status))block {
     self.networkReachabilityStatusBlock = block;
 }
 

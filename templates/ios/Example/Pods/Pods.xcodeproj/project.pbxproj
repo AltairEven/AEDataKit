@@ -41,7 +41,7 @@
 		44D62DC88C4614BB7AB351FA5FFF82B1 /* AELDDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9428301FC6C4D3D2333D35A242E3E4AB /* AELDDiskCache.m */; };
 		479E870BCA94B25452383E65557EDD54 /* AlisRequestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1B35A7353CE4F3BED6C7551675C69E /* AlisRequestContext.m */; };
 		49B3E05A1E453BCF3DDC7BEF0DBD9935 /* AlisPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E63862615E86514DB17E2ABD6E1BB540 /* AlisPluginManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4B576C6170BAEBE6AF121B8B76095B86 /* AENetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 959030C6A1D1E5086E94068DBD50E129 /* AENetworkReachabilityManager.m */; };
+		4B576C6170BAEBE6AF121B8B76095B86 /* AEDKNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 959030C6A1D1E5086E94068DBD50E129 /* AEDKNetworkReachabilityManager.m */; };
 		4E7A0F8A8D03E740F40379AEA795F814 /* AEDKTools.h in Headers */ = {isa = PBXBuildFile; fileRef = CC5EAE726E820155E97617D7DDAB52D9 /* AEDKTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4FAE15BD7BEEBF09E15BA81324A7591C /* AlisRequestConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D963F954BC77FB23E2340998E08AA58 /* AlisRequestConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53ACCAC3A9A962D2DDB2FE196787A880 /* AEDataKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DA3AF20931C69198250A4FD5C11798C /* AEDataKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -114,7 +114,7 @@
 		F4F6A606791304A460D142F56C934386 /* AEDKServer.h in Headers */ = {isa = PBXBuildFile; fileRef = E37D1EF2ADDC0327957ABE85F5135CF7 /* AEDKServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F69100CE8687C0B34975441C87DD0F6B /* AELDOperationMode.h in Headers */ = {isa = PBXBuildFile; fileRef = BADD3B12532D1769969B49642D9BDA07 /* AELDOperationMode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8437BC4765A62B2FDE22365CAE5B14B /* Alis_AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F68241B6CDEB26DB33B5331C7F5208B /* Alis_AFNetworkReachabilityManager.m */; };
-		F8D2FB3BDF177824D1ECE2A364DF03FF /* AENetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6351BD895A29EAC3660B60731622C4D5 /* AENetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D2FB3BDF177824D1ECE2A364DF03FF /* AEDKNetworkReachabilityManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6351BD895A29EAC3660B60731622C4D5 /* AEDKNetworkReachabilityManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,7 +159,7 @@
 		0158AC2C9BBF7FC29B2FBDBEEF125647 /* AlisRequestConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisRequestConfig.m; path = AlisNetworking/Classes/AlisRequestConfig.m; sourceTree = "<group>"; };
 		0469E4633427BFCFE41D026FDA6C7049 /* AEDKServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKServiceConfiguration.h; path = Pod/Classes/AEDKServiceConfiguration.h; sourceTree = "<group>"; };
 		061C34AC55F921F44EB77580A82EF29D /* Pods-PROJECT_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Example-frameworks.sh"; sourceTree = "<group>"; };
-		06810AFB75F585CDEE238C6F40B75277 /* AELocalDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AELocalDataKit.framework; path = AELocalDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		06810AFB75F585CDEE238C6F40B75277 /* AELocalDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AELocalDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0707C1B2D457AFBB216E56F200FD6D6E /* AEDKProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKProtocol.h; path = Pod/Classes/AEDKProtocol.h; sourceTree = "<group>"; };
 		0A51A37E0F18C6E3AEC6CE89AE3AD85B /* Pods-PROJECT_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PROJECT_Tests-dummy.m"; sourceTree = "<group>"; };
 		0DEE81D5DAF59932357B2675F6509520 /* AlisNetworking.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlisNetworking.xcconfig; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 		212F7CCA0602C91BCF71C5A089CC1435 /* Pods-PROJECT_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PROJECT_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		26DC6E05793EE1AC1A0325B73B542EF9 /* AEDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEDataKit.xcconfig; sourceTree = "<group>"; };
 		29EB11E4EB1E798AC7B319DE1053C878 /* AELocalDataSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELocalDataSocket.h; path = AELocalDataKit/Classes/Socket/AELocalDataSocket.h; sourceTree = "<group>"; };
-		2C1C3E551CA0DD1728A0BC6BCB71255B /* Pods_PROJECT_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PROJECT_Tests.framework; path = "Pods-PROJECT_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C1C3E551CA0DD1728A0BC6BCB71255B /* Pods_PROJECT_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PROJECT_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEB8E985A482BF4D22DB51D9109DAA6 /* AEDKServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKServiceConfiguration.m; path = Pod/Classes/AEDKServiceConfiguration.m; sourceTree = "<group>"; };
 		2F55941EBE4AD28CD8263C2BD3905542 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FFBAFD59CD9706023524599CD62EDD2 /* AEDKTools.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKTools.m; path = Pod/Classes/AEDKTools.m; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		35CD149734FCAB672CAB02BB87722B1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = AELocalDataKit/Classes/Info.plist; sourceTree = "<group>"; };
 		37B34C3E317CF9BDB96C8E5FC1AAE1ED /* AELDDiskCachePlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDDiskCachePlug.h; path = AELocalDataKit/Classes/BuiltinPlugs/AELDDiskCachePlug.h; sourceTree = "<group>"; };
 		38B8DFFB102959601DC16588C5C3083B /* Pods-PROJECT_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PROJECT_Tests-umbrella.h"; sourceTree = "<group>"; };
-		3B0382B420DD23A74D980B0B1950BD3F /* Pods-PROJECT_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PROJECT_Tests.modulemap"; sourceTree = "<group>"; };
+		3B0382B420DD23A74D980B0B1950BD3F /* Pods-PROJECT_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PROJECT_Tests.modulemap"; sourceTree = "<group>"; };
 		3B1B35A7353CE4F3BED6C7551675C69E /* AlisRequestContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisRequestContext.m; path = AlisNetworking/Classes/AlisRequestContext.m; sourceTree = "<group>"; };
 		412066F099C1DB12F7C5A37CA02A0525 /* AEDKReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKReachability.m; path = Pod/Classes/AEDKReachability.m; sourceTree = "<group>"; };
 		41869B1A763EBC0CF9B4D76293BB3B26 /* Pods-PROJECT_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -210,25 +210,25 @@
 		5E0C9D0A39B8D264D615C71DD63ED44F /* AlisRequestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisRequestManager.h; path = AlisNetworking/Classes/AlisRequestManager.h; sourceTree = "<group>"; };
 		61219403581215EC07F20F52A0D11172 /* AlisServiceProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisServiceProxy.h; path = AlisNetworking/Classes/Aliservice/AlisServiceProxy.h; sourceTree = "<group>"; };
 		62BF1FF883B464188CA4DFFC1B176079 /* AELocalDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AELocalDataKit.xcconfig; sourceTree = "<group>"; };
-		6351BD895A29EAC3660B60731622C4D5 /* AENetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AENetworkReachabilityManager.h; path = Pod/Classes/AENetworkReachabilityManager.h; sourceTree = "<group>"; };
+		6351BD895A29EAC3660B60731622C4D5 /* AEDKNetworkReachabilityManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKNetworkReachabilityManager.h; path = Pod/Classes/AEDKNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		6353A8F728607571D09E67B1A5FCDCBE /* AEDKProcess.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKProcess.h; path = Pod/Classes/AEDKProcess.h; sourceTree = "<group>"; };
 		646247F51DCB2A1202C940E19A40FF0F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		684E604E00B0D0DCC1773F7FC2DE9A50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68846802A97381955E4897D5D3393FB7 /* AlisNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AlisNetworking.modulemap; sourceTree = "<group>"; };
+		68846802A97381955E4897D5D3393FB7 /* AlisNetworking.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AlisNetworking.modulemap; sourceTree = "<group>"; };
 		6A02659C05B4EA63889F098D3662AB32 /* AEDKProcess.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKProcess.m; path = Pod/Classes/AEDKProcess.m; sourceTree = "<group>"; };
 		6D963F954BC77FB23E2340998E08AA58 /* AlisRequestConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisRequestConst.h; path = AlisNetworking/Classes/AlisRequestConst.h; sourceTree = "<group>"; };
 		6DA3AF20931C69198250A4FD5C11798C /* AEDataKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDataKit.h; path = Pod/Classes/AEDataKit.h; sourceTree = "<group>"; };
 		6E9B689D7286FF28526872CA8408D2BF /* RequestConfig.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = RequestConfig.plist; path = AlisNetworking/Classes/RequestConfig.plist; sourceTree = "<group>"; };
 		6F68241B6CDEB26DB33B5331C7F5208B /* Alis_AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Alis_AFNetworkReachabilityManager.m; path = AlisNetworking/Classes/Alis_AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		726581E4AC5513CA0054BE983170BC8B /* AEDKWebImageLoader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKWebImageLoader.m; path = Pod/Classes/AEDKWebImageLoader.m; sourceTree = "<group>"; };
-		72CE1D33CB40158E9712B39A11EE2116 /* AlisNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlisNetworking.framework; path = AlisNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CE1D33CB40158E9712B39A11EE2116 /* AlisNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlisNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E6E2AE1DEA4C6A6A4953AE03E0866E /* AEDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEDataKit-umbrella.h"; sourceTree = "<group>"; };
 		772143B257C6E392999F423B4AF4A7E7 /* AlisPluginManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisPluginManager.m; path = AlisNetworking/Classes/HTTPRequestPlugins/AlisPluginManager.m; sourceTree = "<group>"; };
-		7C7218FE0AC5D207C49B3AAAA28A8152 /* AEDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AEDataKit.modulemap; sourceTree = "<group>"; };
+		7C7218FE0AC5D207C49B3AAAA28A8152 /* AEDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AEDataKit.modulemap; sourceTree = "<group>"; };
 		7C850E1A5F38C690894D634B494B953A /* AlisServicesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisServicesManager.m; path = AlisNetworking/Classes/Aliservice/AlisServicesManager.m; sourceTree = "<group>"; };
 		82700DBE38C1D23C0B38DB3BCF5D453E /* AlisNetworking-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlisNetworking-dummy.m"; sourceTree = "<group>"; };
 		8294FB476811847E8EE0F9960F71ECF8 /* AEDataKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEDataKit-dummy.m"; sourceTree = "<group>"; };
-		832D5F933CD2DAFB1DABBCD843F79FA8 /* Pods-PROJECT_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PROJECT_Example.modulemap"; sourceTree = "<group>"; };
+		832D5F933CD2DAFB1DABBCD843F79FA8 /* Pods-PROJECT_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PROJECT_Example.modulemap"; sourceTree = "<group>"; };
 		84B778B6EABDD76187D30210BF53494E /* AlisService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisService.h; path = AlisNetworking/Classes/Aliservice/AlisService.h; sourceTree = "<group>"; };
 		84BC260DEDA8EF30DEC29FF6CFEC77EC /* AlisHttpServiceItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisHttpServiceItem.h; path = AlisNetworking/Classes/Aliservice/AlisHttpServiceItem.h; sourceTree = "<group>"; };
 		860DDEF978B8CD3ACE94B677B9DDF8C1 /* AlisRequestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisRequestManager.m; path = AlisNetworking/Classes/AlisRequestManager.m; sourceTree = "<group>"; };
@@ -237,18 +237,18 @@
 		8893856FC4811EC81D3EE0208EE2FA51 /* AELocalDataKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AELocalDataKit-dummy.m"; sourceTree = "<group>"; };
 		8BADEA765577F67F582069C5D333E57F /* AEDKCacheOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKCacheOperation.m; path = Pod/Classes/AEDKCacheOperation.m; sourceTree = "<group>"; };
 		91A32D6F33567EA0C081A96820458449 /* Pods-PROJECT_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PROJECT_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9413E1D8EEFEDBBC0F9083AC58C3C2DE /* Pods-PROJECT_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9428301FC6C4D3D2333D35A242E3E4AB /* AELDDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDDiskCache.m; path = AELocalDataKit/Classes/Cache/AELDDiskCache.m; sourceTree = "<group>"; };
 		953A55155028D886182B2599A6196DF7 /* AELDResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AELDResponse.h; path = AELocalDataKit/Classes/Interface/AELDResponse.h; sourceTree = "<group>"; };
 		9562E7A80C247126DB702209D85B9A10 /* AlisJsonParseManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisJsonParseManager.m; path = AlisNetworking/Classes/JsonParser/AlisJsonParseManager.m; sourceTree = "<group>"; };
-		959030C6A1D1E5086E94068DBD50E129 /* AENetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AENetworkReachabilityManager.m; path = Pod/Classes/AENetworkReachabilityManager.m; sourceTree = "<group>"; };
+		959030C6A1D1E5086E94068DBD50E129 /* AEDKNetworkReachabilityManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKNetworkReachabilityManager.m; path = Pod/Classes/AEDKNetworkReachabilityManager.m; sourceTree = "<group>"; };
 		96241D96949E4602EDDCE92E56EEEF79 /* AlisPluginProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisPluginProtocol.h; path = AlisNetworking/Classes/HTTPRequestPlugins/AlisPluginProtocol.h; sourceTree = "<group>"; };
 		97DFC14B444F1DF6D18470E13EE227A8 /* AELocalDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AELocalDataKit-umbrella.h"; sourceTree = "<group>"; };
 		993A6A3796008D4C00EB20C5A5D6F0AA /* AELDResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDResponse.m; path = AELocalDataKit/Classes/Interface/AELDResponse.m; sourceTree = "<group>"; };
 		9A376E1040CE8B35EFAA9B56CA5AC5BC /* AENetworkDataPlug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AENetworkDataPlug.h; path = Pod/Classes/AENetworkDataPlug.h; sourceTree = "<group>"; };
 		9CC32CCD2C190925AE8D9383800538D0 /* AELDIntegratedCachePlug.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AELDIntegratedCachePlug.m; path = AELocalDataKit/Classes/BuiltinPlugs/AELDIntegratedCachePlug.m; sourceTree = "<group>"; };
-		A0B058294557BD1B57F54AA7C569459B /* Pods_PROJECT_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PROJECT_Example.framework; path = "Pods-PROJECT_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0B058294557BD1B57F54AA7C569459B /* Pods_PROJECT_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PROJECT_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1F0B1471A13703AAB96C5AB70E1DE59 /* AlisJsonParsePluginProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AlisJsonParsePluginProtocol.h; path = AlisNetworking/Classes/JsonParser/AlisJsonParsePluginProtocol.h; sourceTree = "<group>"; };
 		A3B4FA41B221DCA5E90BB340E60F6A3E /* AlisNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlisNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA95058A52178B5C2203A1F8E16B7C7F /* AlisHttpServiceItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AlisHttpServiceItem.m; path = AlisNetworking/Classes/Aliservice/AlisHttpServiceItem.m; sourceTree = "<group>"; };
@@ -279,9 +279,9 @@
 		CF670856B7D03B83F48FE443C2D49779 /* AlisRequestManager+AlisRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "AlisRequestManager+AlisRequest.m"; path = "AlisNetworking/Classes/AlisRequestManager+AlisRequest.m"; sourceTree = "<group>"; };
 		CFBB3279F7017AA339CAD5EFD7299A3E /* AEDKCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKCacheOperation.h; path = Pod/Classes/AEDKCacheOperation.h; sourceTree = "<group>"; };
 		D66A808E6F4DFDF5950FE73AD6DCC75D /* Pods-PROJECT_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PROJECT_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D7E739C6FD853615C7AF951B1570A40F /* AEDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEDataKit.framework; path = AEDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7E739C6FD853615C7AF951B1570A40F /* AEDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD6ADBFE42F1FD989F55513402113E41 /* Pods-PROJECT_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PROJECT_Tests-resources.sh"; sourceTree = "<group>"; };
-		E18332414EA6D52BAFDD30C6D3911E6F /* AELocalDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AELocalDataKit.modulemap; sourceTree = "<group>"; };
+		E18332414EA6D52BAFDD30C6D3911E6F /* AELocalDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AELocalDataKit.modulemap; sourceTree = "<group>"; };
 		E1A285DE3911E489B750435A5CA603EB /* AEDKImageViewPlaceholder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AEDKImageViewPlaceholder.m; path = Pod/Classes/AEDKImageViewPlaceholder.m; sourceTree = "<group>"; };
 		E37D1EF2ADDC0327957ABE85F5135CF7 /* AEDKServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKServer.h; path = Pod/Classes/AEDKServer.h; sourceTree = "<group>"; };
 		E5931D0E02F5E34402D41B787B2BFB5D /* AEDKWebImageLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AEDKWebImageLoader.h; path = Pod/Classes/AEDKWebImageLoader.h; sourceTree = "<group>"; };
@@ -389,7 +389,6 @@
 				35CD149734FCAB672CAB02BB87722B1D /* Info.plist */,
 				441D02A38E5EBB4BEF7DED0CF8EC5D8D /* Support Files */,
 			);
-			name = AELocalDataKit;
 			path = AELocalDataKit;
 			sourceTree = "<group>";
 		};
@@ -533,8 +532,8 @@
 				C46F7EE459D4FFD03F9CE7CBFD79F56D /* AELocalDataPlug.m */,
 				9A376E1040CE8B35EFAA9B56CA5AC5BC /* AENetworkDataPlug.h */,
 				34B399BA8817798582A1D3C40F0A2014 /* AENetworkDataPlug.m */,
-				6351BD895A29EAC3660B60731622C4D5 /* AENetworkReachabilityManager.h */,
-				959030C6A1D1E5086E94068DBD50E129 /* AENetworkReachabilityManager.m */,
+				6351BD895A29EAC3660B60731622C4D5 /* AEDKNetworkReachabilityManager.h */,
+				959030C6A1D1E5086E94068DBD50E129 /* AEDKNetworkReachabilityManager.m */,
 				B1ACA80665D5582EB3F45D9258EAB912 /* AEWebImagePlug.h */,
 				179BB8C041161570AB1F5FACFA1040C1 /* AEWebImagePlug.m */,
 				F5AAFB1DEB934E6B58B0512D76638BDE /* Support Files */,
@@ -588,7 +587,6 @@
 				5442D4CB94968E36DF1B67020F4DE1D2 /* UIImageView+AlisRequest.m */,
 				AC679351A46CAA905D8D3C774BFFB696 /* Support Files */,
 			);
-			name = AlisNetworking;
 			path = AlisNetworking;
 			sourceTree = "<group>";
 		};
@@ -643,7 +641,7 @@
 				398A4CE7EA99732248C0A2C99817ABFF /* AEDKWebImageLoader.h in Headers */,
 				7D5B7DD91DF80A9DDE86FE7CBDCBF837 /* AELocalDataPlug.h in Headers */,
 				7551649F907A0DDCA582319CBF9C95EC /* AENetworkDataPlug.h in Headers */,
-				F8D2FB3BDF177824D1ECE2A364DF03FF /* AENetworkReachabilityManager.h in Headers */,
+				F8D2FB3BDF177824D1ECE2A364DF03FF /* AEDKNetworkReachabilityManager.h in Headers */,
 				66357C135369710693A22A2B3224184A /* AEWebImagePlug.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -873,7 +871,7 @@
 				919BF2ECF6F58021DC4EADEFBB1CF112 /* AEDKWebImageLoader.m in Sources */,
 				1A07480DB2EDC830A31E4189702DF8A1 /* AELocalDataPlug.m in Sources */,
 				3E6F1E37A9602B856C2219B7CE003D9F /* AENetworkDataPlug.m in Sources */,
-				4B576C6170BAEBE6AF121B8B76095B86 /* AENetworkReachabilityManager.m in Sources */,
+				4B576C6170BAEBE6AF121B8B76095B86 /* AEDKNetworkReachabilityManager.m in Sources */,
 				888141C08F0B9330A39D7C712272010A /* AEWebImagePlug.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
