@@ -56,7 +56,7 @@
     alisRequest.parameters = config.requestParameter;
     alisRequest.httpMethod = [self httpMethodConverter:urlRequet.HTTPMethod];
     alisRequest.retryCount = config.retryCount;
-    alisRequest.header = urlRequet.allHTTPHeaderFields;
+    alisRequest.header = config.infoInHttpHeader;
     alisRequest.timeoutInterval = urlRequet.timeoutInterval;
     
     if (config.mimeType == AEDKHttpServiceMimeTypeText) {
